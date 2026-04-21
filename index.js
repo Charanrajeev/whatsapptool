@@ -5,7 +5,7 @@ const { JWT } = require('google-auth-library');
 const creds = require('./credentials.json'); // మీ Google JSON ఫైల్
 
 // Google Sheet సెటప్
-const doc = new GoogleSpreadsheet('YOUR_SHEET_ID_HERE', new JWT({
+const doc = new GoogleSpreadsheet('1AMYRuTswLl8QvjdZl0WcpnbLEiyRFTDw8f1qZWDeoNY', new JWT({
   email: creds.client_email,
   key: creds.private_key,
   scopes: ['https://googleapis.com'],
