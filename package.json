@@ -1,0 +1,12 @@
+{
+  "name": "whatsapp-sheets-bot",
+  "version": "1.0.0",
+  "description": "WhatsApp Automation with Google Sheets",
+  "main": "index.js",
+  "dependencies": {
+    "whatsapp-web.js": "^1.23.0",
+    "qrcode-terminal": "^0.12.0",
+    "google-spreadsheet": "^4.1.1",
+    "google-auth-library": "^9.0.0"
+  }
+}
