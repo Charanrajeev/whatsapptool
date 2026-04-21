@@ -31,9 +31,9 @@ client.on('ready', async () => {
     const rows = await sheet.getRows();
 
     for (let row of rows) {
-        const name = row.get('Name');
-        const phone = row.get('phone number').replace('+', '').trim();
-        const message = row.get('message');
+        const name = row.get('Customer Name');
+        const phone = row.get('Mobile Number').replace('+', '').trim();
+        const message = row.get('Message');
         const finalPhone = phone.includes('@c.us') ? phone : `${phone}@c.us`;
 
         try {
