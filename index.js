@@ -16,7 +16,7 @@ const client = new Client({
     puppeteer: {
         headless: true,
         executablePath: '/usr/bin/google-chrome',
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
     }
 });
 
@@ -32,38 +32,49 @@ client.on('ready', async () => {
     
     try {
         await doc.loadInfo();
-        const sheet = doc.sheetsByIndex[0];
-        const rows = await sheet.getRows();
+        const sheet = doc.sheetsByIndex[0]; // మొదటి షీట్ తీసుకుంటుంది
+        
+        // మీ షీట్‌లో హెడర్స్ ఎక్కడ ఉన్నాయో స్పష్టంగా చెప్పడానికి offset వాడుతున్నాం
+        // ఒకవేళ మీ హెడర్స్ Row 1 లో ఉంటే { offset: 0 } వాడాలి
+        const rows = await sheet.getRows({ offset: 0 }); 
+        console.log(`Total rows found: ${rows.length}`);
 
         for (let row of rows) {
+            // షీట్ లో ఉన్న కాలమ్ పేర్లు ఖచ్చితంగా ఇవే అయి ఉండాలి
             const name = row.get('Customer Name');
             let phone = row.get('Mobile Number');
             const message = row.get('Message');
 
-            if (!phone || !message) continue; // డేటా లేకపోతే స్కిప్ చేస్తుంది
+            console.log(`Checking Row: Name=${name}, Phone=${phone}`);
 
-            // ఫోన్ నంబర్ కి 91 యాడ్ చేయడం మరియు ఫార్మాట్ చేయడం
-            phone = phone.toString().replace('+', '').trim();
-            if (!phone.startsWith('91')) {
-                phone = '91' + phone;
+            if (!phone || !message) {
+                console.log("Skipping row due to missing Phone or Message");
+                continue;
             }
-            const finalPhone = `${phone}@c.us`;
+
+            // ఫోన్ నంబర్ క్లీనింగ్ మరియు 91 యాడ్ చేయడం
+            let formattedPhone = phone.toString().replace(/[^\d]/g, '').trim();
+            if (formattedPhone.length === 10) {
+                formattedPhone = '91' + formattedPhone;
+            }
+            const finalPhone = `${formattedPhone}@c.us`;
 
             try {
                 await client.sendMessage(finalPhone, `Hi ${name}, ${message}`);
-                console.log(`Message sent to ${name} (${phone})`);
-                
-                // 30 సెకన్ల గ్యాప్ (మీరు కావాలంటే 60000 కి పెంచుకోవచ్చు)
-                await delay(30000); 
+                console.log(`✅ Message sent to ${name} (${formattedPhone})`);
+                await delay(30000); // 30 సెకన్ల గ్యాప్
             } catch (err) {
-                console.log(`Failed to send to ${name}:`, err);
+                console.log(`❌ Failed to send to ${name}:`, err.message);
             }
         }
-        console.log('All messages sent!');
+        console.log('All messages processed!');
     } catch (error) {
         console.error('Error accessing Google Sheet:', error);
     }
-    process.exit();
+    
+    // అన్ని మెసేజ్‌లు వెళ్ళాక బాట్ ని ఆపేయడానికి
+    console.log("Task finished. Closing...");
+    setTimeout(() => { process.exit(); }, 5000); 
 });
 
 client.initialize();
