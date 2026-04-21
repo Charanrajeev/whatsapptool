@@ -12,9 +12,15 @@ const doc = new GoogleSpreadsheet('1AMYRuTswLl8QvjdZl0WcpnbLEiyRFTDw8f1qZWDeoNY'
 }));
 
 const client = new Client({
-    authStrategy: new LocalAuth(), // ఇది సెషన్‌ను సేవ్ చేస్తుంది
-    puppeteer: { headless: true, args: ['--no-sandbox'] }
+    authStrategy: new LocalAuth(),
+    puppeteer: {
+        headless: true,
+        executablePath: '/usr/bin/google-chrome', // ఇది ఖచ్చితంగా ఉండాలి
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    }
 });
+
+
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
