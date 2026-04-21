@@ -9,7 +9,8 @@ const creds = require('./credentials.json');
 const doc = new GoogleSpreadsheet('1AMYRuTswLl8QvjdZl0WcpnbLEiyRFTDw8f1qZWDeoNY', new JWT({
   email: creds.client_email,
   // కీ ని పక్కాగా ఫార్మాట్ చేసే పద్ధతి
-  key: creds.private_key.replace(/\\n/g, '\n'), 
+  // key: creds.private_key.replace(/\\n/g, '\n'), 
+  key: creds.private_key.replace(/\\n/g, '\n'),
   scopes: [
     'https://googleapis.com',
     'https://googleapis.com'
