@@ -8,7 +8,11 @@ const creds = require('./credentials.json');
 const doc = new GoogleSpreadsheet('1AMYRuTswLl8QvjdZl0WcpnbLEiyRFTDw8f1qZWDeoNY', new JWT({
   email: creds.client_email,
   key: creds.private_key.replace(/\\n/g, '\n'),
-  scopes: ['https://googleapis.com'], // ఇక్కడ లింక్ సరిచేశాను
+  // scopes: ['https://googleapis.com'], // ఇక్కడ లింక్ సరిచేశాను 
+  // పాతది: scopes: ['https://googleapis.com'],
+// కొత్తది (ఇది వాడండి):
+scopes: ['https://googleapis.com'], 
+
 }));
 
 const client = new Client({
