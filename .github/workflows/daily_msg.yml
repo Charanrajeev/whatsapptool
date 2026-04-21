@@ -1,0 +1,19 @@
+name: Daily WhatsApp Messages
+on:
+  schedule:
+    - cron: '30 4 * * *' # ప్రతిరోజూ ఉదయం 10:00 IST (UTC 4:30)
+  workflow_dispatch: # మాన్యువల్‌గా రన్ చేయడానికి
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install Dependencies
+        run: npm install
+      - name: Run Script
+        run: node index.js
