@@ -12,10 +12,13 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 // ── Fetch CSV and parse into array of objects ────────────────────────────────
 function fetchCSV(url) {
     return new Promise((resolve, reject) => {
-        https.get(url, (res) => {
-            // Follow redirects (Google Sheets redirects to download)
-            if (res.statusCode === 302 || res.statusCode === 301) {
-                return fetchCSV(res.headers.location).then(resolve).catch(reject);
+        https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0' } }, (res) => {
+            // Follow ALL redirects (301, 302, 303, 307, 308)
+            if ([301, 302, 303, 307, 308].includes(res.statusCode)) {
+                res.resume(); // drain to free socket
+                const location = res.headers.location;
+                if (!location) return reject(new Error('Redirect received but no Location header'));
+                return fetchCSV(location).then(resolve).catch(reject);
             }
             if (res.statusCode !== 200) {
                 return reject(new Error(`HTTP ${res.statusCode} fetching sheet. Make sure the sheet is set to "Anyone with the link can view".`));
