@@ -111,7 +111,7 @@ client.on('ready', async () => {
 
             if (phone.length >= 12) {
                 try {
-                    const text = message ? `${message}`;
+                    const text = message;
                     await client.sendMessage(`${phone}@c.us`, text);
                     console.log(`   ✅ Sent to: ${name} (${phone})`);
                     await delay(40000);
