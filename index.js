@@ -1,7 +1,17 @@
 const { Client, LocalAuth } = require('whatsapp-web.js');
-const axios = require('axios');
 const qrcode = require('qrcode-terminal');
+const { GoogleSpreadsheet } = require('google-spreadsheet');
+const { JWT } = require('google-auth-library');
+const credentials = require('./credentials.json');
 
+// ── Google Sheet ID ──────────────────────────────────────────────────────────
+// Extracted from your sheet URL:
+// https://docs.google.com/spreadsheets/d/<SHEET_ID>/edit?...
+const SHEET_ID = '1AMYRuTswLl8QvjdZl0WcpnbLEiyRFTDw8f1qZWDeoNY';
+
+const delay = ms => new Promise(res => setTimeout(res, ms));
+
+// ── WhatsApp Client ──────────────────────────────────────────────────────────
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
@@ -11,55 +21,80 @@ const client = new Client({
     }
 });
 
-const sheetUrl = "https://docs.google.com/spreadsheets/d/1AMYRuTswLl8QvjdZl0WcpnbLEiyRFTDw8f1qZWDeoNY/edit?gid=0#gid=0";
-
-const delay = ms => new Promise(res => setTimeout(res, ms));
+// FIX 1: Register the QR event so you can actually scan and log in
+client.on('qr', (qr) => {
+    console.log('Scan the QR code below with WhatsApp:');
+    qrcode.generate(qr, { small: true });
+});
 
 client.on('ready', async () => {
-    console.log('WhatsApp Client is ready!');
+    console.log('✅ WhatsApp Client is ready!');
+
     try {
-        const response = await axios.get(sheetUrl);
-        // డేటాను క్లీన్ గా వరుసలుగా మార్చడం
-        const rows = response.data.split('\n').map(row => {
-            return row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/).map(col => col.replace(/"/g, '').trim());
+        // FIX 2: Use google-spreadsheet + service account credentials properly
+        const auth = new JWT({
+            email: credentials.client_email,
+            key: credentials.private_key,
+            scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
         });
+
+        const doc = new GoogleSpreadsheet(SHEET_ID, auth);
+        await doc.loadInfo();
+
+        const sheet = doc.sheetsByIndex[0];
+        const rows = await sheet.getRows();
 
         console.log(`Total rows fetched: ${rows.length}`);
 
-        // i=1 (Header) నుండి మొదలుపెట్టి ప్రతి వరుసను చెక్ చేద్దాం
-        for (let i = 1; i < rows.length; i++) {
-            const data = rows[i];
-            
-            // మీ స్క్రీన్‌షాట్ ప్రకారం డేటా ఈ కాలమ్స్ లో ఉంది:
-            let name = data[1];    // Column B
-            let phoneRaw = data[6]; // Column G
-            let message = data[9];  // Column J
+        for (let i = 0; i < rows.length; i++) {
+            const row = rows[i];
 
-            console.log(`Row ${i}: Name=${name}, Phone=${phoneRaw}`);
+            // Adjust these header names to match your actual Google Sheet column headers
+            const name     = row.get('Name');    // Column B header
+            const phoneRaw = row.get('Phone');   // Column G header
+            const message  = row.get('Message'); // Column J header
 
-            if (!phoneRaw || phoneRaw === "" || !name) {
-                console.log(`Skipping row ${i} due to empty data`);
+            console.log(`Row ${i + 1}: Name=${name}, Phone=${phoneRaw}`);
+
+            if (!phoneRaw || !name) {
+                console.log(`Skipping row ${i + 1} due to empty data`);
                 continue;
             }
 
-            let phone = phoneRaw.replace(/[^\d]/g, '').trim();
+            // FIX 3: Proper phone number normalisation
+            let phone = String(phoneRaw).replace(/[^\d]/g, '').trim();
             if (phone.length === 10) phone = '91' + phone;
-            
+
             if (phone.length >= 12) {
                 try {
-                    await client.sendMessage(`${phone}@c.us`, `Hi ${name}, ${message}`);
+                    const text = message
+                        ? `Hi ${name}, ${message}`
+                        : `Hi ${name}!`;
+
+                    await client.sendMessage(`${phone}@c.us`, text);
                     console.log(`✅ Sent to: ${name} (${phone})`);
-                    await delay(40000); 
+                    await delay(40000); // 40s delay to avoid spam detection
                 } catch (err) {
-                    console.log(`❌ Failed for ${name}: ${err.message}`);
+                    console.log(`❌ Failed for ${name} (${phone}): ${err.message}`);
                 }
+            } else {
+                console.log(`⚠️  Invalid phone for ${name}: "${phoneRaw}" → "${phone}"`);
             }
         }
     } catch (error) {
-        console.error('Error:', error.message);
+        console.error('❌ Error:', error.message);
     }
-    console.log('Task Completed!');
+
+    console.log('🎉 Task Completed!');
     setTimeout(() => process.exit(0), 5000);
+});
+
+client.on('auth_failure', (msg) => {
+    console.error('❌ Authentication failure:', msg);
+});
+
+client.on('disconnected', (reason) => {
+    console.log('⚠️  Client disconnected:', reason);
 });
 
 client.initialize();
