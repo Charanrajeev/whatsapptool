@@ -1,7 +1,7 @@
 name: Daily WhatsApp Messages
 on:
   schedule:
-    - cron: '30 4 * * *'
+        - cron: '0 4 * * *'
   workflow_dispatch:
 
 jobs:
