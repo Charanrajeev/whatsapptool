@@ -41,26 +41,43 @@ async function fetchSheetRows(sheetName) {
 }
 
 function parseCSV(raw) {
-    const lines = raw.trim().split('\n');
-    const headers = splitCSVRow(lines[0]).map(h => h.trim().replace(/\r/g, ''));
-    return lines.slice(1).map(line => {
-        const cols = splitCSVRow(line);
+    // Normalize line endings
+    const normalized = raw.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+    const rows = splitCSVRows(normalized);
+    const headers = rows[0].map(h => h.trim());
+    console.log('   Headers:', headers);
+    return rows.slice(1).map(cols => {
         const obj = {};
-        headers.forEach((h, i) => obj[h] = (cols[i] || '').trim().replace(/\r/g, ''));
+        headers.forEach((h, i) => obj[h] = (cols[i] || '').trim());
         return obj;
     });
 }
 
-function splitCSVRow(row) {
-    const result = [];
-    let cur = '', inQuote = false;
-    for (const ch of row) {
-        if (ch === '"') { inQuote = !inQuote; }
-        else if (ch === ',' && !inQuote) { result.push(cur); cur = ''; }
-        else { cur += ch; }
+// Splits entire CSV into rows, correctly handling quoted fields that span multiple lines
+function splitCSVRows(raw) {
+    const rows = [];
+    let cols = [], cur = '', inQuote = false;
+
+    for (let i = 0; i < raw.length; i++) {
+        const ch = raw[i];
+
+        if (ch === '"') {
+            // Handle escaped quotes ("")
+            if (inQuote && raw[i + 1] === '"') { cur += '"'; i++; }
+            else { inQuote = !inQuote; }
+        } else if (ch === ',' && !inQuote) {
+            cols.push(cur); cur = '';
+        } else if (ch === '\n' && !inQuote) {
+            cols.push(cur); cur = '';
+            if (cols.some(c => c !== '') || rows.length === 0) rows.push(cols);
+            cols = [];
+        } else {
+            cur += ch;
+        }
     }
-    result.push(cur);
-    return result;
+    // Push last row
+    if (cur || cols.length) { cols.push(cur); rows.push(cols); }
+    return rows;
 }
 
 // ── WhatsApp Client ───────────────────────────────────────────────────────────
@@ -98,7 +115,7 @@ client.on('ready', async () => {
 
             if (phone.length >= 12) {
                 try {
-                    const text = message ;
+                    const text = message;
                     await client.sendMessage(`${phone}@c.us`, text);
                     console.log(`   ✅ Sent to: ${name} (${phone})`);
                     await delay(40000);
