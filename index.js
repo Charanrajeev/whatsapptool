@@ -1,60 +1,61 @@
 const { Client, LocalAuth } = require('whatsapp-web.js');
-const { GoogleSpreadsheet } = require('google-spreadsheet');
-const { JWT } = require('google-auth-library');
-
-// GitHub Secrets నుండి చదవడం
-const creds = JSON.parse(process.env.GOOGLE_JSON);
-
-const doc = new GoogleSpreadsheet('1AMYRuTswLl8QvjdZl0WcpnbLEiyRFTDw8f1qZWDeoNY', new JWT({
-  email: creds.client_email,
-  // కీ లో ఉన్న లైన్ బ్రేక్స్ ని సరిచేసే పద్ధతి
-  key: creds.private_key.replace(/\\n/g, '\n'), 
-  scopes: ['https://googleapis.com'],
-}));
+const axios = require('axios');
 
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
         headless: true,
         executablePath: '/usr/bin/google-chrome',
-        args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
     }
 });
+
+// మీ షీట్ ఐడి మరియు నేరుగా CSV లింక్
+const sheetId = '1AMYRuTswLl8QvjdZl0WcpnbLEiyRFTDw8f1qZWDeoNY';
+const sheetUrl = `https://google.com{sheetId}/gviz/tq?tqx=out:csv`;
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
 client.on('ready', async () => {
     console.log('WhatsApp Client is ready!');
     try {
-        await doc.loadInfo();
-        // మీ షీట్ కింద ఉన్న పేరు 'Sheet1' అని ఉందో లేదో చూడండి
-        const sheet = doc.sheetsByIndex[0]; 
-        const rows = await sheet.getRows();
-        console.log(`Total rows found: ${rows.length}`);
+        const response = await axios.get(sheetUrl);
+        const csvData = response.data;
+        
+        // డేటాను క్లీన్ గా వరుసలుగా మార్చడం
+        const rows = csvData.split('\n').map(row => {
+            return row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/).map(col => col.replace(/"/g, '').trim());
+        });
 
-        for (let row of rows) {
-            const name = row.get('Customer Name');
-            const phone = row.get('Mobile Number');
-            const message = row.get('Message');
+        console.log(`Total rows found: ${rows.length - 1}`);
 
-            if (!phone || !message) continue;
-
-            let cleanPhone = phone.toString().replace(/[^\d]/g, '');
-            if (cleanPhone.length === 10) cleanPhone = '91' + cleanPhone;
+        for (let i = 1; i < rows.length; i++) {
+            const data = rows[i];
             
-            try {
-                await client.sendMessage(`${cleanPhone}@c.us`, `Hi ${name}, ${message}`);
-                console.log(`✅ Message sent to ${name}`);
-                // వాట్సాప్ అకౌంట్ సేఫ్టీ కోసం 40 సెకన్ల గ్యాప్
-                await delay(40000); 
-            } catch (err) {
-                console.log(`❌ Failed for ${name}: ${err.message}`);
+            // మీ షీట్ కాలమ్స్ ప్రకారం (B=1, G=6, J=9)
+            const name = data[1];    // Column B
+            const phoneRaw = data[6]; // Column G
+            const message = data[9];  // Column J
+
+            if (!phoneRaw || !message || !name) continue;
+
+            let phone = phoneRaw.replace(/[^\d]/g, '');
+            if (phone.length === 10) phone = '91' + phone;
+            
+            if (phone.length >= 12) {
+                try {
+                    await client.sendMessage(`${phone}@c.us`, `Hi ${name}, ${message}`);
+                    console.log(`✅ Message sent to ${name} (${phone})`);
+                    await delay(40000); 
+                } catch (err) {
+                    console.log(`❌ Failed for ${name}`);
+                }
             }
         }
-    } catch (e) {
-        console.error('Google API Error:', e.message);
+    } catch (error) {
+        console.error('Error:', error.message);
     }
-    console.log('Task finished.');
+    console.log('Task Completed!');
     setTimeout(() => process.exit(0), 5000);
 });
 
