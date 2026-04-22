@@ -2,10 +2,10 @@ const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const https = require('https');
 
-const SHEET_ID = '1AMYRuTswLl8QvjdZl0WcpnbLEiyRFTDw8f1qZWDeoNY';
+const SHEET_ID = '1JwR6E00bYYOmds5lINQrmFQnRpwjlfeHIMYFB9U7g3I';
 
 // ── Set the exact sheet tab name you want to process ─────────────────────────
-const SHEET_NAME = 'interest calls'; // ← Change this to your sheet tab name
+const SHEET_NAME = 'Sheet1'; // ← Change this to your sheet tab name
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
@@ -98,7 +98,7 @@ client.on('ready', async () => {
 
             if (phone.length >= 12) {
                 try {
-                    const text = message ? `Hi ${name}, ${message}` : `Hi ${name}!`;
+                    const text = message ;
                     await client.sendMessage(`${phone}@c.us`, text);
                     console.log(`   ✅ Sent to: ${name} (${phone})`);
                     await delay(40000);
