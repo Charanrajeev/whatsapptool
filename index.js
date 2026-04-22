@@ -32,12 +32,12 @@ function fetchCSV(url) {
 
 function parseCSV(raw) {
     const lines = raw.trim().split('\n');
-    const headers = splitCSVRow(lines[0]);
+    const headers = splitCSVRow(lines[0]).map(h => h.trim().replace(/\r/g, ''));
     console.log('Sheet headers:', headers);
     return lines.slice(1).map(line => {
         const cols = splitCSVRow(line);
         const obj = {};
-        headers.forEach((h, i) => obj[h.trim()] = (cols[i] || '').trim());
+        headers.forEach((h, i) => obj[h] = (cols[i] || '').trim().replace(/\r/g, ''));
         return obj;
     });
 }
@@ -83,10 +83,10 @@ client.on('ready', async () => {
         for (let i = 0; i < rows.length; i++) {
             const row = rows[i];
 
-            // These must match your exact column header names in the sheet
-            const name     = row['Name'];    // Column B
-            const phoneRaw = row['Phone'];   // Column G
-            const message  = row['Message']; // Column J
+            // Column headers matched to actual sheet
+            const name     = row['Customer Name'];
+            const phoneRaw = row['Mobile Number'];
+            const message  = row['Message'];
 
             console.log(`Row ${i + 1}: Name=${name}, Phone=${phoneRaw}`);
 
