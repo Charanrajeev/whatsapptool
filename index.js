@@ -2,10 +2,10 @@ const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const https = require('https');
 
-const SHEET_ID = '1JwR6E00bYYOmds5lINQrmFQnRpwjlfeHIMYFB9U7g3I';
+const SHEET_ID = '1AMYRuTswLl8QvjdZl0WcpnbLEiyRFTDw8f1qZWDeoNY';
 
-// ── Set the sheet name you want to process ───────────────────────────────────
-const SHEET_NAME = 'Sheet1'; // ← Change this to your sheet name
+// ── Set the exact sheet tab name you want to process ─────────────────────────
+const SHEET_NAME = 'interest calls'; // ← Change this to your sheet tab name
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
@@ -29,36 +29,14 @@ function httpGet(url) {
     });
 }
 
-// ── Discover all sheets using Google's public JSON feed ──────────────────────
-async function getAllSheets() {
-    // Google Sheets exposes a public JSON feed with sheet metadata
-    const url = `https://spreadsheets.google.com/feeds/worksheets/${SHEET_ID}/public/basic?alt=json`;
+// ── Fetch a specific sheet by name directly ───────────────────────────────────
+async function fetchSheetRows(sheetName) {
+    // Google supports fetching by sheet name via the 'sheet' parameter
+    const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&sheet=${encodeURIComponent(sheetName)}`;
     const raw = await httpGet(url);
-    let data;
-    try {
-        data = JSON.parse(raw);
-    } catch (e) {
-        throw new Error('Could not parse sheet list. Make sure the spreadsheet is set to "Anyone with the link can view".');
+    if (raw.trim().startsWith('<!DOCTYPE') || raw.trim().startsWith('<html')) {
+        throw new Error(`Sheet "${sheetName}" not found or spreadsheet is not public.`);
     }
-    const entries = data.feed.entry || [];
-    if (!entries.length) throw new Error('No sheets found in spreadsheet.');
-
-    const sheets = entries.map(entry => {
-        // gid is the last part of the sheet's self link id
-        const id = entry.id.$t;
-        const gid = id.split('/').pop();
-        const name = entry.title.$t;
-        return { name, gid };
-    });
-
-    console.log('Found sheets:', sheets.map(s => `"${s.name}" (gid=${s.gid})`).join(', '));
-    return sheets;
-}
-
-// ── CSV fetch + parse ─────────────────────────────────────────────────────────
-async function fetchSheetRows(gid) {
-    const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}`;
-    const raw = await httpGet(url);
     return parseCSV(raw);
 }
 
@@ -103,14 +81,8 @@ client.on('qr', (qr) => {
 client.on('ready', async () => {
     console.log('✅ WhatsApp Client is ready!');
     try {
-        const allSheets = await getAllSheets();
-        const sheet = allSheets.find(s => s.name.toLowerCase() === SHEET_NAME.toLowerCase());
-        if (!sheet) {
-            throw new Error(`Sheet "${SHEET_NAME}" not found. Available sheets: ${allSheets.map(s => `"${s.name}"`).join(', ')}`);
-        }
-
-        console.log(`📄 Processing sheet: "${sheet.name}"`);
-        const rows = await fetchSheetRows(sheet.gid);
+        console.log(`📄 Fetching sheet: "${SHEET_NAME}"`);
+        const rows = await fetchSheetRows(SHEET_NAME);
         console.log(`   Rows found: ${rows.length}`);
 
         for (let i = 0; i < rows.length; i++) {
