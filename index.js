@@ -2,26 +2,25 @@ const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const https = require('https');
 
-// ── Google Sheet: make the sheet public ("Anyone with the link" = Viewer) ───
-// Then use this CSV export URL (no login / service account needed)
-const SHEET_ID = '1AMYRuTswLl8QvjdZl0WcpnbLEiyRFTDw8f1qZWDeoNY';
-const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=0`;
+const SHEET_ID = '1JwR6E00bYYOmds5lINQrmFQnRpwjlfeHIMYFB9U7g3I';
+
+// ── Set the sheet name you want to process ───────────────────────────────────
+const SHEET_NAME = 'Sheet1'; // ← Change this to your sheet name
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
-// ── Fetch CSV and parse into array of objects ────────────────────────────────
-function fetchCSV(url) {
+// ── HTTP GET with full redirect following ────────────────────────────────────
+function httpGet(url) {
     return new Promise((resolve, reject) => {
         https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0' } }, (res) => {
-            // Follow ALL redirects (301, 302, 303, 307, 308)
             if ([301, 302, 303, 307, 308].includes(res.statusCode)) {
-                res.resume(); // drain to free socket
+                res.resume();
                 const location = res.headers.location;
-                if (!location) return reject(new Error('Redirect received but no Location header'));
-                return fetchCSV(location).then(resolve).catch(reject);
+                if (!location) return reject(new Error('Redirect with no Location header'));
+                return httpGet(location).then(resolve).catch(reject);
             }
             if (res.statusCode !== 200) {
-                return reject(new Error(`HTTP ${res.statusCode} fetching sheet. Make sure the sheet is set to "Anyone with the link can view".`));
+                return reject(new Error(`HTTP ${res.statusCode} for URL: ${url}`));
             }
             let raw = '';
             res.on('data', chunk => raw += chunk);
@@ -30,10 +29,27 @@ function fetchCSV(url) {
     });
 }
 
+// ── Discover all sheets (name + gid) from the spreadsheet HTML ───────────────
+async function getAllSheets() {
+    const html = await httpGet(`https://docs.google.com/spreadsheets/d/${SHEET_ID}/edit`);
+    // Google embeds sheet metadata as: ["SheetName",null,GID]
+    const matches = [...html.matchAll(/"([^"]+)",null,(\d+)/g)];
+    if (!matches.length) throw new Error('Could not find any sheets. Is the spreadsheet public?');
+    const sheets = matches.map(m => ({ name: m[1], gid: m[2] }));
+    console.log('Found sheets:', sheets.map(s => `"${s.name}" (gid=${s.gid})`).join(', '));
+    return sheets;
+}
+
+// ── CSV fetch + parse ─────────────────────────────────────────────────────────
+async function fetchSheetRows(gid) {
+    const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}`;
+    const raw = await httpGet(url);
+    return parseCSV(raw);
+}
+
 function parseCSV(raw) {
     const lines = raw.trim().split('\n');
     const headers = splitCSVRow(lines[0]).map(h => h.trim().replace(/\r/g, ''));
-    console.log('Sheet headers:', headers);
     return lines.slice(1).map(line => {
         const cols = splitCSVRow(line);
         const obj = {};
@@ -42,12 +58,10 @@ function parseCSV(raw) {
     });
 }
 
-// Handles quoted fields with commas inside
 function splitCSVRow(row) {
     const result = [];
     let cur = '', inQuote = false;
-    for (let i = 0; i < row.length; i++) {
-        const ch = row[i];
+    for (const ch of row) {
         if (ch === '"') { inQuote = !inQuote; }
         else if (ch === ',' && !inQuote) { result.push(cur); cur = ''; }
         else { cur += ch; }
@@ -56,7 +70,7 @@ function splitCSVRow(row) {
     return result;
 }
 
-// ── WhatsApp Client ──────────────────────────────────────────────────────────
+// ── WhatsApp Client ───────────────────────────────────────────────────────────
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
@@ -66,7 +80,6 @@ const client = new Client({
     }
 });
 
-// Show QR code for login
 client.on('qr', (qr) => {
     console.log('Scan the QR code below with WhatsApp:');
     qrcode.generate(qr, { small: true });
@@ -75,47 +88,45 @@ client.on('qr', (qr) => {
 client.on('ready', async () => {
     console.log('✅ WhatsApp Client is ready!');
     try {
-        console.log('Fetching sheet data...');
-        const csv = await fetchCSV(CSV_URL);
-        const rows = parseCSV(csv);
-        console.log(`Total rows: ${rows.length}`);
+        const allSheets = await getAllSheets();
+        const sheet = allSheets.find(s => s.name.toLowerCase() === SHEET_NAME.toLowerCase());
+        if (!sheet) {
+            throw new Error(`Sheet "${SHEET_NAME}" not found. Available sheets: ${allSheets.map(s => `"${s.name}"`).join(', ')}`);
+        }
+
+        console.log(`📄 Processing sheet: "${sheet.name}"`);
+        const rows = await fetchSheetRows(sheet.gid);
+        console.log(`   Rows found: ${rows.length}`);
 
         for (let i = 0; i < rows.length; i++) {
             const row = rows[i];
-
-            // Column headers matched to actual sheet
             const name     = row['Customer Name'];
             const phoneRaw = row['Mobile Number'];
             const message  = row['Message'];
 
-            console.log(`Row ${i + 1}: Name=${name}, Phone=${phoneRaw}`);
-
-            if (!phoneRaw || !name) {
-                console.log(`Skipping row ${i + 1}: missing name or phone`);
-                continue;
-            }
+            if (!phoneRaw || !name) continue;
 
             let phone = String(phoneRaw).replace(/[^\d]/g, '');
             if (phone.length === 10) phone = '91' + phone;
 
             if (phone.length >= 12) {
                 try {
-                    const text = message ? `Hi ${name}, ${message}` : `Hi ${name}!`;
+                    const text = message ? `${message}`;
                     await client.sendMessage(`${phone}@c.us`, text);
-                    console.log(`✅ Sent to: ${name} (${phone})`);
+                    console.log(`   ✅ Sent to: ${name} (${phone})`);
                     await delay(40000);
                 } catch (err) {
-                    console.log(`❌ Failed for ${name} (${phone}): ${err.message}`);
+                    console.log(`   ❌ Failed for ${name} (${phone}): ${err.message}`);
                 }
             } else {
-                console.log(`⚠️  Invalid phone for ${name}: "${phoneRaw}"`);
+                console.log(`   ⚠️  Invalid phone for ${name}: "${phoneRaw}"`);
             }
         }
     } catch (error) {
         console.error('❌ Error:', error.message);
     }
 
-    console.log('🎉 Task Completed!');
+    console.log('\n🎉 All sheets processed!');
     setTimeout(() => process.exit(0), 5000);
 });
 
