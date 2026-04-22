@@ -29,13 +29,28 @@ function httpGet(url) {
     });
 }
 
-// ── Discover all sheets (name + gid) from the spreadsheet HTML ───────────────
+// ── Discover all sheets using Google's public JSON feed ──────────────────────
 async function getAllSheets() {
-    const html = await httpGet(`https://docs.google.com/spreadsheets/d/${SHEET_ID}/edit`);
-    // Google embeds sheet metadata as: ["SheetName",null,GID]
-    const matches = [...html.matchAll(/"([^"]+)",null,(\d+)/g)];
-    if (!matches.length) throw new Error('Could not find any sheets. Is the spreadsheet public?');
-    const sheets = matches.map(m => ({ name: m[1], gid: m[2] }));
+    // Google Sheets exposes a public JSON feed with sheet metadata
+    const url = `https://spreadsheets.google.com/feeds/worksheets/${SHEET_ID}/public/basic?alt=json`;
+    const raw = await httpGet(url);
+    let data;
+    try {
+        data = JSON.parse(raw);
+    } catch (e) {
+        throw new Error('Could not parse sheet list. Make sure the spreadsheet is set to "Anyone with the link can view".');
+    }
+    const entries = data.feed.entry || [];
+    if (!entries.length) throw new Error('No sheets found in spreadsheet.');
+
+    const sheets = entries.map(entry => {
+        // gid is the last part of the sheet's self link id
+        const id = entry.id.$t;
+        const gid = id.split('/').pop();
+        const name = entry.title.$t;
+        return { name, gid };
+    });
+
     console.log('Found sheets:', sheets.map(s => `"${s.name}" (gid=${s.gid})`).join(', '));
     return sheets;
 }
@@ -111,7 +126,7 @@ client.on('ready', async () => {
 
             if (phone.length >= 12) {
                 try {
-                    const text = message;
+                    const text = message ? `Hi ${name}, ${message}` : `Hi ${name}!`;
                     await client.sendMessage(`${phone}@c.us`, text);
                     console.log(`   ✅ Sent to: ${name} (${phone})`);
                     await delay(40000);
