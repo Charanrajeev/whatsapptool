@@ -1,15 +1,57 @@
 const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
-const { GoogleSpreadsheet } = require('google-spreadsheet');
-const { JWT } = require('google-auth-library');
-const credentials = require('./credentials.json');
+const https = require('https');
 
-// ── Google Sheet ID ──────────────────────────────────────────────────────────
-// Extracted from your sheet URL:
-// https://docs.google.com/spreadsheets/d/<SHEET_ID>/edit?...
+// ── Google Sheet: make the sheet public ("Anyone with the link" = Viewer) ───
+// Then use this CSV export URL (no login / service account needed)
 const SHEET_ID = '1AMYRuTswLl8QvjdZl0WcpnbLEiyRFTDw8f1qZWDeoNY';
+const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=0`;
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
+
+// ── Fetch CSV and parse into array of objects ────────────────────────────────
+function fetchCSV(url) {
+    return new Promise((resolve, reject) => {
+        https.get(url, (res) => {
+            // Follow redirects (Google Sheets redirects to download)
+            if (res.statusCode === 302 || res.statusCode === 301) {
+                return fetchCSV(res.headers.location).then(resolve).catch(reject);
+            }
+            if (res.statusCode !== 200) {
+                return reject(new Error(`HTTP ${res.statusCode} fetching sheet. Make sure the sheet is set to "Anyone with the link can view".`));
+            }
+            let raw = '';
+            res.on('data', chunk => raw += chunk);
+            res.on('end', () => resolve(raw));
+        }).on('error', reject);
+    });
+}
+
+function parseCSV(raw) {
+    const lines = raw.trim().split('\n');
+    const headers = splitCSVRow(lines[0]);
+    console.log('Sheet headers:', headers);
+    return lines.slice(1).map(line => {
+        const cols = splitCSVRow(line);
+        const obj = {};
+        headers.forEach((h, i) => obj[h.trim()] = (cols[i] || '').trim());
+        return obj;
+    });
+}
+
+// Handles quoted fields with commas inside
+function splitCSVRow(row) {
+    const result = [];
+    let cur = '', inQuote = false;
+    for (let i = 0; i < row.length; i++) {
+        const ch = row[i];
+        if (ch === '"') { inQuote = !inQuote; }
+        else if (ch === ',' && !inQuote) { result.push(cur); cur = ''; }
+        else { cur += ch; }
+    }
+    result.push(cur);
+    return result;
+}
 
 // ── WhatsApp Client ──────────────────────────────────────────────────────────
 const client = new Client({
@@ -21,7 +63,7 @@ const client = new Client({
     }
 });
 
-// FIX 1: Register the QR event so you can actually scan and log in
+// Show QR code for login
 client.on('qr', (qr) => {
     console.log('Scan the QR code below with WhatsApp:');
     qrcode.generate(qr, { small: true });
@@ -29,56 +71,41 @@ client.on('qr', (qr) => {
 
 client.on('ready', async () => {
     console.log('✅ WhatsApp Client is ready!');
-
     try {
-        // FIX 2: Use google-spreadsheet + service account credentials properly
-        const auth = new JWT({
-            email: credentials.client_email,
-            key: credentials.private_key,
-            scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
-        });
-
-        const doc = new GoogleSpreadsheet(SHEET_ID, auth);
-        await doc.loadInfo();
-
-        const sheet = doc.sheetsByIndex[0];
-        const rows = await sheet.getRows();
-
-        console.log(`Total rows fetched: ${rows.length}`);
+        console.log('Fetching sheet data...');
+        const csv = await fetchCSV(CSV_URL);
+        const rows = parseCSV(csv);
+        console.log(`Total rows: ${rows.length}`);
 
         for (let i = 0; i < rows.length; i++) {
             const row = rows[i];
 
-            // Adjust these header names to match your actual Google Sheet column headers
-            const name     = row.get('Name');    // Column B header
-            const phoneRaw = row.get('Phone');   // Column G header
-            const message  = row.get('Message'); // Column J header
+            // These must match your exact column header names in the sheet
+            const name     = row['Name'];    // Column B
+            const phoneRaw = row['Phone'];   // Column G
+            const message  = row['Message']; // Column J
 
             console.log(`Row ${i + 1}: Name=${name}, Phone=${phoneRaw}`);
 
             if (!phoneRaw || !name) {
-                console.log(`Skipping row ${i + 1} due to empty data`);
+                console.log(`Skipping row ${i + 1}: missing name or phone`);
                 continue;
             }
 
-            // FIX 3: Proper phone number normalisation
-            let phone = String(phoneRaw).replace(/[^\d]/g, '').trim();
+            let phone = String(phoneRaw).replace(/[^\d]/g, '');
             if (phone.length === 10) phone = '91' + phone;
 
             if (phone.length >= 12) {
                 try {
-                    const text = message
-                        ? `Hi ${name}, ${message}`
-                        : `Hi ${name}!`;
-
+                    const text = message ? `Hi ${name}, ${message}` : `Hi ${name}!`;
                     await client.sendMessage(`${phone}@c.us`, text);
                     console.log(`✅ Sent to: ${name} (${phone})`);
-                    await delay(40000); // 40s delay to avoid spam detection
+                    await delay(40000);
                 } catch (err) {
                     console.log(`❌ Failed for ${name} (${phone}): ${err.message}`);
                 }
             } else {
-                console.log(`⚠️  Invalid phone for ${name}: "${phoneRaw}" → "${phone}"`);
+                console.log(`⚠️  Invalid phone for ${name}: "${phoneRaw}"`);
             }
         }
     } catch (error) {
@@ -89,12 +116,7 @@ client.on('ready', async () => {
     setTimeout(() => process.exit(0), 5000);
 });
 
-client.on('auth_failure', (msg) => {
-    console.error('❌ Authentication failure:', msg);
-});
-
-client.on('disconnected', (reason) => {
-    console.log('⚠️  Client disconnected:', reason);
-});
+client.on('auth_failure', msg => console.error('❌ WhatsApp auth failure:', msg));
+client.on('disconnected', reason => console.log('⚠️  Disconnected:', reason));
 
 client.initialize();
