@@ -15,7 +15,6 @@ jobs:
         with:
           node-version: '18'
 
-      # Chrome ని ఇన్‌స్టాల్ చేసే ముఖ్యమైన స్టెప్
       - name: Install Google Chrome
         run: |
           sudo apt-get update
@@ -25,4 +24,6 @@ jobs:
         run: npm install
 
       - name: Run Script
+        env:
+          GOOGLE_JSON: ${{ secrets.GOOGLE_JSON }} # ఇది మీ Secrets నుండి వస్తుంది
         run: node index.js
