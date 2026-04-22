@@ -23,7 +23,16 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Restore WhatsApp Session
+        run: |
+          if [ -n "${{ secrets.WA_SESSION }}" ]; then
+            mkdir -p .wwebjs_auth
+            echo '${{ secrets.WA_SESSION }}' | base64 -d > wa_session.tar.gz
+            tar -xzf wa_session.tar.gz -C .wwebjs_auth
+            echo "Session restored."
+          else
+            echo "No WA_SESSION secret found - QR scan will be needed."
+          fi
+
       - name: Run Script
-        env:
-          GOOGLE_JSON: ${{ secrets.GOOGLE_JSON }} # ఇది మీ Secrets నుండి వస్తుంది
         run: node index.js
