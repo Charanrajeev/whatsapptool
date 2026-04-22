@@ -1,1 +1,48 @@
+name: Daily WhatsApp Messages
+on:
+  schedule:
+    - cron: '30 4 * * *'
+  workflow_dispatch:
 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Google Chrome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Restore WhatsApp Session
+        run: |
+          if [ -n "${{ secrets.WA_SESSION }}" ]; then
+            mkdir -p .wwebjs_auth
+            echo '${{ secrets.WA_SESSION }}' | base64 -d > wa_session.tar.gz
+            tar -xzf wa_session.tar.gz -C .wwebjs_auth
+            echo "Session restored."
+          else
+            echo "No WA_SESSION secret found - QR scan will be needed."
+          fi
+
+      - name: Run Script
+        run: node index.js
+
+      - name: Save sent log back to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sent_log.json || true
+          git diff --staged --quiet || git commit -m "chore: update sent_log [skip ci]"
+          git push || true
