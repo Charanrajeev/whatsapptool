@@ -11,7 +11,7 @@ const client = new Client({
     }
 });
 
-const sheetUrl = "https://google.com";
+const sheetUrl = "https://docs.google.com/spreadsheets/d/1AMYRuTswLl8QvjdZl0WcpnbLEiyRFTDw8f1qZWDeoNY/edit?gid=0#gid=0";
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
