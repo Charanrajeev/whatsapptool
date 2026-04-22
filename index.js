@@ -1,36 +1,11 @@
 const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const https = require('https');
-const fs = require('fs');
-const path = require('path');
 
-// ── Load config from config.json ─────────────────────────────────────────────
-const CONFIG_FILE = path.join(__dirname, 'config.json');
-function loadConfig() {
-    if (!fs.existsSync(CONFIG_FILE)) {
-        console.error('❌ config.json not found.');
-        process.exit(1);
-    }
-    return JSON.parse(fs.readFileSync(CONFIG_FILE, 'utf8'));
-}
-const config = loadConfig();
-const SHEET_ID   = config.SHEET_ID;
-const SHEET_NAME = config.SHEET_NAME;
+const SHEET_ID = '1JwR6E00bYYOmds5lINQrmFQnRpwjlfeHIMYFB9U7g3I';
 
-// ── Sent log: tracks which phone numbers already received a message ───────────
-const SENT_LOG_FILE = path.join(__dirname, 'sent_log.json');
-function loadSentLog() {
-    if (!fs.existsSync(SENT_LOG_FILE)) return {};
-    try { return JSON.parse(fs.readFileSync(SENT_LOG_FILE, 'utf8')); } catch { return {}; }
-}
-function markSent(phone, name) {
-    const log = loadSentLog();
-    log[phone] = { name, sentAt: new Date().toISOString() };
-    fs.writeFileSync(SENT_LOG_FILE, JSON.stringify(log, null, 2));
-}
-function alreadySent(phone) {
-    return !!loadSentLog()[phone];
-}
+// ── Set the exact sheet tab name you want to process ─────────────────────────
+const SHEET_NAME = 'Sheet1'; // ← Change this to your sheet tab name
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
@@ -54,8 +29,9 @@ function httpGet(url) {
     });
 }
 
-// ── Fetch a specific sheet by name ───────────────────────────────────────────
+// ── Fetch a specific sheet by name directly ───────────────────────────────────
 async function fetchSheetRows(sheetName) {
+    // Google supports fetching by sheet name via the 'sheet' parameter
     const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&sheet=${encodeURIComponent(sheetName)}`;
     const raw = await httpGet(url);
     if (raw.trim().startsWith('<!DOCTYPE') || raw.trim().startsWith('<html')) {
@@ -65,6 +41,7 @@ async function fetchSheetRows(sheetName) {
 }
 
 function parseCSV(raw) {
+    // Normalize line endings
     const normalized = raw.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
     const rows = splitCSVRows(normalized);
     const headers = rows[0].map(h => h.trim());
@@ -76,12 +53,16 @@ function parseCSV(raw) {
     });
 }
 
+// Splits entire CSV into rows, correctly handling quoted fields that span multiple lines
 function splitCSVRows(raw) {
     const rows = [];
     let cols = [], cur = '', inQuote = false;
+
     for (let i = 0; i < raw.length; i++) {
         const ch = raw[i];
+
         if (ch === '"') {
+            // Handle escaped quotes ("")
             if (inQuote && raw[i + 1] === '"') { cur += '"'; i++; }
             else { inQuote = !inQuote; }
         } else if (ch === ',' && !inQuote) {
@@ -94,6 +75,7 @@ function splitCSVRows(raw) {
             cur += ch;
         }
     }
+    // Push last row
     if (cur || cols.length) { cols.push(cur); rows.push(cols); }
     return rows;
 }
@@ -115,14 +97,10 @@ client.on('qr', (qr) => {
 
 client.on('ready', async () => {
     console.log('✅ WhatsApp Client is ready!');
-    console.log(`📋 Config: Sheet="${SHEET_NAME}", ID="${SHEET_ID}"`);
-
     try {
         console.log(`📄 Fetching sheet: "${SHEET_NAME}"`);
         const rows = await fetchSheetRows(SHEET_NAME);
-        console.log(`   Total rows: ${rows.length}`);
-
-        let sentCount = 0, skippedCount = 0;
+        console.log(`   Rows found: ${rows.length}`);
 
         for (let i = 0; i < rows.length; i++) {
             const row = rows[i];
@@ -135,36 +113,24 @@ client.on('ready', async () => {
             let phone = String(phoneRaw).replace(/[^\d]/g, '');
             if (phone.length === 10) phone = '91' + phone;
 
-            if (phone.length < 12) {
+            if (phone.length >= 12) {
+                try {
+                    const text = message;
+                    await client.sendMessage(`${phone}@c.us`, text);
+                    console.log(`   ✅ Sent to: ${name} (${phone})`);
+                    await delay(40000);
+                } catch (err) {
+                    console.log(`   ❌ Failed for ${name} (${phone}): ${err.message}`);
+                }
+            } else {
                 console.log(`   ⚠️  Invalid phone for ${name}: "${phoneRaw}"`);
-                continue;
-            }
-
-            // ── Skip if already sent in a previous run ──
-            if (alreadySent(phone)) {
-                console.log(`   ⏭️  Already sent, skipping: ${name} (${phone})`);
-                skippedCount++;
-                continue;
-            }
-
-            try {
-                const text = message ? `Hi ${name}, ${message}` : `Hi ${name}!`;
-                await client.sendMessage(`${phone}@c.us`, text);
-                markSent(phone, name);
-                console.log(`   ✅ Sent to: ${name} (${phone})`);
-                sentCount++;
-                await delay(40000);
-            } catch (err) {
-                console.log(`   ❌ Failed for ${name} (${phone}): ${err.message}`);
             }
         }
-
-        console.log(`\n📊 Summary: ${sentCount} sent, ${skippedCount} skipped (already sent)`);
     } catch (error) {
         console.error('❌ Error:', error.message);
     }
 
-    console.log('🎉 Done!');
+    console.log('\n🎉 All sheets processed!');
     setTimeout(() => process.exit(0), 5000);
 });
 
