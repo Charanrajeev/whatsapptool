@@ -2,21 +2,13 @@ const { Client, LocalAuth } = require('whatsapp-web.js');
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 const { JWT } = require('google-auth-library');
 
-// GitHub Secrets నుండి JSON పొందడం
-let creds;
-try {
-    creds = JSON.parse(process.env.GOOGLE_JSON);
-} catch (e) {
-    console.error("Error parsing GOOGLE_JSON secret. Check if it's a valid JSON.");
-    process.exit(1);
-}
-
-// Private Key ని సరిగ్గా ఫార్మాట్ చేసే పద్ధతి
-const formattedKey = creds.private_key.replace(/\\n/g, '\n');
+// GitHub Secrets నుండి చదవడం
+const creds = JSON.parse(process.env.GOOGLE_JSON);
 
 const doc = new GoogleSpreadsheet('1AMYRuTswLl8QvjdZl0WcpnbLEiyRFTDw8f1qZWDeoNY', new JWT({
   email: creds.client_email,
-  key: formattedKey,
+  // కీ లో ఉన్న లైన్ బ్రేక్స్ ని సరిచేసే పద్ధతి
+  key: creds.private_key.replace(/\\n/g, '\n'), 
   scopes: ['https://googleapis.com'],
 }));
 
@@ -35,8 +27,8 @@ client.on('ready', async () => {
     console.log('WhatsApp Client is ready!');
     try {
         await doc.loadInfo();
-        // ఇక్కడ మీ షీట్ కింద ఉన్న పేరు ఇవ్వండి (ఉదా: 'InterestDemand')
-        const sheet = doc.sheetsByTitle['InterestDemand'] || doc.sheetsByIndex[0];
+        // మీ షీట్ కింద ఉన్న పేరు 'Sheet1' అని ఉందో లేదో చూడండి
+        const sheet = doc.sheetsByIndex[0]; 
         const rows = await sheet.getRows();
         console.log(`Total rows found: ${rows.length}`);
 
@@ -53,13 +45,14 @@ client.on('ready', async () => {
             try {
                 await client.sendMessage(`${cleanPhone}@c.us`, `Hi ${name}, ${message}`);
                 console.log(`✅ Message sent to ${name}`);
-                await delay(35000); // 35 సెకన్ల గ్యాప్
+                // వాట్సాప్ అకౌంట్ సేఫ్టీ కోసం 40 సెకన్ల గ్యాప్
+                await delay(40000); 
             } catch (err) {
                 console.log(`❌ Failed for ${name}: ${err.message}`);
             }
         }
     } catch (e) {
-        console.error('Google API Error Detail:', e.message);
+        console.error('Google API Error:', e.message);
     }
     console.log('Task finished.');
     setTimeout(() => process.exit(0), 5000);
