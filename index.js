@@ -3,13 +3,17 @@ const { GoogleSpreadsheet } = require('google-spreadsheet');
 const { JWT } = require('google-auth-library');
 
 // GitHub Secrets నుండి JSON ని పొందడం
+
 const creds = JSON.parse(process.env.GOOGLE_JSON);
 
 const doc = new GoogleSpreadsheet('1AMYRuTswLl8QvjdZl0WcpnbLEiyRFTDw8f1qZWDeoNY', new JWT({
   email: creds.client_email,
-  key: creds.private_key,
+  // కీ లో ఉండే ఎర్రర్స్ ని ఇది సరిచేస్తుంది
+  key: creds.private_key.replace(/\\n/g, '\n'), 
   scopes: ['https://googleapis.com'],
 }));
+
+
 
 const client = new Client({
     authStrategy: new LocalAuth(),
