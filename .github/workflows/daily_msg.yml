@@ -21,26 +21,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+
       - name: Install Google Chrome
         run: |
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
+
       - name: Install Dependencies
         run: npm install
-      - name: Restore WhatsApp Session
-        run: |
-          if [ -n "${{ secrets.WA_SESSION }}" ]; then
-            mkdir -p .wwebjs_auth
-            echo '${{ secrets.WA_SESSION }}' | base64 -d > wa_session.tar.gz
-            tar -xzf wa_session.tar.gz -C .wwebjs_auth
-            echo "Session restored."
-          else
-            echo "No WA_SESSION secret found."
-          fi
+
       - name: Run Script
         env:
           SHEET_ID: ${{ github.event.client_payload.sheet_id || inputs.sheet_id || secrets.DEFAULT_SHEET_ID }}
@@ -49,4 +43,6 @@ jobs:
           MESSAGE_COLUMN: ${{ github.event.client_payload.message_column || inputs.message_column || 'Message' }}
           EMAIL_USER: ${{ secrets.EMAIL_USER }}
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          GOOGLE_JSON: ${{ secrets.GOOGLE_JSON }}
+          GDRIVE_FILE_ID: ${{ secrets.GDRIVE_FILE_ID }}
         run: node index.js
