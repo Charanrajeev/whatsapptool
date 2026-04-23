@@ -2,14 +2,19 @@ const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const https = require('https');
 
-const SHEET_ID = '1JwR6E00bYYOmds5lINQrmFQnRpwjlfeHIMYFB9U7g3I';
+// ── Read from environment variables (set by GitHub Actions) ──────────────────
+const SHEET_ID      = process.env.SHEET_ID      || '1JwR6E00bYYOmds5lINQrmFQnRpwjlfeHIMYFB9U7g3I';
+const SHEET_NAME    = process.env.SHEET_NAME    || 'Sheet1';
+const PHONE_COLUMN  = process.env.PHONE_COLUMN  || 'Mobile Number';
+const MESSAGE_COLUMN = process.env.MESSAGE_COLUMN || 'Message';
 
-// ── Set the exact sheet tab name you want to process ─────────────────────────
-const SHEET_NAME = 'Sheet1'; // ← Change this to your sheet tab name
+console.log(`📋 Sheet ID: ${SHEET_ID}`);
+console.log(`📄 Sheet Name: ${SHEET_NAME}`);
+console.log(`📞 Phone Column: ${PHONE_COLUMN}`);
+console.log(`💬 Message Column: ${MESSAGE_COLUMN}`);
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
-// ── HTTP GET with full redirect following ────────────────────────────────────
 function httpGet(url) {
     return new Promise((resolve, reject) => {
         https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0' } }, (res) => {
@@ -29,9 +34,7 @@ function httpGet(url) {
     });
 }
 
-// ── Fetch a specific sheet by name directly ───────────────────────────────────
 async function fetchSheetRows(sheetName) {
-    // Google supports fetching by sheet name via the 'sheet' parameter
     const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&sheet=${encodeURIComponent(sheetName)}`;
     const raw = await httpGet(url);
     if (raw.trim().startsWith('<!DOCTYPE') || raw.trim().startsWith('<html')) {
@@ -41,7 +44,6 @@ async function fetchSheetRows(sheetName) {
 }
 
 function parseCSV(raw) {
-    // Normalize line endings
     const normalized = raw.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
     const rows = splitCSVRows(normalized);
     const headers = rows[0].map(h => h.trim());
@@ -53,16 +55,12 @@ function parseCSV(raw) {
     });
 }
 
-// Splits entire CSV into rows, correctly handling quoted fields that span multiple lines
 function splitCSVRows(raw) {
     const rows = [];
     let cols = [], cur = '', inQuote = false;
-
     for (let i = 0; i < raw.length; i++) {
         const ch = raw[i];
-
         if (ch === '"') {
-            // Handle escaped quotes ("")
             if (inQuote && raw[i + 1] === '"') { cur += '"'; i++; }
             else { inQuote = !inQuote; }
         } else if (ch === ',' && !inQuote) {
@@ -75,12 +73,10 @@ function splitCSVRows(raw) {
             cur += ch;
         }
     }
-    // Push last row
     if (cur || cols.length) { cols.push(cur); rows.push(cols); }
     return rows;
 }
 
-// ── WhatsApp Client ───────────────────────────────────────────────────────────
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
@@ -104,37 +100,35 @@ client.on('ready', async () => {
 
         for (let i = 0; i < rows.length; i++) {
             const row = rows[i];
-            const name     = row['Customer Name'];
-            const phoneRaw = row['Mobile Number'];
-            const message  = row['Message'];
+            const phoneRaw = row[PHONE_COLUMN];
+            const message  = row[MESSAGE_COLUMN];
 
-            if (!phoneRaw || !name) continue;
+            if (!phoneRaw || !message) continue;
 
             let phone = String(phoneRaw).replace(/[^\d]/g, '');
             if (phone.length === 10) phone = '91' + phone;
 
             if (phone.length >= 12) {
                 try {
-                    const text = message;
-                    await client.sendMessage(`${phone}@c.us`, text);
-                    console.log(`   ✅ Sent to: ${name} (${phone})`);
+                    await client.sendMessage(`${phone}@c.us`, message);
+                    console.log(`   ✅ Sent to: ${phone}`);
                     await delay(40000);
                 } catch (err) {
-                    console.log(`   ❌ Failed for ${name} (${phone}): ${err.message}`);
+                    console.log(`   ❌ Failed for ${phone}: ${err.message}`);
                 }
             } else {
-                console.log(`   ⚠️  Invalid phone for ${name}: "${phoneRaw}"`);
+                console.log(`   ⚠️  Invalid phone: "${phoneRaw}"`);
             }
         }
     } catch (error) {
         console.error('❌ Error:', error.message);
     }
 
-    console.log('\n🎉 All sheets processed!');
+    console.log('\n🎉 Done!');
     setTimeout(() => process.exit(0), 5000);
 });
 
-client.on('auth_failure', msg => console.error('❌ WhatsApp auth failure:', msg));
-client.on('disconnected', reason => console.log('⚠️  Disconnected:', reason));
+client.on('auth_failure', msg => console.error('❌ Auth failure:', msg));
+client.on('disconnected', reason => console.log('⚠️ Disconnected:', reason));
 
 client.initialize();
