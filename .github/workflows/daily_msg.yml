@@ -16,11 +16,14 @@ on:
       message_column:
         description: 'Message Column Name'
         required: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_PAT }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -43,6 +46,13 @@ jobs:
           MESSAGE_COLUMN: ${{ github.event.client_payload.message_column || inputs.message_column || 'Message' }}
           EMAIL_USER: ${{ secrets.EMAIL_USER }}
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
-          GOOGLE_JSON: ${{ secrets.GOOGLE_JSON }}
-          GDRIVE_FILE_ID: ${{ secrets.GDRIVE_FILE_ID }}
         run: node index.js
+
+      - name: Save Session to Repo
+        if: always()
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          git add -f .wwebjs_auth/ .wwebjs_cache/ 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Update WhatsApp session"
+          git push
