@@ -8,44 +8,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Save WA_SESSION Secret
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.GH_PAT }}
-          script: |
-            const { execSync } = require('child_process');
-            const fs = require('fs');
-            
-            // Session archive చేయండి
-            execSync('tar -czf wa_session.tar.gz -C .wwebjs_auth .');
-            
-            // File గా చదివి base64 చేయండి
-            const sessionData = fs.readFileSync('wa_session.tar.gz');
-            const value = sessionData.toString('base64');
-            
-            // Secret save చేయండి
-            const { data: key } = await github.rest.actions.getRepoPublicKey({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-            });
-            
-            const _sodium = require('libsodium-wrappers');
-            await _sodium.ready;
-            
-            const keyBytes = _sodium.from_base64(key.key, _sodium.base64_variants.ORIGINAL);
-            const msgBytes = Buffer.from(value);
-            const encrypted = _sodium.to_base64(
-              _sodium.crypto_box_seal(msgBytes, keyBytes),
-              _sodium.base64_variants.ORIGINAL
-            );
-            
-            await github.rest.actions.createOrUpdateRepoSecret({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              secret_name: 'WA_SESSION',
-              encrypted_value: encrypted,
-              key_id: key.key_id,
-            });
-            
-            console.log('✅ WA_SESSION secret saved!');
-            console.log(`📦 Session size: ${(sessionData.length / 1024).toFixed(1)} KB`);
+      - name: Install gh cli & Save WA_SESSION
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          # Session zip చేయండి
+          tar -czf wa_session.tar.gz -C .wwebjs_auth .
+          
+          # Base64 చేయండి — file గా save చేయండి
+          base64 wa_session.tar.gz > session_b64.txt
+          
+          # GitHub CLI తో secret set చేయండి
+          gh secret set WA_SESSION < session_b64.txt
+          
+          echo "✅ WA_SESSION saved successfully!"
