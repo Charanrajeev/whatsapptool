@@ -1,0 +1,35 @@
+name: Save Session
+on:
+  workflow_dispatch:
+
+jobs:
+  save:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Save WA_SESSION
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GH_PAT }}
+          script: |
+            const fs = require('fs');
+            const { execSync } = require('child_process');
+            execSync('tar -czf wa_session.tar.gz -C .wwebjs_auth .');
+            const session = fs.readFileSync('wa_session.tar.gz').toString('base64');
+            const sodium = require('tweetsodium');
+            const { data: key } = await github.rest.actions.getRepoPublicKey({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            });
+            const encrypted = Buffer.from(
+              sodium.seal(Buffer.from(session), Buffer.from(key.key, 'base64'))
+            ).toString('base64');
+            await github.rest.actions.createOrUpdateRepoSecret({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              secret_name: 'WA_SESSION',
+              encrypted_value: encrypted,
+              key_id: key.key_id,
+            });
+            console.log('✅ WA_SESSION saved!');
