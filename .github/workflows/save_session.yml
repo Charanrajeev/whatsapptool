@@ -12,16 +12,26 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          # session folder మాత్రమే తీసుకోండి
-          ls -la .wwebjs_auth/
+          # session folder contents చూడండి
+          echo "=== Session folder ==="
+          ls -la .wwebjs_auth/session/
           
-          # session folder size చూడండి
-          du -sh .wwebjs_auth/
+          # Default file మాత్రమే తీసుకోండి (main session file)
+          echo "=== File sizes ==="
+          du -sh .wwebjs_auth/session/* 2>/dev/null | sort -h
+          
+          # session.json లేదా Default file మాత్రమే zip చేయండి
+          mkdir -p clean_session/session
+          
+          # Important files మాత్రమే copy చేయండి
+          cp .wwebjs_auth/session/Default .wwebjs_auth/session/*.json clean_session/session/ 2>/dev/null || true
+          cp -r .wwebjs_auth/session/Default clean_session/session/ 2>/dev/null || true
+          
+          echo "=== Clean session size ==="
+          du -sh clean_session/
           
           # zip చేయండి
-          tar -czf wa_session.tar.gz -C .wwebjs_auth .
-          
-          # size check చేయండి
+          tar -czf wa_session.tar.gz -C clean_session .
           ls -lh wa_session.tar.gz
           
           # secret set చేయండి
