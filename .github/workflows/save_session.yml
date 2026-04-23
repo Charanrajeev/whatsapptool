@@ -8,17 +8,23 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install gh cli & Save WA_SESSION
+      - name: Save WA_SESSION
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          # Session zip చేయండి
+          # session folder మాత్రమే తీసుకోండి
+          ls -la .wwebjs_auth/
+          
+          # session folder size చూడండి
+          du -sh .wwebjs_auth/
+          
+          # zip చేయండి
           tar -czf wa_session.tar.gz -C .wwebjs_auth .
           
-          # Base64 చేయండి — file గా save చేయండి
-          base64 wa_session.tar.gz > session_b64.txt
+          # size check చేయండి
+          ls -lh wa_session.tar.gz
           
-          # GitHub CLI తో secret set చేయండి
-          gh secret set WA_SESSION < session_b64.txt
+          # secret set చేయండి
+          gh secret set WA_SESSION < <(base64 -w 0 wa_session.tar.gz)
           
-          echo "✅ WA_SESSION saved successfully!"
+          echo "✅ Done!"
