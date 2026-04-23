@@ -1,5 +1,4 @@
 name: Daily WhatsApp Messages
-
 on:
   repository_dispatch:
     types: [send-whatsapp]
@@ -17,26 +16,21 @@ on:
       message_column:
         description: 'Message Column Name'
         required: false
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-
       - name: Install Google Chrome
         run: |
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
-
       - name: Install Dependencies
         run: npm install
-
       - name: Restore WhatsApp Session
         run: |
           if [ -n "${{ secrets.WA_SESSION }}" ]; then
@@ -47,11 +41,12 @@ jobs:
           else
             echo "No WA_SESSION secret found."
           fi
-
       - name: Run Script
         env:
           SHEET_ID: ${{ github.event.client_payload.sheet_id || inputs.sheet_id || secrets.DEFAULT_SHEET_ID }}
           SHEET_NAME: ${{ github.event.client_payload.sheet_name || inputs.sheet_name || 'Sheet1' }}
           PHONE_COLUMN: ${{ github.event.client_payload.phone_column || inputs.phone_column || 'Mobile Number' }}
           MESSAGE_COLUMN: ${{ github.event.client_payload.message_column || inputs.message_column || 'Message' }}
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
         run: node index.js
