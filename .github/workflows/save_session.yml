@@ -7,24 +7,36 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
-      - name: Save WA_SESSION
+
+      - name: Create Session Archive
+        run: |
+          tar -czf wa_session.tar.gz -C .wwebjs_auth .
+          echo "SESSION_B64=$(base64 wa_session.tar.gz | tr -d '\n')" >> $GITHUB_ENV
+
+      - name: Save WA_SESSION Secret
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GH_PAT }}
           script: |
-            const fs = require('fs');
-            const { execSync } = require('child_process');
-            execSync('tar -czf wa_session.tar.gz -C .wwebjs_auth .');
-            const session = fs.readFileSync('wa_session.tar.gz').toString('base64');
-            const sodium = require('tweetsodium');
+            const value = process.env.SESSION_B64;
+            
             const { data: key } = await github.rest.actions.getRepoPublicKey({
               owner: context.repo.owner,
               repo: context.repo.repo,
             });
-            const encrypted = Buffer.from(
-              sodium.seal(Buffer.from(session), Buffer.from(key.key, 'base64'))
-            ).toString('base64');
+            
+            // libsodium use చేస్తాం — tweetsodium వద్దు
+            const _sodium = require('libsodium-wrappers');
+            await _sodium.ready;
+            const sodium = _sodium;
+            
+            const keyBytes = sodium.from_base64(key.key, sodium.base64_variants.ORIGINAL);
+            const msgBytes = sodium.from_string(value);
+            const encrypted = sodium.to_base64(
+              sodium.crypto_box_seal(msgBytes, keyBytes),
+              sodium.base64_variants.ORIGINAL
+            );
+            
             await github.rest.actions.createOrUpdateRepoSecret({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -32,4 +44,7 @@ jobs:
               encrypted_value: encrypted,
               key_id: key.key_id,
             });
-            console.log('✅ WA_SESSION saved!');
+            
+            console.log('✅ WA_SESSION secret saved successfully!');
+        env:
+          SESSION_B64: ${{ env.SESSION_B64 }}
