@@ -1,3 +1,15 @@
-2026/04/27-05:19:17.319 c2f Reusing MANIFEST /home/runner/work/whatsapptool/whatsapptool/.wwebjs_auth/session/Default/Local Storage/leveldb/MANIFEST-000001
-2026/04/27-05:19:17.324 c2f Recovering log #16
-2026/04/27-05:19:17.326 c2f Reusing old log /home/runner/work/whatsapptool/whatsapptool/.wwebjs_auth/session/Default/Local Storage/leveldb/000016.log 
+2026/04/27-09:37:45.715 bff Reusing MANIFEST /home/runner/work/whatsapptool/whatsapptool/.wwebjs_auth/session/Default/Local Storage/leveldb/MANIFEST-000001
+2026/04/27-09:37:45.721 bff Recovering log #16
+2026/04/27-09:37:45.721 bff Reusing old log /home/runner/work/whatsapptool/whatsapptool/.wwebjs_auth/session/Default/Local Storage/leveldb/000016.log 
+2026/04/27-09:46:10.253 c02 Level-0 table #20: started
+2026/04/27-09:46:10.255 c02 Level-0 table #20: 15212 bytes OK
+2026/04/27-09:46:10.256 c02 Delete type=0 #16
+2026/04/27-09:46:10.256 c02 Compacting 4@0 + 1@1 files
+2026/04/27-09:46:10.257 c02 Generated table #21@0: 123 keys, 8556 bytes
+2026/04/27-09:46:10.257 c02 Compacted 4@0 + 1@1 files => 8556 bytes
+2026/04/27-09:46:10.258 c02 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/04/27-09:46:10.258 c02 Delete type=2 #14
+2026/04/27-09:46:10.258 c02 Delete type=2 #11
+2026/04/27-09:46:10.258 c02 Delete type=2 #8
+2026/04/27-09:46:10.258 c02 Delete type=2 #20
+2026/04/27-09:46:10.258 c02 Delete type=2 #17
