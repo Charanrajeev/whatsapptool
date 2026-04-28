@@ -1,935 +1,1626 @@
-2026/04/27-09:37:46.229 bd9 Reusing MANIFEST /home/runner/work/whatsapptool/whatsapptool/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/04/27-09:37:46.233 bd9 Recovering log #7740
-2026/04/27-09:37:46.248 bd9 Reusing old log /home/runner/work/whatsapptool/whatsapptool/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/007740.log 
-2026/04/27-09:37:53.575 bdb Level-0 table #7804: started
-2026/04/27-09:37:53.608 bdb Level-0 table #7804: 1431733 bytes OK
-2026/04/27-09:37:53.612 bdb Delete type=0 #7740
-2026/04/27-09:37:53.951 bdb Compacting 1@0 + 1@1 files
-2026/04/27-09:37:53.961 bdb Generated table #7805@0: 12327 keys, 111401 bytes
-2026/04/27-09:37:53.966 bdb Generated table #7806@0: 5001 keys, 256326 bytes
-2026/04/27-09:37:53.967 bdb Generated table #7807@0: 97 keys, 69410 bytes
-2026/04/27-09:37:53.971 bdb Generated table #7808@0: 2225 keys, 154312 bytes
-2026/04/27-09:37:53.972 bdb Generated table #7809@0: 84 keys, 16821 bytes
-2026/04/27-09:37:53.972 bdb Compacted 1@0 + 1@1 files => 608270 bytes
-2026/04/27-09:37:53.973 bdb compacted to: files[ 0 5 44 22 0 0 0 ]
-2026/04/27-09:37:53.974 bdb Delete type=2 #7746
-2026/04/27-09:37:53.974 bdb Delete type=2 #7804
-2026/04/27-09:37:54.159 be0 Compacting 1@1 + 10@2 files
-2026/04/27-09:37:54.206 be0 Generated table #7810@1: 79024 keys, 2230130 bytes
-2026/04/27-09:37:54.260 be0 Generated table #7811@1: 79341 keys, 2382983 bytes
-2026/04/27-09:37:54.291 be0 Generated table #7812@1: 27205 keys, 2242900 bytes
-2026/04/27-09:37:54.346 be0 Generated table #7813@1: 67419 keys, 2235371 bytes
-2026/04/27-09:37:54.386 be0 Generated table #7814@1: 29511 keys, 2181970 bytes
-2026/04/27-09:37:54.406 be0 Generated table #7815@1: 1485 keys, 2149894 bytes
-2026/04/27-09:37:54.436 be0 Generated table #7816@1: 1530 keys, 2151702 bytes
-2026/04/27-09:37:54.454 be0 Generated table #7817@1: 1398 keys, 2144849 bytes
-2026/04/27-09:37:54.474 be0 Generated table #7818@1: 1337 keys, 2141748 bytes
-2026/04/27-09:37:54.491 be0 Generated table #7819@1: 1404 keys, 2148508 bytes
-2026/04/27-09:37:54.493 be0 Generated table #7820@1: 41 keys, 67334 bytes
-2026/04/27-09:37:54.493 be0 Compacted 1@1 + 10@2 files => 22077389 bytes
-2026/04/27-09:37:54.494 be0 compacted to: files[ 0 4 45 22 0 0 0 ]
-2026/04/27-09:37:54.570 bdb Compacting 1@1 + 11@2 files
-2026/04/27-09:37:54.632 bdb Generated table #7821@1: 32069 keys, 2246382 bytes
-2026/04/27-09:37:54.692 bdb Generated table #7822@1: 25476 keys, 2271556 bytes
-2026/04/27-09:37:54.747 bdb Generated table #7823@1: 25469 keys, 2269380 bytes
-2026/04/27-09:37:54.795 bdb Generated table #7824@1: 25213 keys, 2263422 bytes
-2026/04/27-09:37:54.850 bdb Generated table #7825@1: 21939 keys, 2262661 bytes
-2026/04/27-09:37:54.896 bdb Generated table #7826@1: 25667 keys, 2193636 bytes
-2026/04/27-09:37:54.925 bdb Generated table #7827@1: 19067 keys, 2153517 bytes
-2026/04/27-09:37:54.933 bdb Generated table #7828@1: 525 keys, 2112818 bytes
-2026/04/27-09:37:54.942 bdb Generated table #7829@1: 486 keys, 2111084 bytes
-2026/04/27-09:37:54.956 bdb Generated table #7830@1: 7162 keys, 2123142 bytes
-2026/04/27-09:37:54.956 bdb Compacted 1@1 + 11@2 files => 22007598 bytes
-2026/04/27-09:37:54.957 bdb compacted to: files[ 0 3 44 22 0 0 0 ]
-2026/04/27-09:37:54.958 bdb Delete type=2 #7806
-2026/04/27-09:37:54.958 bdb Delete type=2 #7760
-2026/04/27-09:37:54.958 bdb Delete type=2 #7763
-2026/04/27-09:37:54.958 bdb Delete type=2 #7762
-2026/04/27-09:37:54.958 bdb Delete type=2 #7765
-2026/04/27-09:37:54.958 bdb Delete type=2 #7768
-2026/04/27-09:37:54.958 bdb Delete type=2 #7759
-2026/04/27-09:37:54.958 bdb Delete type=2 #7761
-2026/04/27-09:37:54.958 bdb Delete type=2 #7767
-2026/04/27-09:37:54.958 bdb Delete type=2 #7764
-2026/04/27-09:37:54.958 bdb Delete type=2 #7766
-2026/04/27-09:37:54.971 bdb Compacting 1@1 + 11@2 files
-2026/04/27-09:37:54.987 bdb Generated table #7831@1: 1319 keys, 2151287 bytes
-2026/04/27-09:37:55.003 bdb Generated table #7832@1: 1408 keys, 2146558 bytes
-2026/04/27-09:37:55.025 bdb Generated table #7833@1: 1723 keys, 2143550 bytes
-2026/04/27-09:37:55.043 bdb Generated table #7834@1: 2257 keys, 2143541 bytes
-2026/04/27-09:37:55.058 bdb Generated table #7835@1: 2113 keys, 2146116 bytes
-2026/04/27-09:37:55.068 bdb Generated table #7836@1: 687 keys, 2136712 bytes
-2026/04/27-09:37:55.081 bdb Generated table #7837@1: 1705 keys, 2142248 bytes
-2026/04/27-09:37:55.094 bdb Generated table #7838@1: 1509 keys, 2136906 bytes
-2026/04/27-09:37:55.110 bdb Generated table #7839@1: 1956 keys, 2144265 bytes
-2026/04/27-09:37:55.125 bdb Generated table #7840@1: 2363 keys, 2146686 bytes
-2026/04/27-09:37:55.132 bdb Generated table #7841@1: 4000 keys, 636924 bytes
-2026/04/27-09:37:55.132 bdb Compacted 1@1 + 11@2 files => 22074793 bytes
-2026/04/27-09:37:55.133 bdb compacted to: files[ 0 2 44 22 0 0 0 ]
-2026/04/27-09:37:55.134 bdb Delete type=2 #7772
-2026/04/27-09:37:55.134 bdb Delete type=2 #7775
-2026/04/27-09:37:55.134 bdb Delete type=2 #7808
-2026/04/27-09:37:55.134 bdb Delete type=2 #7791
-2026/04/27-09:37:55.134 bdb Delete type=2 #7778
-2026/04/27-09:37:55.134 bdb Delete type=2 #7807
-2026/04/27-09:37:55.134 bdb Delete type=2 #7797
-2026/04/27-09:37:55.134 bdb Delete type=2 #7795
-2026/04/27-09:37:55.134 bdb Delete type=2 #7800
-2026/04/27-09:37:55.135 bdb Delete type=2 #7796
-2026/04/27-09:37:55.135 bdb Delete type=2 #7769
-2026/04/27-09:37:55.135 bdb Delete type=2 #7776
-2026/04/27-09:37:55.135 bdb Delete type=2 #7801
-2026/04/27-09:37:55.135 bdb Delete type=2 #7771
-2026/04/27-09:37:55.135 bdb Delete type=2 #7792
-2026/04/27-09:37:55.135 bdb Delete type=2 #7798
-2026/04/27-09:37:55.135 bdb Delete type=2 #7777
-2026/04/27-09:37:55.135 bdb Delete type=2 #7779
-2026/04/27-09:37:55.135 bdb Delete type=2 #7793
-2026/04/27-09:37:55.135 bdb Delete type=2 #7794
-2026/04/27-09:37:55.135 bdb Delete type=2 #7770
-2026/04/27-09:37:55.135 bdb Delete type=2 #7774
-2026/04/27-09:37:55.135 bdb Delete type=2 #7799
-2026/04/27-09:37:55.135 bdb Delete type=2 #7773
-2026/04/27-09:37:57.089 bdb Compacting 1@1 + 1@2 files
-2026/04/27-09:37:57.116 bdb Generated table #7842@1: 7935 keys, 810655 bytes
-2026/04/27-09:37:57.116 bdb Compacted 1@1 + 1@2 files => 810655 bytes
-2026/04/27-09:37:57.116 bdb compacted to: files[ 0 1 44 22 0 0 0 ]
-2026/04/27-09:38:01.061 bdb Level-0 table #7844: started
-2026/04/27-09:38:01.080 bdb Level-0 table #7844: 1763158 bytes OK
-2026/04/27-09:38:01.083 bdb Delete type=2 #7809
-2026/04/27-09:38:01.083 bdb Delete type=0 #7803
-2026/04/27-09:38:01.083 bdb Delete type=2 #7728
-2026/04/27-09:38:01.147 bd9 Compacting 1@0 + 1@1 files
-2026/04/27-09:38:01.180 bd9 Generated table #7845@0: 19515 keys, 199428 bytes
-2026/04/27-09:38:01.185 bd9 Generated table #7846@0: 1741 keys, 213189 bytes
-2026/04/27-09:38:01.188 bd9 Generated table #7847@0: 144 keys, 346869 bytes
-2026/04/27-09:38:01.196 bd9 Generated table #7848@0: 2247 keys, 559040 bytes
-2026/04/27-09:38:01.198 bd9 Generated table #7849@0: 184 keys, 42574 bytes
-2026/04/27-09:38:01.198 bd9 Compacted 1@0 + 1@1 files => 1361100 bytes
-2026/04/27-09:38:01.199 bd9 compacted to: files[ 0 5 44 22 0 0 0 ]
-2026/04/27-09:38:01.273 bdb Compacting 1@1 + 10@2 files
-2026/04/27-09:38:01.292 bdb Generated table #7850@1: 1317 keys, 2148871 bytes
-2026/04/27-09:38:01.314 bdb Generated table #7851@1: 1401 keys, 2145357 bytes
-2026/04/27-09:38:01.336 bdb Generated table #7852@1: 1702 keys, 2145327 bytes
-2026/04/27-09:38:01.358 bdb Generated table #7853@1: 2248 keys, 2144690 bytes
-2026/04/27-09:38:01.378 bdb Generated table #7854@1: 2175 keys, 2150902 bytes
-2026/04/27-09:38:01.395 bdb Generated table #7855@1: 712 keys, 2129538 bytes
-2026/04/27-09:38:01.417 bdb Generated table #7856@1: 1512 keys, 2138936 bytes
-2026/04/27-09:38:01.433 bdb Generated table #7857@1: 1696 keys, 2179866 bytes
-2026/04/27-09:38:01.446 bdb Generated table #7858@1: 1648 keys, 2137325 bytes
-2026/04/27-09:38:01.462 bdb Generated table #7859@1: 2342 keys, 2146789 bytes
-2026/04/27-09:38:01.465 bdb Generated table #7860@1: 414 keys, 274714 bytes
-2026/04/27-09:38:01.465 bdb Compacted 1@1 + 10@2 files => 21742315 bytes
-2026/04/27-09:38:01.465 bdb compacted to: files[ 0 4 45 22 0 0 0 ]
-2026/04/27-09:38:01.466 bdb Delete type=2 #7835
-2026/04/27-09:38:01.467 bdb Delete type=2 #7838
-2026/04/27-09:38:01.467 bdb Delete type=2 #7840
-2026/04/27-09:38:01.467 bdb Delete type=2 #7836
-2026/04/27-09:38:01.467 bdb Delete type=2 #7833
-2026/04/27-09:38:01.467 bdb Delete type=2 #7831
-2026/04/27-09:38:01.467 bdb Delete type=2 #7839
-2026/04/27-09:38:01.467 bdb Delete type=2 #7834
-2026/04/27-09:38:01.467 bdb Delete type=2 #7832
-2026/04/27-09:38:01.467 bdb Delete type=2 #7805
-2026/04/27-09:38:01.467 bdb Delete type=2 #7844
-2026/04/27-09:38:01.467 bdb Delete type=2 #7847
-2026/04/27-09:38:01.467 bdb Delete type=2 #7837
-2026/04/27-09:38:01.491 bdb Compacting 1@1 + 11@2 files
-2026/04/27-09:38:01.537 bdb Generated table #7861@1: 29439 keys, 2215015 bytes
-2026/04/27-09:38:01.588 bdb Generated table #7862@1: 25130 keys, 2272352 bytes
-2026/04/27-09:38:01.639 bdb Generated table #7863@1: 24027 keys, 2273413 bytes
-2026/04/27-09:38:01.699 bdb Generated table #7864@1: 26644 keys, 2262836 bytes
-2026/04/27-09:38:01.750 bdb Generated table #7865@1: 23362 keys, 2267746 bytes
-2026/04/27-09:38:01.793 bdb Generated table #7866@1: 23194 keys, 2198992 bytes
-2026/04/27-09:38:01.834 bdb Generated table #7867@1: 27871 keys, 2195774 bytes
-2026/04/27-09:38:01.843 bdb Generated table #7868@1: 519 keys, 2114820 bytes
-2026/04/27-09:38:01.851 bdb Generated table #7869@1: 543 keys, 2112462 bytes
-2026/04/27-09:38:01.859 bdb Generated table #7870@1: 454 keys, 2112017 bytes
-2026/04/27-09:38:01.871 bdb Generated table #7871@1: 7375 keys, 1123500 bytes
-2026/04/27-09:38:01.872 bdb Compacted 1@1 + 11@2 files => 23148927 bytes
-2026/04/27-09:38:01.872 bdb compacted to: files[ 0 3 45 22 0 0 0 ]
-2026/04/27-09:38:01.873 bdb Delete type=2 #7825
-2026/04/27-09:38:01.873 bdb Delete type=2 #7841
-2026/04/27-09:38:01.873 bdb Delete type=2 #7830
-2026/04/27-09:38:01.873 bdb Delete type=2 #7826
-2026/04/27-09:38:01.873 bdb Delete type=2 #7848
-2026/04/27-09:38:01.873 bdb Delete type=2 #7828
-2026/04/27-09:38:01.873 bdb Delete type=2 #7827
-2026/04/27-09:38:01.873 bdb Delete type=2 #7824
-2026/04/27-09:38:01.873 bdb Delete type=2 #7821
-2026/04/27-09:38:01.873 bdb Delete type=2 #7823
-2026/04/27-09:38:01.874 bdb Delete type=2 #7822
-2026/04/27-09:38:01.874 bdb Delete type=2 #7829
-2026/04/27-09:38:01.888 bdb Compacting 1@1 + 10@2 files
-2026/04/27-09:38:01.951 bdb Generated table #7872@1: 78158 keys, 2227922 bytes
-2026/04/27-09:38:02.016 bdb Generated table #7873@1: 80735 keys, 2373869 bytes
-2026/04/27-09:38:02.064 bdb Generated table #7874@1: 26753 keys, 2254541 bytes
-2026/04/27-09:38:02.140 bdb Generated table #7875@1: 66975 keys, 2235615 bytes
-2026/04/27-09:38:02.183 bdb Generated table #7876@1: 30765 keys, 2183989 bytes
-2026/04/27-09:38:02.200 bdb Generated table #7877@1: 1470 keys, 2148974 bytes
-2026/04/27-09:38:02.217 bdb Generated table #7878@1: 1530 keys, 2149656 bytes
-2026/04/27-09:38:02.234 bdb Generated table #7879@1: 1406 keys, 2145665 bytes
-2026/04/27-09:38:02.251 bdb Generated table #7880@1: 1298 keys, 2140668 bytes
-2026/04/27-09:38:02.268 bdb Generated table #7881@1: 1416 keys, 2148745 bytes
-2026/04/27-09:38:02.270 bdb Generated table #7882@1: 93 keys, 161635 bytes
-2026/04/27-09:38:02.270 bdb Compacted 1@1 + 10@2 files => 22171279 bytes
-2026/04/27-09:38:02.271 bdb compacted to: files[ 0 2 46 22 0 0 0 ]
-2026/04/27-09:38:02.458 bd9 Compacting 1@1 + 10@2 files
-2026/04/27-09:38:02.469 bd9 Generated table #7883@1: 18896 keys, 191741 bytes
-2026/04/27-09:38:02.535 bd9 Generated table #7884@1: 91316 keys, 2241675 bytes
-2026/04/27-09:38:02.599 bd9 Generated table #7885@1: 91998 keys, 2239731 bytes
-2026/04/27-09:38:02.666 bd9 Generated table #7886@1: 91309 keys, 2239385 bytes
-2026/04/27-09:38:02.721 bd9 Generated table #7887@1: 91713 keys, 2239815 bytes
-2026/04/27-09:38:02.795 bd9 Generated table #7888@1: 92556 keys, 2241582 bytes
-2026/04/27-09:38:02.867 bd9 Generated table #7889@1: 93694 keys, 2241917 bytes
-2026/04/27-09:38:02.940 bd9 Generated table #7890@1: 91438 keys, 2241103 bytes
-2026/04/27-09:38:03.010 bd9 Generated table #7891@1: 91113 keys, 2238670 bytes
-2026/04/27-09:38:03.083 bd9 Generated table #7892@1: 91598 keys, 2240992 bytes
-2026/04/27-09:38:03.154 bd9 Generated table #7893@1: 94622 keys, 2244761 bytes
-2026/04/27-09:38:03.155 bd9 Generated table #7894@1: 417 keys, 10348 bytes
-2026/04/27-09:38:03.155 bd9 Compacted 1@1 + 10@2 files => 22611720 bytes
-2026/04/27-09:38:03.156 bd9 compacted to: files[ 0 1 48 22 0 0 0 ]
-2026/04/27-09:38:03.157 bd9 Delete type=2 #7814
-2026/04/27-09:38:03.157 bd9 Delete type=2 #7812
-2026/04/27-09:38:03.157 bd9 Delete type=2 #7817
-2026/04/27-09:38:03.157 bd9 Delete type=2 #7815
-2026/04/27-09:38:03.157 bd9 Delete type=2 #7819
-2026/04/27-09:38:03.157 bd9 Delete type=2 #7816
-2026/04/27-09:38:03.157 bd9 Delete type=2 #7811
-2026/04/27-09:38:03.157 bd9 Delete type=2 #7810
-2026/04/27-09:38:03.157 bd9 Delete type=2 #7846
-2026/04/27-09:38:03.157 bd9 Delete type=2 #7813
-2026/04/27-09:38:03.158 bd9 Delete type=2 #7818
-2026/04/27-09:38:03.852 bdb Compacting 1@2 + 10@3 files
-2026/04/27-09:38:03.883 bdb Generated table #7895@2: 1471 keys, 2117510 bytes
-2026/04/27-09:38:03.911 bdb Generated table #7896@2: 6579 keys, 2127490 bytes
-2026/04/27-09:38:03.932 bdb Generated table #7897@2: 2903 keys, 2123028 bytes
-2026/04/27-09:38:03.943 bdb Generated table #7898@2: 302 keys, 2110290 bytes
-2026/04/27-09:38:03.962 bdb Generated table #7899@2: 2559 keys, 2119828 bytes
-2026/04/27-09:38:03.976 bdb Generated table #7900@2: 2054 keys, 2115082 bytes
-2026/04/27-09:38:03.994 bdb Generated table #7901@2: 15861 keys, 2140490 bytes
-2026/04/27-09:38:04.039 bdb Generated table #7902@2: 101625 keys, 2252399 bytes
-2026/04/27-09:38:04.082 bdb Generated table #7903@2: 92260 keys, 2242332 bytes
-2026/04/27-09:38:04.124 bdb Generated table #7904@2: 91234 keys, 2232272 bytes
-2026/04/27-09:38:04.124 bdb Compacted 1@2 + 10@3 files => 21580721 bytes
-2026/04/27-09:38:04.124 bdb compacted to: files[ 0 1 47 22 0 0 0 ]
-2026/04/27-09:38:04.125 bdb Delete type=2 #7782
-2026/04/27-09:38:04.125 bdb Delete type=2 #7757
-2026/04/27-09:38:04.125 bdb Delete type=2 #7780
-2026/04/27-09:38:04.125 bdb Delete type=2 #7756
-2026/04/27-09:38:04.125 bdb Delete type=2 #7785
-2026/04/27-09:38:04.125 bdb Delete type=2 #7754
-2026/04/27-09:38:04.125 bdb Delete type=2 #7748
-2026/04/27-09:38:04.125 bdb Delete type=2 #7781
-2026/04/27-09:38:04.125 bdb Delete type=2 #7845
-2026/04/27-09:38:04.125 bdb Delete type=2 #7755
-2026/04/27-09:38:04.125 bdb Delete type=2 #7783
-2026/04/27-09:38:04.125 bdb Delete type=2 #7883
-2026/04/27-09:38:04.125 bdb Delete type=2 #7787
-2026/04/27-09:38:04.125 bdb Delete type=2 #7784
-2026/04/27-09:38:04.125 bdb Delete type=2 #7789
-2026/04/27-09:38:04.125 bdb Delete type=2 #7753
-2026/04/27-09:38:04.125 bdb Delete type=2 #7786
-2026/04/27-09:38:04.125 bdb Delete type=2 #7750
-2026/04/27-09:38:04.126 bdb Delete type=2 #7788
-2026/04/27-09:38:04.126 bdb Delete type=2 #7749
-2026/04/27-09:38:04.126 bdb Delete type=2 #7752
-2026/04/27-09:38:04.126 bdb Delete type=2 #7751
-2026/04/27-09:38:04.958 bdb Compacting 1@2 + 7@3 files
-2026/04/27-09:38:05.017 bdb Generated table #7905@2: 93426 keys, 2243620 bytes
-2026/04/27-09:38:05.059 bdb Generated table #7906@2: 93764 keys, 2243830 bytes
-2026/04/27-09:38:05.101 bdb Generated table #7907@2: 91991 keys, 2240773 bytes
-2026/04/27-09:38:05.142 bdb Generated table #7908@2: 90238 keys, 2239691 bytes
-2026/04/27-09:38:05.184 bdb Generated table #7909@2: 92582 keys, 2241538 bytes
-2026/04/27-09:38:05.226 bdb Generated table #7910@2: 92033 keys, 2240142 bytes
-2026/04/27-09:38:05.266 bdb Generated table #7911@2: 91364 keys, 2239714 bytes
-2026/04/27-09:38:05.284 bdb Generated table #7912@2: 38646 keys, 942534 bytes
-2026/04/27-09:38:05.284 bdb Compacted 1@2 + 7@3 files => 16631842 bytes
-2026/04/27-09:38:05.285 bdb compacted to: files[ 0 1 46 23 0 0 0 ]
-2026/04/27-09:38:05.286 bdb Delete type=2 #7726
-2026/04/27-09:38:05.286 bdb Delete type=2 #7722
-2026/04/27-09:38:05.286 bdb Delete type=2 #7723
-2026/04/27-09:38:05.286 bdb Delete type=2 #7724
-2026/04/27-09:38:05.286 bdb Delete type=2 #7725
-2026/04/27-09:38:05.286 bdb Delete type=2 #7727
-2026/04/27-09:38:05.286 bdb Delete type=2 #7721
-2026/04/27-09:38:05.286 bdb Delete type=2 #7884
-2026/04/27-09:38:09.670 bdb Compacting 1@1 + 1@2 files
-2026/04/27-09:38:09.684 bdb Generated table #7913@1: 8009 keys, 826070 bytes
-2026/04/27-09:38:09.684 bdb Compacted 1@1 + 1@2 files => 826070 bytes
-2026/04/27-09:38:09.684 bdb compacted to: files[ 0 0 46 23 0 0 0 ]
-2026/04/27-09:38:09.685 bdb Delete type=2 #7842
-2026/04/27-09:38:09.685 bdb Delete type=2 #7849
-2026/04/27-09:38:10.875 bd9 Level-0 table #7915: started
-2026/04/27-09:38:10.894 bd9 Level-0 table #7915: 1452397 bytes OK
-2026/04/27-09:38:10.895 bd9 Delete type=0 #7843
-2026/04/27-09:38:10.899 bdb Compacting 1@0 + 0@1 files
-2026/04/27-09:38:10.912 bdb Generated table #7916@0: 14185 keys, 206221 bytes
-2026/04/27-09:38:10.913 bdb Generated table #7917@0: 657 keys, 21679 bytes
-2026/04/27-09:38:10.917 bdb Generated table #7918@0: 1541 keys, 128331 bytes
-2026/04/27-09:38:10.920 bdb Generated table #7919@0: 1087 keys, 102831 bytes
-2026/04/27-09:38:10.920 bdb Compacted 1@0 + 0@1 files => 459062 bytes
-2026/04/27-09:38:10.920 bdb compacted to: files[ 0 4 46 23 0 0 0 ]
-2026/04/27-09:38:10.973 bdb Compacting 1@1 + 4@2 files
-2026/04/27-09:38:11.033 bdb Generated table #7920@1: 80871 keys, 2377573 bytes
-2026/04/27-09:38:11.074 bdb Generated table #7921@1: 26759 keys, 2254504 bytes
-2026/04/27-09:38:11.127 bdb Generated table #7922@1: 66934 keys, 2235324 bytes
-2026/04/27-09:38:11.153 bdb Generated table #7923@1: 30503 keys, 2181200 bytes
-2026/04/27-09:38:11.153 bdb Compacted 1@1 + 4@2 files => 9048601 bytes
-2026/04/27-09:38:11.154 bdb compacted to: files[ 0 3 46 23 0 0 0 ]
-2026/04/27-09:38:11.155 bdb Delete type=2 #7875
-2026/04/27-09:38:11.155 bdb Delete type=2 #7874
-2026/04/27-09:38:11.155 bdb Delete type=2 #7915
-2026/04/27-09:38:11.155 bdb Delete type=2 #7876
-2026/04/27-09:38:11.155 bdb Delete type=2 #7873
-2026/04/27-09:38:11.155 bdb Delete type=2 #7917
-2026/04/27-09:38:11.258 bdb Compacting 1@1 + 11@2 files
-2026/04/27-09:38:11.271 bdb Generated table #7924@1: 714 keys, 2128505 bytes
-2026/04/27-09:38:11.285 bdb Generated table #7925@1: 1750 keys, 2140808 bytes
-2026/04/27-09:38:11.296 bdb Generated table #7926@1: 1520 keys, 2136185 bytes
-2026/04/27-09:38:11.308 bdb Generated table #7927@1: 2004 keys, 2144869 bytes
-2026/04/27-09:38:11.326 bdb Generated table #7928@1: 2357 keys, 2149108 bytes
-2026/04/27-09:38:11.364 bdb Generated table #7929@1: 30391 keys, 2220135 bytes
-2026/04/27-09:38:11.409 bdb Generated table #7930@1: 25235 keys, 2272572 bytes
-2026/04/27-09:38:11.460 bdb Generated table #7931@1: 24306 keys, 2272748 bytes
-2026/04/27-09:38:11.500 bdb Generated table #7932@1: 26230 keys, 2263054 bytes
-2026/04/27-09:38:11.545 bdb Generated table #7933@1: 22286 keys, 2161184 bytes
-2026/04/27-09:38:11.545 bdb Compacted 1@1 + 11@2 files => 21889168 bytes
-2026/04/27-09:38:11.546 bdb compacted to: files[ 0 2 45 23 0 0 0 ]
-2026/04/27-09:38:11.547 bdb Delete type=2 #7863
-2026/04/27-09:38:11.547 bdb Delete type=2 #7862
-2026/04/27-09:38:11.547 bdb Delete type=2 #7856
-2026/04/27-09:38:11.547 bdb Delete type=2 #7865
-2026/04/27-09:38:11.547 bdb Delete type=2 #7857
-2026/04/27-09:38:11.547 bdb Delete type=2 #7859
-2026/04/27-09:38:11.547 bdb Delete type=2 #7861
-2026/04/27-09:38:11.547 bdb Delete type=2 #7855
-2026/04/27-09:38:11.547 bdb Delete type=2 #7918
-2026/04/27-09:38:11.547 bdb Delete type=2 #7860
-2026/04/27-09:38:11.548 bdb Delete type=2 #7858
-2026/04/27-09:38:11.548 bdb Delete type=2 #7864
-2026/04/27-09:38:11.575 bdb Compacting 1@1 + 12@2 files
-2026/04/27-09:38:11.584 bdb Generated table #7934@1: 10785 keys, 132129 bytes
-2026/04/27-09:38:11.653 bdb Generated table #7935@1: 92353 keys, 2240862 bytes
-2026/04/27-09:38:11.726 bdb Generated table #7936@1: 91233 keys, 2239262 bytes
-2026/04/27-09:38:11.783 bdb Generated table #7937@1: 91618 keys, 2240636 bytes
-2026/04/27-09:38:11.839 bdb Generated table #7938@1: 92660 keys, 2240224 bytes
-2026/04/27-09:38:11.895 bdb Generated table #7939@1: 93647 keys, 2241297 bytes
-2026/04/27-09:38:11.970 bdb Generated table #7940@1: 91506 keys, 2240995 bytes
-2026/04/27-09:38:12.025 bdb Generated table #7941@1: 91094 keys, 2239795 bytes
-2026/04/27-09:38:12.077 bdb Generated table #7942@1: 90955 keys, 2240710 bytes
-2026/04/27-09:38:12.132 bdb Generated table #7943@1: 95221 keys, 2244403 bytes
-2026/04/27-09:38:12.185 bdb Generated table #7944@1: 78112 keys, 2227846 bytes
-2026/04/27-09:38:12.191 bdb Generated table #7945@1: 7830 keys, 184733 bytes
-2026/04/27-09:38:12.191 bdb Compacted 1@1 + 12@2 files => 22712892 bytes
-2026/04/27-09:38:12.192 bdb compacted to: files[ 0 1 45 23 0 0 0 ]
-2026/04/27-09:38:12.889 be0 Compacting 1@1 + 7@2 files
-2026/04/27-09:38:12.943 be0 Generated table #7946@1: 23176 keys, 2197842 bytes
-2026/04/27-09:38:12.984 be0 Generated table #7947@1: 27911 keys, 2199012 bytes
-2026/04/27-09:38:12.994 be0 Generated table #7948@1: 519 keys, 2114820 bytes
-2026/04/27-09:38:13.002 be0 Generated table #7949@1: 543 keys, 2112462 bytes
-2026/04/27-09:38:13.012 be0 Generated table #7950@1: 454 keys, 2112017 bytes
-2026/04/27-09:38:13.050 be0 Generated table #7951@1: 15411 keys, 1962945 bytes
-2026/04/27-09:38:13.050 be0 Compacted 1@1 + 7@2 files => 12699098 bytes
-2026/04/27-09:38:13.050 be0 compacted to: files[ 0 0 44 23 0 0 0 ]
-2026/04/27-09:38:13.051 be0 Delete type=2 #7890
-2026/04/27-09:38:13.051 be0 Delete type=2 #7892
-2026/04/27-09:38:13.052 be0 Delete type=2 #7891
-2026/04/27-09:38:13.052 be0 Delete type=2 #7887
-2026/04/27-09:38:13.052 be0 Delete type=2 #7872
-2026/04/27-09:38:13.052 be0 Delete type=2 #7893
-2026/04/27-09:38:13.052 be0 Delete type=2 #7886
-2026/04/27-09:38:13.052 be0 Delete type=2 #7885
-2026/04/27-09:38:13.052 be0 Delete type=2 #7888
-2026/04/27-09:38:13.052 be0 Delete type=2 #7758
-2026/04/27-09:38:13.052 be0 Delete type=2 #7916
-2026/04/27-09:38:13.052 be0 Delete type=2 #7894
-2026/04/27-09:38:13.052 be0 Delete type=2 #7889
-2026/04/27-09:38:39.344 bd9 Level-0 table #7953: started
-2026/04/27-09:38:39.357 bd9 Level-0 table #7953: 1036693 bytes OK
-2026/04/27-09:38:39.359 bd9 Delete type=2 #7869
-2026/04/27-09:38:39.359 bd9 Delete type=2 #7913
-2026/04/27-09:38:39.359 bd9 Delete type=2 #7870
-2026/04/27-09:38:39.359 bd9 Delete type=2 #7867
-2026/04/27-09:38:39.359 bd9 Delete type=2 #7871
-2026/04/27-09:38:39.359 bd9 Delete type=0 #7914
-2026/04/27-09:38:39.359 bd9 Delete type=2 #7868
-2026/04/27-09:38:39.359 bd9 Delete type=2 #7866
-2026/04/27-09:38:39.359 bd9 Delete type=2 #7919
-2026/04/27-09:38:49.784 be1 Compacting 1@0 + 0@1 files
-2026/04/27-09:38:49.794 be1 Generated table #7954@0: 9213 keys, 90633 bytes
-2026/04/27-09:38:49.795 be1 Generated table #7955@0: 573 keys, 30030 bytes
-2026/04/27-09:38:49.800 be1 Generated table #7956@0: 2650 keys, 183664 bytes
-2026/04/27-09:38:49.801 be1 Generated table #7957@0: 13 keys, 3305 bytes
-2026/04/27-09:38:49.801 be1 Compacted 1@0 + 0@1 files => 307632 bytes
-2026/04/27-09:38:49.801 be1 compacted to: files[ 0 4 44 23 0 0 0 ]
-2026/04/27-09:39:01.115 bdb Compacting 1@1 + 4@2 files
-2026/04/27-09:39:01.157 bdb Generated table #7958@1: 81045 keys, 2372256 bytes
-2026/04/27-09:39:01.188 bdb Generated table #7959@1: 26686 keys, 2260184 bytes
-2026/04/27-09:39:01.232 bdb Generated table #7960@1: 66830 keys, 2234260 bytes
-2026/04/27-09:39:01.258 bdb Generated table #7961@1: 30725 keys, 2183548 bytes
-2026/04/27-09:39:01.259 bdb Generated table #7962@1: 5 keys, 8932 bytes
-2026/04/27-09:39:01.259 bdb Compacted 1@1 + 4@2 files => 9059180 bytes
-2026/04/27-09:39:01.260 bdb compacted to: files[ 0 3 45 23 0 0 0 ]
-2026/04/27-09:39:01.260 bdb Delete type=2 #7953
-2026/04/27-09:39:01.260 bdb Delete type=2 #7923
-2026/04/27-09:39:01.260 bdb Delete type=2 #7922
-2026/04/27-09:39:01.260 bdb Delete type=2 #7920
-2026/04/27-09:39:01.260 bdb Delete type=2 #7955
-2026/04/27-09:39:01.260 bdb Delete type=2 #7921
-2026/04/27-09:39:14.171 be0 Compacting 1@1 + 11@2 files
-2026/04/27-09:39:14.187 be0 Generated table #7963@1: 19233 keys, 202412 bytes
-2026/04/27-09:39:14.239 be0 Generated table #7964@1: 92329 keys, 2240436 bytes
-2026/04/27-09:39:14.293 be0 Generated table #7965@1: 91191 keys, 2238833 bytes
-2026/04/27-09:39:14.360 be0 Generated table #7966@1: 91610 keys, 2240180 bytes
-2026/04/27-09:39:14.481 be0 Generated table #7967@1: 92652 keys, 2241595 bytes
-2026/04/27-09:39:14.539 be0 Generated table #7968@1: 93630 keys, 2241878 bytes
-2026/04/27-09:39:14.581 be0 Generated table #7969@1: 91423 keys, 2239754 bytes
-2026/04/27-09:39:14.623 be0 Generated table #7970@1: 91025 keys, 2240384 bytes
-2026/04/27-09:39:14.666 be0 Generated table #7971@1: 91012 keys, 2239307 bytes
-2026/04/27-09:39:14.710 be0 Generated table #7972@1: 95240 keys, 2245633 bytes
-2026/04/27-09:39:14.747 be0 Generated table #7973@1: 78049 keys, 2220375 bytes
-2026/04/27-09:39:14.747 be0 Compacted 1@1 + 11@2 files => 22590787 bytes
-2026/04/27-09:39:14.747 be0 compacted to: files[ 0 2 45 23 0 0 0 ]
-2026/04/27-09:39:14.748 be0 Delete type=2 #7939
-2026/04/27-09:39:14.748 be0 Delete type=2 #7941
-2026/04/27-09:39:14.748 be0 Delete type=2 #7940
-2026/04/27-09:39:14.748 be0 Delete type=2 #7944
-2026/04/27-09:39:14.748 be0 Delete type=2 #7954
-2026/04/27-09:39:14.748 be0 Delete type=2 #7935
-2026/04/27-09:39:14.748 be0 Delete type=2 #7937
-2026/04/27-09:39:14.748 be0 Delete type=2 #7943
-2026/04/27-09:39:14.748 be0 Delete type=2 #7942
-2026/04/27-09:39:14.748 be0 Delete type=2 #7936
-2026/04/27-09:39:14.748 be0 Delete type=2 #7934
-2026/04/27-09:39:14.748 be0 Delete type=2 #7938
-2026/04/27-09:40:34.215 bdb Compacting 1@1 + 10@2 files
-2026/04/27-09:40:34.229 bdb Generated table #7974@1: 1521 keys, 2137854 bytes
-2026/04/27-09:40:34.244 bdb Generated table #7975@1: 2004 keys, 2144869 bytes
-2026/04/27-09:40:34.267 bdb Generated table #7976@1: 2357 keys, 2149108 bytes
-2026/04/27-09:40:34.301 bdb Generated table #7977@1: 30392 keys, 2220163 bytes
-2026/04/27-09:40:34.350 bdb Generated table #7978@1: 25224 keys, 2271757 bytes
-2026/04/27-09:40:34.395 bdb Generated table #7979@1: 24296 keys, 2272156 bytes
-2026/04/27-09:40:34.494 bdb Generated table #7980@1: 26229 keys, 2263423 bytes
-2026/04/27-09:40:34.559 bdb Generated table #7981@1: 23625 keys, 2265760 bytes
-2026/04/27-09:40:34.590 bdb Generated table #7982@1: 23140 keys, 2201206 bytes
-2026/04/27-09:40:34.614 bdb Generated table #7983@1: 26655 keys, 2096075 bytes
-2026/04/27-09:40:34.614 bdb Compacted 1@1 + 10@2 files => 22022371 bytes
-2026/04/27-09:40:34.615 bdb compacted to: files[ 0 1 45 23 0 0 0 ]
-2026/04/27-09:40:34.615 bdb Delete type=2 #7932
-2026/04/27-09:40:34.615 bdb Delete type=2 #7933
-2026/04/27-09:40:34.615 bdb Delete type=2 #7947
-2026/04/27-09:40:34.615 bdb Delete type=2 #7926
-2026/04/27-09:40:34.615 bdb Delete type=2 #7930
-2026/04/27-09:40:34.616 bdb Delete type=2 #7928
-2026/04/27-09:40:34.616 bdb Delete type=2 #7931
-2026/04/27-09:40:34.616 bdb Delete type=2 #7946
-2026/04/27-09:40:34.616 bdb Delete type=2 #7929
-2026/04/27-09:40:34.616 bdb Delete type=2 #7927
-2026/04/27-09:40:34.616 bdb Delete type=2 #7956
-2026/04/27-09:41:14.279 bdb Compacting 1@2 + 10@3 files
-2026/04/27-09:41:14.305 bdb Generated table #7984@2: 1350 keys, 2117445 bytes
-2026/04/27-09:41:14.331 bdb Generated table #7985@2: 6551 keys, 2128240 bytes
-2026/04/27-09:41:14.345 bdb Generated table #7986@2: 2801 keys, 2117470 bytes
-2026/04/27-09:41:14.362 bdb Generated table #7987@2: 302 keys, 2110362 bytes
-2026/04/27-09:41:14.376 bdb Generated table #7988@2: 2559 keys, 2119423 bytes
-2026/04/27-09:41:14.391 bdb Generated table #7989@2: 2109 keys, 2114631 bytes
-2026/04/27-09:41:14.417 bdb Generated table #7990@2: 14958 keys, 2138079 bytes
-2026/04/27-09:41:14.475 bdb Generated table #7991@2: 102198 keys, 2255204 bytes
-2026/04/27-09:41:14.528 bdb Generated table #7992@2: 92062 keys, 2239934 bytes
-2026/04/27-09:41:14.570 bdb Generated table #7993@2: 91659 keys, 2240042 bytes
-2026/04/27-09:41:14.571 bdb Generated table #7994@2: 849 keys, 21599 bytes
-2026/04/27-09:41:14.571 bdb Compacted 1@2 + 10@3 files => 21602429 bytes
-2026/04/27-09:41:14.571 bdb compacted to: files[ 0 1 44 24 0 0 0 ]
-2026/04/27-09:41:14.572 bdb Delete type=2 #7899
-2026/04/27-09:41:14.572 bdb Delete type=2 #7901
-2026/04/27-09:41:14.572 bdb Delete type=2 #7902
-2026/04/27-09:41:14.572 bdb Delete type=2 #7904
-2026/04/27-09:41:14.572 bdb Delete type=2 #7897
-2026/04/27-09:41:14.572 bdb Delete type=2 #7895
-2026/04/27-09:41:14.572 bdb Delete type=2 #7896
-2026/04/27-09:41:14.572 bdb Delete type=2 #7963
-2026/04/27-09:41:14.572 bdb Delete type=2 #7900
-2026/04/27-09:41:14.572 bdb Delete type=2 #7903
-2026/04/27-09:41:14.572 bdb Delete type=2 #7898
-2026/04/27-09:41:54.324 bdb Compacting 1@2 + 13@3 files
-2026/04/27-09:41:54.378 bdb Generated table #7995@2: 93232 keys, 2243233 bytes
-2026/04/27-09:41:54.435 bdb Generated table #7996@2: 93828 keys, 2242255 bytes
-2026/04/27-09:41:54.506 bdb Generated table #7997@2: 91898 keys, 2239915 bytes
-2026/04/27-09:41:54.577 bdb Generated table #7998@2: 90147 keys, 2237744 bytes
-2026/04/27-09:41:54.648 bdb Generated table #7999@2: 92571 keys, 2241012 bytes
-2026/04/27-09:41:54.690 bdb Generated table #8000@2: 92027 keys, 2240635 bytes
-2026/04/27-09:41:54.732 bdb Generated table #8001@2: 91316 keys, 2240314 bytes
-2026/04/27-09:41:54.772 bdb Generated table #8002@2: 92646 keys, 2240402 bytes
-2026/04/27-09:41:54.790 bdb Generated table #8003@2: 42770 keys, 1056164 bytes
-2026/04/27-09:41:54.790 bdb Compacted 1@2 + 13@3 files => 18981674 bytes
-2026/04/27-09:41:54.790 bdb compacted to: files[ 0 1 43 20 0 0 0 ]
-2026/04/27-09:41:54.791 bdb Delete type=2 #7667
-2026/04/27-09:41:54.791 bdb Delete type=2 #7910
-2026/04/27-09:41:54.791 bdb Delete type=2 #7964
-2026/04/27-09:41:54.791 bdb Delete type=2 #7905
-2026/04/27-09:41:54.791 bdb Delete type=2 #7911
-2026/04/27-09:41:54.791 bdb Delete type=2 #7720
-2026/04/27-09:41:54.791 bdb Delete type=2 #7790
-2026/04/27-09:41:54.791 bdb Delete type=2 #7912
-2026/04/27-09:41:54.792 bdb Delete type=2 #7909
-2026/04/27-09:41:54.792 bdb Delete type=2 #7906
-2026/04/27-09:41:54.792 bdb Delete type=2 #7908
-2026/04/27-09:41:54.792 bdb Delete type=2 #7565
-2026/04/27-09:41:54.792 bdb Delete type=2 #7506
-2026/04/27-09:41:54.792 bdb Delete type=2 #7907
-2026/04/27-09:47:14.533 be0 Compacting 1@1 + 1@2 files
-2026/04/27-09:47:14.559 be0 Generated table #8004@1: 15407 keys, 1962575 bytes
-2026/04/27-09:47:14.559 be0 Compacted 1@1 + 1@2 files => 1962575 bytes
-2026/04/27-09:47:14.559 be0 compacted to: files[ 0 0 43 20 0 0 0 ]
-2026/04/27-09:47:14.560 be0 Delete type=2 #7957
-2026/04/27-09:47:14.560 be0 Delete type=2 #7951
-2026/04/27-09:57:15.191 bd9 Level-0 table #8006: started
-2026/04/27-09:57:15.217 bd9 Level-0 table #8006: 1419485 bytes OK
-2026/04/27-09:57:15.219 bd9 Delete type=0 #7952
-2026/04/27-09:57:46.956 bdb Compacting 1@0 + 0@1 files
-2026/04/27-09:57:46.968 bdb Generated table #8007@0: 15053 keys, 210411 bytes
-2026/04/27-09:57:46.969 bdb Generated table #8008@0: 451 keys, 38558 bytes
-2026/04/27-09:57:46.970 bdb Generated table #8009@0: 179 keys, 108785 bytes
-2026/04/27-09:57:46.973 bdb Generated table #8010@0: 2075 keys, 209988 bytes
-2026/04/27-09:57:46.974 bdb Compacted 1@0 + 0@1 files => 567742 bytes
-2026/04/27-09:57:46.974 bdb compacted to: files[ 0 4 43 20 0 0 0 ]
-2026/04/27-09:57:46.974 bdb Delete type=2 #8006
-2026/04/27-09:57:54.999 bdb Compacting 1@1 + 11@2 files
-2026/04/27-09:57:55.008 bdb Generated table #8011@1: 10939 keys, 131155 bytes
-2026/04/27-09:57:55.052 bdb Generated table #8012@1: 92165 keys, 2242403 bytes
-2026/04/27-09:57:55.101 bdb Generated table #8013@1: 91776 keys, 2240313 bytes
-2026/04/27-09:57:55.173 bdb Generated table #8014@1: 92674 keys, 2240504 bytes
-2026/04/27-09:57:55.284 bdb Generated table #8015@1: 93392 keys, 2241989 bytes
-2026/04/27-09:57:55.336 bdb Generated table #8016@1: 91750 keys, 2241791 bytes
-2026/04/27-09:57:55.378 bdb Generated table #8017@1: 91106 keys, 2240862 bytes
-2026/04/27-09:57:55.420 bdb Generated table #8018@1: 90983 keys, 2239638 bytes
-2026/04/27-09:57:55.463 bdb Generated table #8019@1: 95372 keys, 2245692 bytes
-2026/04/27-09:57:55.500 bdb Generated table #8020@1: 78067 keys, 2227441 bytes
-2026/04/27-09:57:55.540 bdb Generated table #8021@1: 91173 keys, 2284461 bytes
-2026/04/27-09:57:55.546 bdb Generated table #8022@1: 264 keys, 348396 bytes
-2026/04/27-09:57:55.546 bdb Compacted 1@1 + 11@2 files => 22924645 bytes
-2026/04/27-09:57:55.546 bdb compacted to: files[ 0 3 44 20 0 0 0 ]
-2026/04/27-09:57:55.547 bdb Delete type=2 #8007
-2026/04/27-09:57:55.547 bdb Delete type=2 #7966
-2026/04/27-09:57:55.547 bdb Delete type=2 #7965
-2026/04/27-09:57:55.547 bdb Delete type=2 #7970
-2026/04/27-09:57:55.547 bdb Delete type=2 #7945
-2026/04/27-09:57:55.547 bdb Delete type=2 #7971
-2026/04/27-09:57:55.547 bdb Delete type=2 #7972
-2026/04/27-09:57:55.547 bdb Delete type=2 #7973
-2026/04/27-09:57:55.547 bdb Delete type=2 #7967
-2026/04/27-09:57:55.547 bdb Delete type=2 #7969
-2026/04/27-09:57:55.548 bdb Delete type=2 #7968
-2026/04/27-09:57:55.548 bdb Delete type=2 #7958
-2026/04/27-09:59:15.037 bdb Compacting 1@1 + 13@2 files
-2026/04/27-09:59:15.082 bdb Generated table #8023@1: 26690 keys, 2260495 bytes
-2026/04/27-09:59:15.142 bdb Generated table #8024@1: 66802 keys, 2235276 bytes
-2026/04/27-09:59:15.169 bdb Generated table #8025@1: 30803 keys, 2187673 bytes
-2026/04/27-09:59:15.183 bdb Generated table #8026@1: 1469 keys, 2148351 bytes
-2026/04/27-09:59:15.199 bdb Generated table #8027@1: 1530 keys, 2149823 bytes
-2026/04/27-09:59:15.216 bdb Generated table #8028@1: 1408 keys, 2143599 bytes
-2026/04/27-09:59:15.247 bdb Generated table #8029@1: 1294 keys, 2141911 bytes
-2026/04/27-09:59:15.279 bdb Generated table #8030@1: 1420 keys, 2148465 bytes
-2026/04/27-09:59:15.307 bdb Generated table #8031@1: 1304 keys, 2148714 bytes
-2026/04/27-09:59:15.339 bdb Generated table #8032@1: 1424 keys, 2152926 bytes
-2026/04/27-09:59:15.342 bdb Generated table #8033@1: 129 keys, 231971 bytes
-2026/04/27-09:59:15.342 bdb Compacted 1@1 + 13@2 files => 21949204 bytes
-2026/04/27-09:59:15.344 bdb compacted to: files[ 0 2 42 20 0 0 0 ]
-2026/04/27-09:59:15.345 bdb Delete type=2 #7850
-2026/04/27-09:59:15.345 bdb Delete type=2 #7962
-2026/04/27-09:59:15.346 bdb Delete type=2 #7879
-2026/04/27-09:59:15.346 bdb Delete type=2 #7877
-2026/04/27-09:59:15.346 bdb Delete type=2 #7880
-2026/04/27-09:59:15.346 bdb Delete type=2 #7881
-2026/04/27-09:59:15.346 bdb Delete type=2 #7851
-2026/04/27-09:59:15.346 bdb Delete type=2 #7878
-2026/04/27-09:59:15.346 bdb Delete type=2 #7959
-2026/04/27-09:59:15.346 bdb Delete type=2 #7961
-2026/04/27-09:59:15.346 bdb Delete type=2 #7820
-2026/04/27-09:59:15.346 bdb Delete type=2 #7882
-2026/04/27-09:59:15.346 bdb Delete type=2 #8008
-2026/04/27-09:59:15.346 bdb Delete type=2 #7960
-2026/04/27-09:59:55.093 bdb Compacting 1@2 + 10@3 files
-2026/04/27-09:59:55.115 bdb Generated table #8034@2: 1352 keys, 2119048 bytes
-2026/04/27-09:59:55.132 bdb Generated table #8035@2: 6551 keys, 2128240 bytes
-2026/04/27-09:59:55.146 bdb Generated table #8036@2: 2801 keys, 2117470 bytes
-2026/04/27-09:59:55.160 bdb Generated table #8037@2: 302 keys, 2110362 bytes
-2026/04/27-09:59:55.174 bdb Generated table #8038@2: 2559 keys, 2119423 bytes
-2026/04/27-09:59:55.188 bdb Generated table #8039@2: 2109 keys, 2114631 bytes
-2026/04/27-09:59:55.211 bdb Generated table #8040@2: 12799 keys, 2137123 bytes
-2026/04/27-09:59:55.257 bdb Generated table #8041@2: 103207 keys, 2255888 bytes
-2026/04/27-09:59:55.303 bdb Generated table #8042@2: 92103 keys, 2240537 bytes
-2026/04/27-09:59:55.344 bdb Generated table #8043@2: 91768 keys, 2241223 bytes
-2026/04/27-09:59:55.346 bdb Generated table #8044@2: 1842 keys, 47322 bytes
-2026/04/27-09:59:55.346 bdb Compacted 1@2 + 10@3 files => 21631267 bytes
-2026/04/27-09:59:55.346 bdb compacted to: files[ 0 2 41 21 0 0 0 ]
-2026/04/27-09:59:55.347 bdb Delete type=2 #7986
-2026/04/27-09:59:55.347 bdb Delete type=2 #7992
-2026/04/27-09:59:55.347 bdb Delete type=2 #7990
-2026/04/27-09:59:55.347 bdb Delete type=2 #7985
-2026/04/27-09:59:55.347 bdb Delete type=2 #7991
-2026/04/27-09:59:55.347 bdb Delete type=2 #8011
-2026/04/27-09:59:55.347 bdb Delete type=2 #7989
-2026/04/27-09:59:55.347 bdb Delete type=2 #7993
-2026/04/27-09:59:55.347 bdb Delete type=2 #7987
-2026/04/27-09:59:55.347 bdb Delete type=2 #7984
-2026/04/27-09:59:55.347 bdb Delete type=2 #7988
-2026/04/27-10:00:02.152 bdb Compacting 1@1 + 9@2 files
-2026/04/27-10:00:02.188 bdb Generated table #8045@1: 24320 keys, 2273382 bytes
-2026/04/27-10:00:02.223 bdb Generated table #8046@1: 26226 keys, 2262472 bytes
-2026/04/27-10:00:02.258 bdb Generated table #8047@1: 23802 keys, 2266371 bytes
-2026/04/27-10:00:02.285 bdb Generated table #8048@1: 23013 keys, 2200478 bytes
-2026/04/27-10:00:02.309 bdb Generated table #8049@1: 26886 keys, 2191696 bytes
-2026/04/27-10:00:02.316 bdb Generated table #8050@1: 534 keys, 2114000 bytes
-2026/04/27-10:00:02.322 bdb Generated table #8051@1: 526 keys, 2111930 bytes
-2026/04/27-10:00:02.328 bdb Generated table #8052@1: 461 keys, 2113798 bytes
-2026/04/27-10:00:02.344 bdb Generated table #8053@1: 15425 keys, 1920400 bytes
-2026/04/27-10:00:02.345 bdb Compacted 1@1 + 9@2 files => 19454527 bytes
-2026/04/27-10:00:02.345 bdb compacted to: files[ 0 1 41 21 0 0 0 ]
-2026/04/27-10:00:02.346 bdb Delete type=2 #7979
-2026/04/27-10:00:02.346 bdb Delete type=2 #7950
-2026/04/27-10:00:02.346 bdb Delete type=2 #7983
-2026/04/27-10:00:02.346 bdb Delete type=2 #8010
-2026/04/27-10:00:02.346 bdb Delete type=2 #8004
-2026/04/27-10:00:02.346 bdb Delete type=2 #7981
-2026/04/27-10:00:02.346 bdb Delete type=2 #7948
-2026/04/27-10:00:02.346 bdb Delete type=2 #7982
-2026/04/27-10:00:02.346 bdb Delete type=2 #7980
-2026/04/27-10:00:02.346 bdb Delete type=2 #7949
-2026/04/27-10:00:25.649 bdb Compacting 1@1 + 10@2 files
-2026/04/27-10:00:25.664 bdb Generated table #8054@1: 1700 keys, 2145082 bytes
-2026/04/27-10:00:25.678 bdb Generated table #8055@1: 2244 keys, 2143641 bytes
-2026/04/27-10:00:25.690 bdb Generated table #8056@1: 2181 keys, 2148527 bytes
-2026/04/27-10:00:25.699 bdb Generated table #8057@1: 716 keys, 2130899 bytes
-2026/04/27-10:00:25.710 bdb Generated table #8058@1: 1740 keys, 2143686 bytes
-2026/04/27-10:00:25.720 bdb Generated table #8059@1: 1523 keys, 2135948 bytes
-2026/04/27-10:00:25.731 bdb Generated table #8060@1: 1999 keys, 2144350 bytes
-2026/04/27-10:00:25.742 bdb Generated table #8061@1: 2363 keys, 2146872 bytes
-2026/04/27-10:00:25.773 bdb Generated table #8062@1: 29749 keys, 2217234 bytes
-2026/04/27-10:00:25.809 bdb Generated table #8063@1: 25208 keys, 2272596 bytes
-2026/04/27-10:00:25.811 bdb Generated table #8064@1: 782 keys, 69857 bytes
-2026/04/27-10:00:25.811 bdb Compacted 1@1 + 10@2 files => 21698692 bytes
-2026/04/27-10:00:25.811 bdb compacted to: files[ 0 0 42 21 0 0 0 ]
-2026/04/27-10:00:25.812 bdb Delete type=2 #7976
-2026/04/27-10:00:25.812 bdb Delete type=2 #8009
-2026/04/27-10:00:25.812 bdb Delete type=2 #7974
-2026/04/27-10:00:25.812 bdb Delete type=2 #7852
-2026/04/27-10:00:25.812 bdb Delete type=2 #7975
-2026/04/27-10:00:25.812 bdb Delete type=2 #7978
-2026/04/27-10:00:25.812 bdb Delete type=2 #7977
-2026/04/27-10:00:25.812 bdb Delete type=2 #7853
-2026/04/27-10:00:25.812 bdb Delete type=2 #7924
-2026/04/27-10:00:25.813 bdb Delete type=2 #7854
-2026/04/27-10:00:25.813 bdb Delete type=2 #7925
-2026/04/27-10:00:35.146 bdb Compacting 1@2 + 9@3 files
-2026/04/27-10:00:35.198 bdb Generated table #8065@2: 93167 keys, 2241457 bytes
-2026/04/27-10:00:35.267 bdb Generated table #8066@2: 93877 keys, 2242043 bytes
-2026/04/27-10:00:35.334 bdb Generated table #8067@2: 92008 keys, 2241073 bytes
-2026/04/27-10:00:35.402 bdb Generated table #8068@2: 90135 keys, 2237397 bytes
-2026/04/27-10:00:35.461 bdb Generated table #8069@2: 92690 keys, 2242611 bytes
-2026/04/27-10:00:35.505 bdb Generated table #8070@2: 91965 keys, 2239951 bytes
-2026/04/27-10:00:35.547 bdb Generated table #8071@2: 91327 keys, 2239919 bytes
-2026/04/27-10:00:35.589 bdb Generated table #8072@2: 92720 keys, 2241458 bytes
-2026/04/27-10:00:35.629 bdb Generated table #8073@2: 91037 keys, 2238424 bytes
-2026/04/27-10:00:35.648 bdb Generated table #8074@2: 43674 keys, 1075493 bytes
-2026/04/27-10:00:35.648 bdb Compacted 1@2 + 9@3 files => 21239826 bytes
-2026/04/27-10:00:35.648 bdb compacted to: files[ 0 0 41 22 0 0 0 ]
-2026/04/27-10:00:35.649 bdb Delete type=2 #8002
-2026/04/27-10:00:35.649 bdb Delete type=2 #8000
-2026/04/27-10:00:35.649 bdb Delete type=2 #8003
-2026/04/27-10:00:35.649 bdb Delete type=2 #7997
-2026/04/27-10:00:35.649 bdb Delete type=2 #7999
-2026/04/27-10:00:35.649 bdb Delete type=2 #7998
-2026/04/27-10:00:35.649 bdb Delete type=2 #7995
-2026/04/27-10:00:35.649 bdb Delete type=2 #8001
-2026/04/27-10:00:35.649 bdb Delete type=2 #7996
-2026/04/27-10:00:35.649 bdb Delete type=2 #8012
-2026/04/27-10:03:02.412 bdb Level-0 table #8076: started
-2026/04/27-10:03:02.428 bdb Level-0 table #8076: 1070365 bytes OK
-2026/04/27-10:03:02.430 bdb Delete type=0 #8005
-2026/04/27-10:03:15.279 bdb Compacting 1@0 + 0@1 files
-2026/04/27-10:03:15.307 bdb Generated table #8077@0: 28119 keys, 362896 bytes
-2026/04/27-10:03:15.307 bdb Generated table #8078@0: 34 keys, 1014 bytes
-2026/04/27-10:03:15.308 bdb Generated table #8079@0: 140 keys, 56312 bytes
-2026/04/27-10:03:15.309 bdb Generated table #8080@0: 51 keys, 34437 bytes
-2026/04/27-10:03:15.309 bdb Compacted 1@0 + 0@1 files => 454659 bytes
-2026/04/27-10:03:15.310 bdb compacted to: files[ 0 4 41 22 0 0 0 ]
-2026/04/27-10:03:15.310 bdb Delete type=2 #8076
-2026/04/27-10:03:55.299 bdb Compacting 1@1 + 11@2 files
-2026/04/27-10:03:55.309 bdb Generated table #8081@1: 19787 keys, 178524 bytes
-2026/04/27-10:03:55.310 bdb Generated table #8082@1: 833 keys, 10786 bytes
-2026/04/27-10:03:55.358 bdb Generated table #8083@1: 91772 keys, 2240420 bytes
-2026/04/27-10:03:55.415 bdb Generated table #8084@1: 92654 keys, 2240344 bytes
-2026/04/27-10:03:55.485 bdb Generated table #8085@1: 93340 keys, 2241271 bytes
-2026/04/27-10:03:55.591 bdb Generated table #8086@1: 91733 keys, 2240562 bytes
-2026/04/27-10:03:55.641 bdb Generated table #8087@1: 91124 keys, 2239818 bytes
-2026/04/27-10:03:55.683 bdb Generated table #8088@1: 90843 keys, 2238435 bytes
-2026/04/27-10:03:55.726 bdb Generated table #8089@1: 95390 keys, 2243676 bytes
-2026/04/27-10:03:55.763 bdb Generated table #8090@1: 78022 keys, 2228622 bytes
-2026/04/27-10:03:55.804 bdb Generated table #8091@1: 92161 keys, 2281061 bytes
-2026/04/27-10:03:55.836 bdb Generated table #8092@1: 23905 keys, 2361333 bytes
-2026/04/27-10:03:55.840 bdb Generated table #8093@1: 3103 keys, 274361 bytes
-2026/04/27-10:03:55.840 bdb Compacted 1@1 + 11@2 files => 23019213 bytes
-2026/04/27-10:03:55.841 bdb compacted to: files[ 0 3 43 22 0 0 0 ]
-2026/04/27-10:03:55.842 bdb Delete type=2 #8018
-2026/04/27-10:03:55.842 bdb Delete type=2 #8021
-2026/04/27-10:03:55.842 bdb Delete type=2 #8017
-2026/04/27-10:03:55.842 bdb Delete type=2 #8019
-2026/04/27-10:03:55.842 bdb Delete type=2 #8013
-2026/04/27-10:03:55.842 bdb Delete type=2 #8020
-2026/04/27-10:03:55.842 bdb Delete type=2 #8077
-2026/04/27-10:03:55.842 bdb Delete type=2 #8014
-2026/04/27-10:03:55.842 bdb Delete type=2 #8023
-2026/04/27-10:03:55.842 bdb Delete type=2 #8015
-2026/04/27-10:03:55.842 bdb Delete type=2 #8022
-2026/04/27-10:03:55.842 bdb Delete type=2 #8016
-2026/04/27-10:04:35.324 be0 Compacting 1@2 + 10@3 files
-2026/04/27-10:04:35.370 be0 Generated table #8094@2: 93169 keys, 2241090 bytes
-2026/04/27-10:04:35.413 be0 Generated table #8095@2: 93868 keys, 2242686 bytes
-2026/04/27-10:04:35.464 be0 Generated table #8096@2: 91901 keys, 2239855 bytes
-2026/04/27-10:04:35.512 be0 Generated table #8097@2: 90184 keys, 2237586 bytes
-2026/04/27-10:04:35.554 be0 Generated table #8098@2: 92607 keys, 2242416 bytes
-2026/04/27-10:04:35.597 be0 Generated table #8099@2: 91869 keys, 2239839 bytes
-2026/04/27-10:04:35.638 be0 Generated table #8100@2: 91460 keys, 2239178 bytes
-2026/04/27-10:04:35.680 be0 Generated table #8101@2: 92719 keys, 2240412 bytes
-2026/04/27-10:04:35.721 be0 Generated table #8102@2: 91174 keys, 2241201 bytes
-2026/04/27-10:04:35.742 be0 Generated table #8103@2: 44482 keys, 1096890 bytes
-2026/04/27-10:04:35.742 be0 Compacted 1@2 + 10@3 files => 21261153 bytes
-2026/04/27-10:04:35.743 be0 compacted to: files[ 0 3 42 22 0 0 0 ]
-2026/04/27-10:04:35.743 be0 Delete type=2 #8067
-2026/04/27-10:04:35.744 be0 Delete type=2 #8065
-2026/04/27-10:04:35.744 be0 Delete type=2 #8070
-2026/04/27-10:04:35.744 be0 Delete type=2 #8068
-2026/04/27-10:04:35.744 be0 Delete type=2 #8074
-2026/04/27-10:04:35.744 be0 Delete type=2 #8073
-2026/04/27-10:04:35.744 be0 Delete type=2 #8082
-2026/04/27-10:04:35.744 be0 Delete type=2 #8066
-2026/04/27-10:04:35.744 be0 Delete type=2 #8071
-2026/04/27-10:04:35.744 be0 Delete type=2 #8069
-2026/04/27-10:04:35.744 be0 Delete type=2 #8072
-2026/04/27-10:04:36.163 bdb Compacting 1@1 + 11@2 files
-2026/04/27-10:04:36.174 bdb Generated table #8104@1: 716 keys, 2129806 bytes
-2026/04/27-10:04:36.184 bdb Generated table #8105@1: 1733 keys, 2157975 bytes
-2026/04/27-10:04:36.194 bdb Generated table #8106@1: 1521 keys, 2135692 bytes
-2026/04/27-10:04:36.203 bdb Generated table #8107@1: 1973 keys, 2144911 bytes
-2026/04/27-10:04:36.213 bdb Generated table #8108@1: 2359 keys, 2146405 bytes
-2026/04/27-10:04:36.244 bdb Generated table #8109@1: 29472 keys, 2214752 bytes
-2026/04/27-10:04:36.279 bdb Generated table #8110@1: 25125 keys, 2271267 bytes
-2026/04/27-10:04:36.315 bdb Generated table #8111@1: 24014 keys, 2273379 bytes
-2026/04/27-10:04:36.349 bdb Generated table #8112@1: 26668 keys, 2262834 bytes
-2026/04/27-10:04:36.383 bdb Generated table #8113@1: 23070 keys, 2268048 bytes
-2026/04/27-10:04:36.385 bdb Generated table #8114@1: 1890 keys, 111419 bytes
-2026/04/27-10:04:36.385 bdb Compacted 1@1 + 11@2 files => 22116488 bytes
-2026/04/27-10:04:36.386 bdb compacted to: files[ 0 2 42 22 0 0 0 ]
-2026/04/27-10:04:36.386 bdb Delete type=2 #8063
-2026/04/27-10:04:36.387 bdb Delete type=2 #8045
-2026/04/27-10:04:36.387 bdb Delete type=2 #8046
-2026/04/27-10:04:36.387 bdb Delete type=2 #8060
-2026/04/27-10:04:36.387 bdb Delete type=2 #8079
-2026/04/27-10:04:36.387 bdb Delete type=2 #8062
-2026/04/27-10:04:36.387 bdb Delete type=2 #8059
-2026/04/27-10:04:36.387 bdb Delete type=2 #8064
-2026/04/27-10:04:36.387 bdb Delete type=2 #8057
-2026/04/27-10:04:36.387 bdb Delete type=2 #8061
-2026/04/27-10:04:36.387 bdb Delete type=2 #8058
-2026/04/27-10:04:36.387 bdb Delete type=2 #8047
-2026/04/27-10:05:15.364 bdb Compacting 1@2 + 10@3 files
-2026/04/27-10:05:15.383 bdb Generated table #8115@2: 1345 keys, 2117296 bytes
-2026/04/27-10:05:15.408 bdb Generated table #8116@2: 6551 keys, 2128240 bytes
-2026/04/27-10:05:15.424 bdb Generated table #8117@2: 2801 keys, 2117470 bytes
-2026/04/27-10:05:15.438 bdb Generated table #8118@2: 302 keys, 2110362 bytes
-2026/04/27-10:05:15.452 bdb Generated table #8119@2: 2559 keys, 2119423 bytes
-2026/04/27-10:05:15.467 bdb Generated table #8120@2: 2109 keys, 2114631 bytes
-2026/04/27-10:05:15.486 bdb Generated table #8121@2: 11478 keys, 2133036 bytes
-2026/04/27-10:05:15.535 bdb Generated table #8122@2: 103747 keys, 2256953 bytes
-2026/04/27-10:05:15.603 bdb Generated table #8123@2: 92137 keys, 2240601 bytes
-2026/04/27-10:05:15.722 bdb Generated table #8124@2: 91827 keys, 2241761 bytes
-2026/04/27-10:05:15.728 bdb Generated table #8125@2: 1009 keys, 26122 bytes
-2026/04/27-10:05:15.728 bdb Compacted 1@2 + 10@3 files => 21605895 bytes
-2026/04/27-10:05:15.729 bdb compacted to: files[ 0 2 41 23 0 0 0 ]
-2026/04/27-10:05:15.730 bdb Delete type=2 #8036
-2026/04/27-10:05:15.730 bdb Delete type=2 #8034
-2026/04/27-10:05:15.730 bdb Delete type=2 #8042
-2026/04/27-10:05:15.730 bdb Delete type=2 #8037
-2026/04/27-10:05:15.730 bdb Delete type=2 #8035
-2026/04/27-10:05:15.730 bdb Delete type=2 #8043
-2026/04/27-10:05:15.730 bdb Delete type=2 #8041
-2026/04/27-10:05:15.730 bdb Delete type=2 #8038
-2026/04/27-10:05:15.730 bdb Delete type=2 #8040
-2026/04/27-10:05:15.730 bdb Delete type=2 #8081
-2026/04/27-10:05:15.730 bdb Delete type=2 #8039
-2026/04/27-10:09:15.672 bdb Compacting 1@1 + 5@2 files
-2026/04/27-10:09:15.697 bdb Generated table #8126@1: 26886 keys, 2191693 bytes
-2026/04/27-10:09:15.703 bdb Generated table #8127@1: 534 keys, 2114000 bytes
-2026/04/27-10:09:15.709 bdb Generated table #8128@1: 526 keys, 2111930 bytes
-2026/04/27-10:09:15.714 bdb Generated table #8129@1: 461 keys, 2113798 bytes
-2026/04/27-10:09:15.733 bdb Generated table #8130@1: 15441 keys, 1944665 bytes
-2026/04/27-10:09:15.733 bdb Compacted 1@1 + 5@2 files => 10476086 bytes
-2026/04/27-10:09:15.733 bdb compacted to: files[ 0 1 41 23 0 0 0 ]
-2026/04/27-10:09:15.734 bdb Delete type=2 #8051
-2026/04/27-10:09:15.734 bdb Delete type=2 #8052
-2026/04/27-10:09:15.734 bdb Delete type=2 #8050
-2026/04/27-10:09:15.734 bdb Delete type=2 #8053
-2026/04/27-10:09:15.734 bdb Delete type=2 #8080
-2026/04/27-10:09:15.734 bdb Delete type=2 #8049
-2026/04/27-10:17:39.551 bdb Compacting 1@1 + 2@2 files
-2026/04/27-10:17:39.594 bdb Generated table #8131@1: 66802 keys, 2235260 bytes
-2026/04/27-10:17:39.620 bdb Generated table #8132@1: 30803 keys, 2187657 bytes
-2026/04/27-10:17:39.620 bdb Compacted 1@1 + 2@2 files => 4422917 bytes
-2026/04/27-10:17:39.621 bdb compacted to: files[ 0 0 41 23 0 0 0 ]
-2026/04/27-10:17:39.621 bdb Delete type=2 #8025
-2026/04/27-10:17:39.621 bdb Delete type=2 #8024
-2026/04/27-10:17:39.621 bdb Delete type=2 #8078
-2026/04/27-10:17:50.173 be0 Level-0 table #8134: started
-2026/04/27-10:17:50.190 be0 Level-0 table #8134: 1298837 bytes OK
-2026/04/27-10:17:50.191 be0 Delete type=0 #8075
-2026/04/27-10:17:55.967 be0 Compacting 1@0 + 0@1 files
-2026/04/27-10:17:55.980 be0 Generated table #8135@0: 18102 keys, 304991 bytes
-2026/04/27-10:17:55.981 be0 Generated table #8136@0: 84 keys, 11519 bytes
-2026/04/27-10:17:55.982 be0 Generated table #8137@0: 117 keys, 51041 bytes
-2026/04/27-10:17:55.985 be0 Generated table #8138@0: 968 keys, 93300 bytes
-2026/04/27-10:17:55.985 be0 Compacted 1@0 + 0@1 files => 460851 bytes
-2026/04/27-10:17:55.985 be0 compacted to: files[ 0 4 41 23 0 0 0 ]
-2026/04/27-10:17:55.986 be0 Delete type=2 #8134
-2026/04/27-10:18:35.995 bdb Compacting 1@1 + 10@2 files
-2026/04/27-10:18:36.003 bdb Generated table #8139@1: 12690 keys, 198914 bytes
-2026/04/27-10:18:36.005 bdb Generated table #8140@1: 2630 keys, 35772 bytes
-2026/04/27-10:18:36.048 bdb Generated table #8141@1: 91801 keys, 2241301 bytes
-2026/04/27-10:18:36.103 bdb Generated table #8142@1: 92758 keys, 2242152 bytes
-2026/04/27-10:18:36.172 bdb Generated table #8143@1: 93225 keys, 2241154 bytes
-2026/04/27-10:18:36.222 bdb Generated table #8144@1: 91833 keys, 2239374 bytes
-2026/04/27-10:18:36.267 bdb Generated table #8145@1: 91094 keys, 2241056 bytes
-2026/04/27-10:18:36.308 bdb Generated table #8146@1: 90985 keys, 2239659 bytes
-2026/04/27-10:18:36.352 bdb Generated table #8147@1: 95399 keys, 2245328 bytes
-2026/04/27-10:18:36.390 bdb Generated table #8148@1: 77756 keys, 2227162 bytes
-2026/04/27-10:18:36.431 bdb Generated table #8149@1: 94553 keys, 2267234 bytes
-2026/04/27-10:18:36.462 bdb Generated table #8150@1: 23232 keys, 2380317 bytes
-2026/04/27-10:18:36.463 bdb Generated table #8151@1: 793 keys, 69573 bytes
-2026/04/27-10:18:36.463 bdb Compacted 1@1 + 10@2 files => 22868996 bytes
-2026/04/27-10:18:36.464 bdb compacted to: files[ 0 3 44 23 0 0 0 ]
-2026/04/27-10:18:36.465 bdb Delete type=2 #8135
-2026/04/27-10:18:36.465 bdb Delete type=2 #8089
-2026/04/27-10:18:36.465 bdb Delete type=2 #8091
-2026/04/27-10:18:36.465 bdb Delete type=2 #8086
-2026/04/27-10:18:36.465 bdb Delete type=2 #8085
-2026/04/27-10:18:36.465 bdb Delete type=2 #8087
-2026/04/27-10:18:36.465 bdb Delete type=2 #8090
-2026/04/27-10:18:36.465 bdb Delete type=2 #8088
-2026/04/27-10:18:36.465 bdb Delete type=2 #8083
-2026/04/27-10:18:36.465 bdb Delete type=2 #8092
-2026/04/27-10:18:36.465 bdb Delete type=2 #8084
-2026/04/27-10:19:16.023 bdb Compacting 1@2 + 12@3 files
-2026/04/27-10:19:16.075 bdb Generated table #8152@2: 93240 keys, 2243684 bytes
-2026/04/27-10:19:16.120 bdb Generated table #8153@2: 93815 keys, 2242223 bytes
-2026/04/27-10:19:16.172 bdb Generated table #8154@2: 91941 keys, 2240099 bytes
-2026/04/27-10:19:16.228 bdb Generated table #8155@2: 90310 keys, 2239272 bytes
-2026/04/27-10:19:16.295 bdb Generated table #8156@2: 92344 keys, 2240230 bytes
-2026/04/27-10:19:16.406 bdb Generated table #8157@2: 91929 keys, 2240954 bytes
-2026/04/27-10:19:16.460 bdb Generated table #8158@2: 91699 keys, 2240092 bytes
-2026/04/27-10:19:16.502 bdb Generated table #8159@2: 92859 keys, 2242818 bytes
-2026/04/27-10:19:16.543 bdb Generated table #8160@2: 91096 keys, 2239924 bytes
-2026/04/27-10:19:16.566 bdb Generated table #8161@2: 49521 keys, 1222594 bytes
-2026/04/27-10:19:16.566 bdb Compacted 1@2 + 12@3 files => 21391890 bytes
-2026/04/27-10:19:16.566 bdb compacted to: files[ 0 3 43 21 0 0 0 ]
-2026/04/27-10:19:16.567 bdb Delete type=2 #7994
-2026/04/27-10:19:16.567 bdb Delete type=2 #8094
-2026/04/27-10:19:16.567 bdb Delete type=2 #8044
-2026/04/27-10:19:16.567 bdb Delete type=2 #8101
-2026/04/27-10:19:16.567 bdb Delete type=2 #8097
-2026/04/27-10:19:16.567 bdb Delete type=2 #8103
-2026/04/27-10:19:16.567 bdb Delete type=2 #8099
-2026/04/27-10:19:16.567 bdb Delete type=2 #8102
-2026/04/27-10:19:16.567 bdb Delete type=2 #8095
-2026/04/27-10:19:16.567 bdb Delete type=2 #8140
-2026/04/27-10:19:16.567 bdb Delete type=2 #8098
-2026/04/27-10:19:16.567 bdb Delete type=2 #8100
-2026/04/27-10:19:16.568 bdb Delete type=2 #8096
-2026/04/27-10:19:56.159 bd9 Compacting 1@1 + 8@2 files
-2026/04/27-10:19:56.266 bd9 Generated table #8162@1: 22996 keys, 2268948 bytes
-2026/04/27-10:19:56.314 bd9 Generated table #8163@1: 23569 keys, 2198828 bytes
-2026/04/27-10:19:56.340 bd9 Generated table #8164@1: 28445 keys, 2194975 bytes
-2026/04/27-10:19:56.346 bd9 Generated table #8165@1: 515 keys, 2114181 bytes
-2026/04/27-10:19:56.352 bd9 Generated table #8166@1: 546 keys, 2116405 bytes
-2026/04/27-10:19:56.358 bd9 Generated table #8167@1: 456 keys, 2114288 bytes
-2026/04/27-10:19:56.375 bd9 Generated table #8168@1: 15480 keys, 2071573 bytes
-2026/04/27-10:19:56.375 bd9 Compacted 1@1 + 8@2 files => 15079198 bytes
-2026/04/27-10:19:56.376 bd9 compacted to: files[ 0 2 42 21 0 0 0 ]
-2026/04/27-10:19:56.376 bd9 Delete type=2 #8130
-2026/04/27-10:19:56.376 bd9 Delete type=2 #8128
-2026/04/27-10:19:56.376 bd9 Delete type=2 #8129
-2026/04/27-10:19:56.376 bd9 Delete type=2 #8126
-2026/04/27-10:19:56.376 bd9 Delete type=2 #8048
-2026/04/27-10:19:56.377 bd9 Delete type=2 #8127
-2026/04/27-10:19:56.377 bd9 Delete type=2 #8113
-2026/04/27-10:19:56.377 bd9 Delete type=2 #8114
-2026/04/27-10:19:56.377 bd9 Delete type=2 #8138
-2026/04/27-10:20:36.061 be0 Compacting 1@2 + 10@3 files
-2026/04/27-10:20:36.088 be0 Generated table #8169@2: 1907 keys, 2119241 bytes
-2026/04/27-10:20:36.106 be0 Generated table #8170@2: 6537 keys, 2127901 bytes
-2026/04/27-10:20:36.126 be0 Generated table #8171@2: 2952 keys, 2120419 bytes
-2026/04/27-10:20:36.139 be0 Generated table #8172@2: 302 keys, 2110261 bytes
-2026/04/27-10:20:36.157 be0 Generated table #8173@2: 2545 keys, 2118014 bytes
-2026/04/27-10:20:36.174 be0 Generated table #8174@2: 2037 keys, 2116548 bytes
-2026/04/27-10:20:36.198 be0 Generated table #8175@2: 4756 keys, 2124644 bytes
-2026/04/27-10:20:36.270 be0 Generated table #8176@2: 106700 keys, 2259779 bytes
-2026/04/27-10:20:36.331 be0 Generated table #8177@2: 92123 keys, 2240099 bytes
-2026/04/27-10:20:36.459 be0 Generated table #8178@2: 91988 keys, 2241324 bytes
-2026/04/27-10:20:36.462 be0 Generated table #8179@2: 4701 keys, 116014 bytes
-2026/04/27-10:20:36.462 be0 Compacted 1@2 + 10@3 files => 21694244 bytes
-2026/04/27-10:20:36.462 be0 compacted to: files[ 0 2 41 22 0 0 0 ]
-2026/04/27-10:20:36.463 be0 Delete type=2 #8121
-2026/04/27-10:20:36.463 be0 Delete type=2 #8123
-2026/04/27-10:20:36.463 be0 Delete type=2 #8119
-2026/04/27-10:20:36.463 be0 Delete type=2 #8115
-2026/04/27-10:20:36.463 be0 Delete type=2 #8139
-2026/04/27-10:20:36.463 be0 Delete type=2 #8120
-2026/04/27-10:20:36.463 be0 Delete type=2 #8122
-2026/04/27-10:20:36.463 be0 Delete type=2 #8117
-2026/04/27-10:20:36.463 be0 Delete type=2 #8116
-2026/04/27-10:20:36.463 be0 Delete type=2 #8118
-2026/04/27-10:20:36.463 be0 Delete type=2 #8124
-2026/04/27-10:21:16.057 bdb Compacting 1@1 + 10@2 files
-2026/04/27-10:21:16.072 bdb Generated table #8180@1: 2182 keys, 2152304 bytes
-2026/04/27-10:21:16.083 bdb Generated table #8181@1: 716 keys, 2129806 bytes
-2026/04/27-10:21:16.099 bdb Generated table #8182@1: 1736 keys, 2161680 bytes
-2026/04/27-10:21:16.109 bdb Generated table #8183@1: 1519 keys, 2136091 bytes
-2026/04/27-10:21:16.124 bdb Generated table #8184@1: 1941 keys, 2143012 bytes
-2026/04/27-10:21:16.138 bdb Generated table #8185@1: 2378 keys, 2148565 bytes
-2026/04/27-10:21:16.170 bdb Generated table #8186@1: 29198 keys, 2212016 bytes
-2026/04/27-10:21:16.215 bdb Generated table #8187@1: 25122 keys, 2272681 bytes
-2026/04/27-10:21:16.251 bdb Generated table #8188@1: 23912 keys, 2273754 bytes
-2026/04/27-10:21:16.286 bdb Generated table #8189@1: 26751 keys, 2263186 bytes
-2026/04/27-10:21:16.287 bdb Generated table #8190@1: 420 keys, 38061 bytes
-2026/04/27-10:21:16.287 bdb Compacted 1@1 + 10@2 files => 21931156 bytes
-2026/04/27-10:21:16.288 bdb compacted to: files[ 0 1 42 22 0 0 0 ]
-2026/04/27-10:21:16.289 bdb Delete type=2 #8105
-2026/04/27-10:21:16.289 bdb Delete type=2 #8112
-2026/04/27-10:21:16.289 bdb Delete type=2 #8104
-2026/04/27-10:21:16.289 bdb Delete type=2 #8106
-2026/04/27-10:21:16.289 bdb Delete type=2 #8137
-2026/04/27-10:21:16.289 bdb Delete type=2 #8108
-2026/04/27-10:21:16.289 bdb Delete type=2 #8110
-2026/04/27-10:21:16.289 bdb Delete type=2 #8056
-2026/04/27-10:21:16.289 bdb Delete type=2 #8109
-2026/04/27-10:21:16.289 bdb Delete type=2 #8111
-2026/04/27-10:21:16.289 bdb Delete type=2 #8107
-2026/04/27-10:25:16.247 be0 Compacting 1@1 + 7@2 files
-2026/04/27-10:25:16.294 be0 Generated table #8191@1: 66802 keys, 2235269 bytes
-2026/04/27-10:25:16.322 be0 Generated table #8192@1: 30807 keys, 2188163 bytes
-2026/04/27-10:25:16.334 be0 Generated table #8193@1: 1469 keys, 2148351 bytes
-2026/04/27-10:25:16.351 be0 Generated table #8194@1: 1530 keys, 2149823 bytes
-2026/04/27-10:25:16.366 be0 Generated table #8195@1: 1408 keys, 2143599 bytes
-2026/04/27-10:25:16.381 be0 Generated table #8196@1: 1292 keys, 2140636 bytes
-2026/04/27-10:25:16.399 be0 Generated table #8197@1: 1419 keys, 2146468 bytes
-2026/04/27-10:25:16.399 be0 Generated table #8198@1: 6 keys, 10935 bytes
-2026/04/27-10:25:16.399 be0 Compacted 1@1 + 7@2 files => 15163244 bytes
-2026/04/27-10:25:16.400 be0 compacted to: files[ 0 0 43 22 0 0 0 ]
-2026/04/27-10:25:16.401 be0 Delete type=2 #8027
-2026/04/27-10:25:16.401 be0 Delete type=2 #8030
-2026/04/27-10:25:16.401 be0 Delete type=2 #8136
-2026/04/27-10:25:16.401 be0 Delete type=2 #8028
-2026/04/27-10:25:16.401 be0 Delete type=2 #8029
-2026/04/27-10:25:16.401 be0 Delete type=2 #8132
-2026/04/27-10:25:16.401 be0 Delete type=2 #8131
-2026/04/27-10:25:16.401 be0 Delete type=2 #8026
+2026/04/28-02:33:43.682 be8 Reusing MANIFEST /home/runner/work/whatsapptool/whatsapptool/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/04/28-02:33:43.691 be8 Recovering log #8133
+2026/04/28-02:33:43.741 be8 Reusing old log /home/runner/work/whatsapptool/whatsapptool/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/008133.log 
+2026/04/28-02:33:50.687 bea Level-0 table #8201: started
+2026/04/28-02:33:50.708 bea Level-0 table #8201: 1264441 bytes OK
+2026/04/28-02:33:50.711 bea Delete type=0 #8133
+2026/04/28-02:33:50.723 be8 Compacting 1@0 + 0@1 files
+2026/04/28-02:33:50.748 be8 Generated table #8202@0: 18631 keys, 290101 bytes
+2026/04/28-02:33:50.751 be8 Generated table #8203@0: 80 keys, 6073 bytes
+2026/04/28-02:33:50.757 be8 Generated table #8204@0: 1508 keys, 183014 bytes
+2026/04/28-02:33:50.761 be8 Generated table #8205@0: 60 keys, 18920 bytes
+2026/04/28-02:33:50.761 be8 Compacted 1@0 + 0@1 files => 498108 bytes
+2026/04/28-02:33:50.762 be8 compacted to: files[ 0 4 43 22 0 0 0 ]
+2026/04/28-02:33:50.860 bea Compacting 1@1 + 10@2 files
+2026/04/28-02:33:50.867 bea Generated table #8206@1: 12815 keys, 153964 bytes
+2026/04/28-02:33:50.869 bea Generated table #8207@1: 2517 keys, 34272 bytes
+2026/04/28-02:33:50.916 bea Generated table #8208@1: 91874 keys, 2241392 bytes
+2026/04/28-02:33:50.979 bea Generated table #8209@1: 92800 keys, 2241796 bytes
+2026/04/28-02:33:51.041 bea Generated table #8210@1: 93364 keys, 2243653 bytes
+2026/04/28-02:33:51.113 bea Generated table #8211@1: 91828 keys, 2240002 bytes
+2026/04/28-02:33:51.188 bea Generated table #8212@1: 91135 keys, 2240261 bytes
+2026/04/28-02:33:51.249 bea Generated table #8213@1: 91021 keys, 2239903 bytes
+2026/04/28-02:33:51.310 bea Generated table #8214@1: 95354 keys, 2244845 bytes
+2026/04/28-02:33:51.364 bea Generated table #8215@1: 77458 keys, 2228044 bytes
+2026/04/28-02:33:51.413 bea Generated table #8216@1: 96864 keys, 2267834 bytes
+2026/04/28-02:33:51.450 bea Generated table #8217@1: 22624 keys, 2385241 bytes
+2026/04/28-02:33:51.451 bea Generated table #8218@1: 724 keys, 62473 bytes
+2026/04/28-02:33:51.451 bea Compacted 1@1 + 10@2 files => 22823680 bytes
+2026/04/28-02:33:51.452 bea compacted to: files[ 0 3 46 22 0 0 0 ]
+2026/04/28-02:33:51.454 bea Delete type=2 #8201
+2026/04/28-02:33:51.455 bea Compacting 1@1 + 10@2 files
+2026/04/28-02:33:51.526 bea Generated table #8219@1: 63731 keys, 2228979 bytes
+2026/04/28-02:33:51.562 bea Generated table #8220@1: 36870 keys, 2196272 bytes
+2026/04/28-02:33:51.574 bea Generated table #8221@1: 1389 keys, 2144946 bytes
+2026/04/28-02:33:51.587 bea Generated table #8222@1: 1536 keys, 2149810 bytes
+2026/04/28-02:33:51.599 bea Generated table #8223@1: 1412 keys, 2146129 bytes
+2026/04/28-02:33:51.611 bea Generated table #8224@1: 1292 keys, 2139468 bytes
+2026/04/28-02:33:51.624 bea Generated table #8225@1: 1429 keys, 2146988 bytes
+2026/04/28-02:33:51.637 bea Generated table #8226@1: 1296 keys, 2150788 bytes
+2026/04/28-02:33:51.640 bea Generated table #8227@1: 189 keys, 284216 bytes
+2026/04/28-02:33:51.640 bea Compacted 1@1 + 10@2 files => 17587596 bytes
+2026/04/28-02:33:51.641 bea compacted to: files[ 0 2 45 22 0 0 0 ]
+2026/04/28-02:33:51.642 bea Delete type=2 #8143
+2026/04/28-02:33:51.642 bea Delete type=2 #8145
+2026/04/28-02:33:51.642 bea Delete type=2 #8148
+2026/04/28-02:33:51.642 bea Delete type=2 #8141
+2026/04/28-02:33:51.642 bea Delete type=2 #8146
+2026/04/28-02:33:51.642 bea Delete type=2 #8147
+2026/04/28-02:33:51.642 bea Delete type=2 #8150
+2026/04/28-02:33:51.642 bea Delete type=2 #8202
+2026/04/28-02:33:51.642 bea Delete type=2 #8144
+2026/04/28-02:33:51.643 bea Delete type=2 #8149
+2026/04/28-02:33:51.643 bea Delete type=2 #8142
+2026/04/28-02:33:51.645 bea Compacting 1@1 + 11@2 files
+2026/04/28-02:33:51.656 bea Generated table #8228@1: 1517 keys, 2135889 bytes
+2026/04/28-02:33:51.672 bea Generated table #8229@1: 1913 keys, 2142750 bytes
+2026/04/28-02:33:51.686 bea Generated table #8230@1: 2372 keys, 2147047 bytes
+2026/04/28-02:33:51.720 bea Generated table #8231@1: 28901 keys, 2210422 bytes
+2026/04/28-02:33:51.765 bea Generated table #8232@1: 25134 keys, 2272982 bytes
+2026/04/28-02:33:51.821 bea Generated table #8233@1: 23758 keys, 2273970 bytes
+2026/04/28-02:33:51.871 bea Generated table #8234@1: 26833 keys, 2261950 bytes
+2026/04/28-02:33:51.927 bea Generated table #8235@1: 23267 keys, 2278049 bytes
+2026/04/28-02:33:51.962 bea Generated table #8236@1: 20230 keys, 2192347 bytes
+2026/04/28-02:33:51.997 bea Generated table #8237@1: 33078 keys, 2208305 bytes
+2026/04/28-02:33:51.999 bea Generated table #8238@1: 26 keys, 155044 bytes
+2026/04/28-02:33:51.999 bea Compacted 1@1 + 11@2 files => 22278755 bytes
+2026/04/28-02:33:52.000 bea compacted to: files[ 0 1 45 22 0 0 0 ]
+2026/04/28-02:33:52.000 bea Delete type=2 #8198
+2026/04/28-02:33:52.001 bea Delete type=2 #8192
+2026/04/28-02:33:52.001 bea Delete type=2 #8195
+2026/04/28-02:33:52.001 bea Delete type=2 #8196
+2026/04/28-02:33:52.001 bea Delete type=2 #8194
+2026/04/28-02:33:52.001 bea Delete type=2 #8093
+2026/04/28-02:33:52.001 bea Delete type=2 #8191
+2026/04/28-02:33:52.001 bea Delete type=2 #8203
+2026/04/28-02:33:52.001 bea Delete type=2 #8193
+2026/04/28-02:33:52.001 bea Delete type=2 #8197
+2026/04/28-02:33:52.001 bea Delete type=2 #8031
+2026/04/28-02:33:52.173 bea Level-0 table #8240: started
+2026/04/28-02:33:52.190 bea Level-0 table #8240: 1159489 bytes OK
+2026/04/28-02:33:52.192 bea Delete type=2 #8189
+2026/04/28-02:33:52.192 bea Delete type=2 #8187
+2026/04/28-02:33:52.192 bea Delete type=2 #8183
+2026/04/28-02:33:52.193 bea Delete type=2 #8184
+2026/04/28-02:33:52.193 bea Delete type=2 #8162
+2026/04/28-02:33:52.193 bea Delete type=2 #8188
+2026/04/28-02:33:52.193 bea Delete type=2 #8204
+2026/04/28-02:33:52.193 bea Delete type=2 #8186
+2026/04/28-02:33:52.193 bea Delete type=2 #8164
+2026/04/28-02:33:52.193 bea Delete type=2 #8185
+2026/04/28-02:33:52.193 bea Delete type=2 #8163
+2026/04/28-02:33:52.193 bea Delete type=0 #8200
+2026/04/28-02:33:52.193 bea Delete type=2 #8190
+2026/04/28-02:33:52.198 bea Compacting 1@0 + 0@1 files
+2026/04/28-02:33:52.223 bea Generated table #8241@0: 17743 keys, 417205 bytes
+2026/04/28-02:33:52.224 bea Generated table #8242@0: 109 keys, 6119 bytes
+2026/04/28-02:33:52.228 bea Generated table #8243@0: 1430 keys, 155477 bytes
+2026/04/28-02:33:52.230 bea Generated table #8244@0: 264 keys, 8395 bytes
+2026/04/28-02:33:52.230 bea Compacted 1@0 + 0@1 files => 587196 bytes
+2026/04/28-02:33:52.231 bea compacted to: files[ 0 5 45 22 0 0 0 ]
+2026/04/28-02:33:52.295 bea Compacting 1@1 + 1@2 files
+2026/04/28-02:33:52.321 bea Generated table #8245@1: 15488 keys, 2075481 bytes
+2026/04/28-02:33:52.321 bea Compacted 1@1 + 1@2 files => 2075481 bytes
+2026/04/28-02:33:52.323 bea compacted to: files[ 0 4 45 22 0 0 0 ]
+2026/04/28-02:33:52.324 bea Delete type=2 #8205
+2026/04/28-02:33:52.324 bea Delete type=2 #8240
+2026/04/28-02:33:52.324 bea Delete type=2 #8168
+2026/04/28-02:33:52.385 be8 Compacting 1@1 + 14@2 files
+2026/04/28-02:33:52.450 be8 Generated table #8246@1: 60875 keys, 2224443 bytes
+2026/04/28-02:33:52.502 be8 Generated table #8247@1: 41207 keys, 2203029 bytes
+2026/04/28-02:33:52.519 be8 Generated table #8248@1: 1349 keys, 2148571 bytes
+2026/04/28-02:33:52.537 be8 Generated table #8249@1: 1528 keys, 2149884 bytes
+2026/04/28-02:33:52.554 be8 Generated table #8250@1: 1433 keys, 2146558 bytes
+2026/04/28-02:33:52.571 be8 Generated table #8251@1: 1278 keys, 2138840 bytes
+2026/04/28-02:33:52.589 be8 Generated table #8252@1: 1425 keys, 2148244 bytes
+2026/04/28-02:33:52.606 be8 Generated table #8253@1: 1310 keys, 2152105 bytes
+2026/04/28-02:33:52.625 be8 Generated table #8254@1: 1509 keys, 2152189 bytes
+2026/04/28-02:33:52.641 be8 Generated table #8255@1: 1485 keys, 2142751 bytes
+2026/04/28-02:33:52.645 be8 Generated table #8256@1: 523 keys, 641765 bytes
+2026/04/28-02:33:52.645 be8 Compacted 1@1 + 14@2 files => 22248379 bytes
+2026/04/28-02:33:52.646 be8 compacted to: files[ 0 3 42 22 0 0 0 ]
+2026/04/28-02:33:52.646 be8 Delete type=2 #8151
+2026/04/28-02:33:52.646 be8 Delete type=2 #8032
+2026/04/28-02:33:52.646 be8 Delete type=2 #8222
+2026/04/28-02:33:52.646 be8 Delete type=2 #8221
+2026/04/28-02:33:52.646 be8 Delete type=2 #8220
+2026/04/28-02:33:52.646 be8 Delete type=2 #8219
+2026/04/28-02:33:52.646 be8 Delete type=2 #8223
+2026/04/28-02:33:52.647 be8 Delete type=2 #8225
+2026/04/28-02:33:52.647 be8 Delete type=2 #8242
+2026/04/28-02:33:52.647 be8 Delete type=2 #8227
+2026/04/28-02:33:52.647 be8 Delete type=2 #8226
+2026/04/28-02:33:52.647 be8 Delete type=2 #8224
+2026/04/28-02:33:52.647 be8 Delete type=2 #8054
+2026/04/28-02:33:52.647 be8 Delete type=2 #8033
+2026/04/28-02:33:52.647 be8 Delete type=2 #8218
+2026/04/28-02:33:52.717 bea Compacting 1@1 + 12@2 files
+2026/04/28-02:33:52.730 bea Generated table #8257@1: 24650 keys, 363404 bytes
+2026/04/28-02:33:52.732 bea Generated table #8258@1: 2517 keys, 34272 bytes
+2026/04/28-02:33:52.778 bea Generated table #8259@1: 91874 keys, 2241392 bytes
+2026/04/28-02:33:52.824 bea Generated table #8260@1: 92800 keys, 2241796 bytes
+2026/04/28-02:33:52.882 bea Generated table #8261@1: 93364 keys, 2243653 bytes
+2026/04/28-02:33:52.926 bea Generated table #8262@1: 91828 keys, 2240002 bytes
+2026/04/28-02:33:52.984 bea Generated table #8263@1: 91135 keys, 2240261 bytes
+2026/04/28-02:33:53.030 bea Generated table #8264@1: 91021 keys, 2239903 bytes
+2026/04/28-02:33:53.073 bea Generated table #8265@1: 95354 keys, 2244845 bytes
+2026/04/28-02:33:53.130 bea Generated table #8266@1: 78012 keys, 2227406 bytes
+2026/04/28-02:33:53.210 bea Generated table #8267@1: 98568 keys, 2251857 bytes
+2026/04/28-02:33:53.258 bea Generated table #8268@1: 22642 keys, 2397128 bytes
+2026/04/28-02:33:53.260 bea Generated table #8269@1: 680 keys, 58207 bytes
+2026/04/28-02:33:53.260 bea Compacted 1@1 + 12@2 files => 23024126 bytes
+2026/04/28-02:33:53.261 bea compacted to: files[ 0 2 43 22 0 0 0 ]
+2026/04/28-02:33:54.091 bea Compacting 1@1 + 10@2 files
+2026/04/28-02:33:54.112 bea Generated table #8270@1: 1736 keys, 2161596 bytes
+2026/04/28-02:33:54.128 bea Generated table #8271@1: 1517 keys, 2136021 bytes
+2026/04/28-02:33:54.147 bea Generated table #8272@1: 1913 keys, 2142820 bytes
+2026/04/28-02:33:54.169 bea Generated table #8273@1: 2373 keys, 2147284 bytes
+2026/04/28-02:33:54.205 bea Level-0 table #8276: started
+2026/04/28-02:33:54.228 bea Level-0 table #8276: 1175353 bytes OK
+2026/04/28-02:33:54.230 bea Delete type=2 #8207
+2026/04/28-02:33:54.230 bea Delete type=2 #8210
+2026/04/28-02:33:54.230 bea Delete type=2 #8213
+2026/04/28-02:33:54.230 bea Delete type=2 #8211
+2026/04/28-02:33:54.230 bea Delete type=2 #8215
+2026/04/28-02:33:54.230 bea Delete type=2 #8208
+2026/04/28-02:33:54.230 bea Delete type=2 #8214
+2026/04/28-02:33:54.230 bea Delete type=2 #8209
+2026/04/28-02:33:54.230 bea Delete type=2 #8216
+2026/04/28-02:33:54.230 bea Delete type=2 #8241
+2026/04/28-02:33:54.230 bea Delete type=2 #8212
+2026/04/28-02:33:54.230 bea Delete type=2 #8217
+2026/04/28-02:33:54.230 bea Delete type=2 #8206
+2026/04/28-02:33:54.230 bea Delete type=0 #8239
+2026/04/28-02:33:54.255 bea Generated table #8274@1: 28891 keys, 2209854 bytes
+2026/04/28-02:33:54.305 bea Generated table #8277@1: 25124 keys, 2272047 bytes
+2026/04/28-02:33:54.354 bea Generated table #8278@1: 23741 keys, 2273584 bytes
+2026/04/28-02:33:54.414 bea Generated table #8279@1: 26864 keys, 2263238 bytes
+2026/04/28-02:33:54.466 bea Generated table #8280@1: 23240 keys, 2278328 bytes
+2026/04/28-02:33:54.505 bea Generated table #8281@1: 19987 keys, 2192515 bytes
+2026/04/28-02:33:54.506 bea Generated table #8282@1: 407 keys, 14660 bytes
+2026/04/28-02:33:54.506 bea Compacted 1@1 + 10@2 files => 22091947 bytes
+2026/04/28-02:33:54.507 bea compacted to: files[ 1 1 44 22 0 0 0 ]
+2026/04/28-02:33:54.508 bea Delete type=2 #8233
+2026/04/28-02:33:54.508 bea Delete type=2 #8230
+2026/04/28-02:33:54.508 bea Delete type=2 #8229
+2026/04/28-02:33:54.508 bea Delete type=2 #8236
+2026/04/28-02:33:54.508 bea Delete type=2 #8235
+2026/04/28-02:33:54.508 bea Delete type=2 #8182
+2026/04/28-02:33:54.508 bea Delete type=2 #8228
+2026/04/28-02:33:54.508 bea Delete type=2 #8231
+2026/04/28-02:33:54.508 bea Delete type=2 #8243
+2026/04/28-02:33:54.508 bea Delete type=2 #8234
+2026/04/28-02:33:54.508 bea Delete type=2 #8232
+2026/04/28-02:33:54.589 bea Compacting 1@0 + 1@1 files
+2026/04/28-02:33:54.618 bea Generated table #8283@0: 26678 keys, 548046 bytes
+2026/04/28-02:33:54.620 bea Generated table #8284@0: 460 keys, 21918 bytes
+2026/04/28-02:33:54.620 bea Generated table #8285@0: 27 keys, 2648 bytes
+2026/04/28-02:33:54.624 bea Generated table #8286@0: 1993 keys, 121272 bytes
+2026/04/28-02:33:54.624 bea Compacted 1@0 + 1@1 files => 693884 bytes
+2026/04/28-02:33:54.625 bea compacted to: files[ 0 4 44 22 0 0 0 ]
+2026/04/28-02:33:54.734 bea Compacting 1@1 + 12@2 files
+2026/04/28-02:33:54.763 bea Generated table #8287@1: 38749 keys, 434845 bytes
+2026/04/28-02:33:54.766 bea Generated table #8288@1: 2517 keys, 34272 bytes
+2026/04/28-02:33:54.826 bea Generated table #8289@1: 91874 keys, 2241392 bytes
+2026/04/28-02:33:54.893 bea Generated table #8290@1: 92800 keys, 2241796 bytes
+2026/04/28-02:33:54.959 bea Generated table #8291@1: 93364 keys, 2243653 bytes
+2026/04/28-02:33:55.023 bea Generated table #8292@1: 91828 keys, 2240002 bytes
+2026/04/28-02:33:55.087 bea Generated table #8293@1: 91135 keys, 2240261 bytes
+2026/04/28-02:33:55.155 bea Generated table #8294@1: 91021 keys, 2239903 bytes
+2026/04/28-02:33:55.215 bea Generated table #8295@1: 95354 keys, 2244845 bytes
+2026/04/28-02:33:55.277 bea Generated table #8296@1: 77881 keys, 2226079 bytes
+2026/04/28-02:33:55.348 bea Generated table #8297@1: 98427 keys, 2251817 bytes
+2026/04/28-02:33:55.395 bea Generated table #8298@1: 26321 keys, 2400841 bytes
+2026/04/28-02:33:55.398 bea Generated table #8299@1: 1267 keys, 107063 bytes
+2026/04/28-02:33:55.398 bea Compacted 1@1 + 12@2 files => 23146769 bytes
+2026/04/28-02:33:55.398 bea compacted to: files[ 0 3 45 22 0 0 0 ]
+2026/04/28-02:33:55.399 bea Delete type=2 #8244
+2026/04/28-02:33:55.399 bea Delete type=2 #8276
+2026/04/28-02:33:55.621 bea Compacting 1@1 + 3@2 files
+2026/04/28-02:33:55.694 bea Generated table #8300@1: 59670 keys, 2222836 bytes
+2026/04/28-02:33:55.750 bea Generated table #8301@1: 43106 keys, 2208144 bytes
+2026/04/28-02:33:55.751 bea Generated table #8302@1: 10 keys, 57162 bytes
+2026/04/28-02:33:55.751 bea Compacted 1@1 + 3@2 files => 4488142 bytes
+2026/04/28-02:33:55.752 bea compacted to: files[ 0 2 45 22 0 0 0 ]
+2026/04/28-02:33:55.753 bea Delete type=2 #8265
+2026/04/28-02:33:55.753 bea Delete type=2 #8259
+2026/04/28-02:33:55.753 bea Delete type=2 #8264
+2026/04/28-02:33:55.753 bea Delete type=2 #8261
+2026/04/28-02:33:55.753 bea Delete type=2 #8267
+2026/04/28-02:33:55.753 bea Delete type=2 #8258
+2026/04/28-02:33:55.753 bea Delete type=2 #8260
+2026/04/28-02:33:55.753 bea Delete type=2 #8283
+2026/04/28-02:33:55.753 bea Delete type=2 #8263
+2026/04/28-02:33:55.753 bea Delete type=2 #8268
+2026/04/28-02:33:55.754 bea Delete type=2 #8262
+2026/04/28-02:33:55.754 bea Delete type=2 #8257
+2026/04/28-02:33:55.754 bea Delete type=2 #8266
+2026/04/28-02:33:55.761 bf0 Compacting 1@1 + 11@2 files
+2026/04/28-02:33:55.779 bf0 Generated table #8303@1: 1951 keys, 2143125 bytes
+2026/04/28-02:33:55.797 bf0 Generated table #8304@1: 2710 keys, 2156563 bytes
+2026/04/28-02:33:55.815 bf0 Generated table #8305@1: 885 keys, 2139330 bytes
+2026/04/28-02:33:55.828 bf0 Generated table #8306@1: 1038 keys, 2132355 bytes
+2026/04/28-02:33:55.846 bf0 Generated table #8307@1: 2057 keys, 2144737 bytes
+2026/04/28-02:33:55.862 bf0 Generated table #8308@1: 1346 keys, 2134287 bytes
+2026/04/28-02:33:55.889 bf0 Generated table #8309@1: 2588 keys, 2153772 bytes
+2026/04/28-02:33:55.952 bf0 Generated table #8310@1: 19151 keys, 2177686 bytes
+2026/04/28-02:33:56.012 bf0 Generated table #8311@1: 28042 keys, 2264654 bytes
+2026/04/28-02:33:56.068 bf0 Generated table #8312@1: 23875 keys, 2273531 bytes
+2026/04/28-02:33:56.085 bf0 Generated table #8313@1: 7344 keys, 694532 bytes
+2026/04/28-02:33:56.085 bf0 Compacted 1@1 + 11@2 files => 22414572 bytes
+2026/04/28-02:33:56.085 bf0 compacted to: files[ 0 1 45 22 0 0 0 ]
+2026/04/28-02:33:56.089 bea Compacting 1@1 + 4@2 files
+2026/04/28-02:33:56.146 bea Generated table #8314@1: 23215 keys, 2277510 bytes
+2026/04/28-02:33:56.146 bea Level-0 table #8316: started
+2026/04/28-02:33:56.163 bea Level-0 table #8316: 1958816 bytes OK
+2026/04/28-02:33:56.165 bea Delete type=0 #8275
+2026/04/28-02:33:56.204 bea Generated table #8317@1: 19964 keys, 2192658 bytes
+2026/04/28-02:33:56.246 bea Generated table #8318@1: 33623 keys, 2211894 bytes
+2026/04/28-02:33:56.247 bea Generated table #8319@1: 2 keys, 15849 bytes
+2026/04/28-02:33:56.247 bea Compacted 1@1 + 4@2 files => 6697911 bytes
+2026/04/28-02:33:56.247 bea compacted to: files[ 1 0 45 22 0 0 0 ]
+2026/04/28-02:33:56.296 bea Compacting 1@0 + 0@1 files
+2026/04/28-02:33:56.318 bea Generated table #8320@0: 16163 keys, 506729 bytes
+2026/04/28-02:33:56.319 bea Generated table #8321@0: 428 keys, 116815 bytes
+2026/04/28-02:33:56.325 bea Generated table #8322@0: 825 keys, 542564 bytes
+2026/04/28-02:33:56.333 bea Generated table #8323@0: 1953 keys, 632383 bytes
+2026/04/28-02:33:56.333 bea Compacted 1@0 + 0@1 files => 1798491 bytes
+2026/04/28-02:33:56.334 bea compacted to: files[ 0 4 45 22 0 0 0 ]
+2026/04/28-02:33:56.335 bea Delete type=2 #8316
+2026/04/28-02:33:56.337 bea Compacting 1@1 + 12@2 files
+2026/04/28-02:33:56.369 bea Generated table #8324@1: 48973 keys, 727344 bytes
+2026/04/28-02:33:56.372 bea Generated table #8325@1: 2517 keys, 34272 bytes
+2026/04/28-02:33:56.438 bea Generated table #8326@1: 91874 keys, 2241392 bytes
+2026/04/28-02:33:56.500 bea Generated table #8327@1: 92800 keys, 2241796 bytes
+2026/04/28-02:33:56.552 bea Generated table #8328@1: 93364 keys, 2243653 bytes
+2026/04/28-02:33:56.613 bea Generated table #8329@1: 91828 keys, 2240002 bytes
+2026/04/28-02:33:56.699 bea Generated table #8330@1: 91135 keys, 2240261 bytes
+2026/04/28-02:33:56.763 bea Generated table #8331@1: 91021 keys, 2239903 bytes
+2026/04/28-02:33:56.828 bea Generated table #8332@1: 95354 keys, 2244845 bytes
+2026/04/28-02:33:56.891 bea Generated table #8333@1: 77473 keys, 2227293 bytes
+2026/04/28-02:33:56.962 bea Generated table #8334@1: 98330 keys, 2251608 bytes
+2026/04/28-02:33:57.013 bea Generated table #8335@1: 27986 keys, 2403347 bytes
+2026/04/28-02:33:57.015 bea Generated table #8336@1: 484 keys, 50203 bytes
+2026/04/28-02:33:57.015 bea Compacted 1@1 + 12@2 files => 23385919 bytes
+2026/04/28-02:33:57.016 bea compacted to: files[ 0 3 46 22 0 0 0 ]
+2026/04/28-02:33:57.017 bea Delete type=2 #8320
+2026/04/28-02:33:57.105 bea Compacting 1@1 + 11@2 files
+2026/04/28-02:33:57.187 bea Generated table #8337@1: 59670 keys, 2222838 bytes
+2026/04/28-02:33:57.223 bea Generated table #8338@1: 43456 keys, 2208844 bytes
+2026/04/28-02:33:57.242 bea Generated table #8339@1: 1317 keys, 2145560 bytes
+2026/04/28-02:33:57.262 bea Generated table #8340@1: 1525 keys, 2149602 bytes
+2026/04/28-02:33:57.281 bea Generated table #8341@1: 1428 keys, 2146032 bytes
+2026/04/28-02:33:57.297 bea Generated table #8342@1: 1254 keys, 2140368 bytes
+2026/04/28-02:33:57.316 bea Generated table #8343@1: 1444 keys, 2145750 bytes
+2026/04/28-02:33:57.332 bea Generated table #8344@1: 1314 keys, 2153495 bytes
+2026/04/28-02:33:57.348 bea Generated table #8345@1: 1459 keys, 2151620 bytes
+2026/04/28-02:33:57.364 bea Generated table #8346@1: 1475 keys, 2147688 bytes
+2026/04/28-02:33:57.366 bea Generated table #8347@1: 167 keys, 179758 bytes
+2026/04/28-02:33:57.367 bea Compacted 1@1 + 11@2 files => 21791555 bytes
+2026/04/28-02:33:57.367 bea compacted to: files[ 0 2 46 22 0 0 0 ]
+2026/04/28-02:33:57.369 bea Delete type=2 #8296
+2026/04/28-02:33:57.369 bea Delete type=2 #8256
+2026/04/28-02:33:57.369 bea Delete type=2 #8281
+2026/04/28-02:33:57.369 bea Delete type=2 #8280
+2026/04/28-02:33:57.369 bea Delete type=2 #8273
+2026/04/28-02:33:57.369 bea Delete type=2 #8181
+2026/04/28-02:33:57.369 bea Delete type=2 #8270
+2026/04/28-02:33:57.369 bea Delete type=2 #8278
+2026/04/28-02:33:57.369 bea Delete type=2 #8284
+2026/04/28-02:33:57.369 bea Delete type=2 #8288
+2026/04/28-02:33:57.369 bea Delete type=2 #8277
+2026/04/28-02:33:57.369 bea Delete type=2 #8295
+2026/04/28-02:33:57.369 bea Delete type=2 #8290
+2026/04/28-02:33:57.369 bea Delete type=2 #8298
+2026/04/28-02:33:57.369 bea Delete type=2 #8287
+2026/04/28-02:33:57.369 bea Delete type=2 #8294
+2026/04/28-02:33:57.369 bea Delete type=2 #8269
+2026/04/28-02:33:57.369 bea Delete type=2 #8237
+2026/04/28-02:33:57.370 bea Delete type=2 #8274
+2026/04/28-02:33:57.370 bea Delete type=2 #8297
+2026/04/28-02:33:57.370 bea Delete type=2 #8289
+2026/04/28-02:33:57.370 bea Delete type=2 #8282
+2026/04/28-02:33:57.370 bea Delete type=2 #8246
+2026/04/28-02:33:57.370 bea Delete type=2 #8272
+2026/04/28-02:33:57.370 bea Delete type=2 #8286
+2026/04/28-02:33:57.370 bea Delete type=2 #8293
+2026/04/28-02:33:57.370 bea Delete type=2 #8291
+2026/04/28-02:33:57.370 bea Delete type=2 #8292
+2026/04/28-02:33:57.370 bea Delete type=2 #8247
+2026/04/28-02:33:57.370 bea Delete type=2 #8180
+2026/04/28-02:33:57.370 bea Delete type=2 #8271
+2026/04/28-02:33:57.370 bea Delete type=2 #8055
+2026/04/28-02:33:57.370 bea Delete type=2 #8285
+2026/04/28-02:33:58.474 bea Compacting 1@1 + 10@2 files
+2026/04/28-02:33:58.495 bea Generated table #8348@1: 1947 keys, 2140458 bytes
+2026/04/28-02:33:58.526 bea Generated table #8349@1: 2705 keys, 2152043 bytes
+2026/04/28-02:33:58.547 bea Generated table #8350@1: 891 keys, 2132083 bytes
+2026/04/28-02:33:58.563 bea Generated table #8351@1: 955 keys, 2131529 bytes
+2026/04/28-02:33:58.587 bea Generated table #8352@1: 2008 keys, 2142695 bytes
+2026/04/28-02:33:58.604 bea Generated table #8353@1: 1324 keys, 2132282 bytes
+2026/04/28-02:33:58.631 bea Generated table #8354@1: 2331 keys, 2147368 bytes
+2026/04/28-02:33:58.659 bea Level-0 table #8357: started
+2026/04/28-02:33:58.686 bea Level-0 table #8357: 1346845 bytes OK
+2026/04/28-02:33:58.688 bea Delete type=2 #8254
+2026/04/28-02:33:58.688 bea Delete type=2 #8251
+2026/04/28-02:33:58.689 bea Delete type=2 #8321
+2026/04/28-02:33:58.689 bea Delete type=2 #8255
+2026/04/28-02:33:58.689 bea Delete type=2 #8300
+2026/04/28-02:33:58.689 bea Delete type=2 #8252
+2026/04/28-02:33:58.689 bea Delete type=2 #8249
+2026/04/28-02:33:58.689 bea Delete type=2 #8302
+2026/04/28-02:33:58.689 bea Delete type=2 #8301
+2026/04/28-02:33:58.689 bea Delete type=2 #8248
+2026/04/28-02:33:58.689 bea Delete type=2 #8253
+2026/04/28-02:33:58.689 bea Delete type=0 #8315
+2026/04/28-02:33:58.689 bea Delete type=2 #8250
+2026/04/28-02:33:58.710 bea Generated table #8355@1: 12210 keys, 2167947 bytes
+2026/04/28-02:33:58.777 bea Generated table #8358@1: 30326 keys, 2257237 bytes
+2026/04/28-02:33:58.838 bea Generated table #8359@1: 24958 keys, 2270674 bytes
+2026/04/28-02:33:58.851 bea Generated table #8360@1: 4715 keys, 448333 bytes
+2026/04/28-02:33:58.851 bea Compacted 1@1 + 10@2 files => 22122649 bytes
+2026/04/28-02:33:58.851 bea compacted to: files[ 1 1 47 22 0 0 0 ]
+2026/04/28-02:33:58.853 bea Compacting 1@0 + 1@1 files
+2026/04/28-02:33:58.884 bea Generated table #8361@0: 29249 keys, 718727 bytes
+2026/04/28-02:33:58.885 bea Generated table #8362@0: 464 keys, 22645 bytes
+2026/04/28-02:33:58.892 bea Generated table #8363@0: 2357 keys, 790212 bytes
+2026/04/28-02:33:58.892 bea Compacted 1@0 + 1@1 files => 1531584 bytes
+2026/04/28-02:33:58.893 bea compacted to: files[ 0 3 47 22 0 0 0 ]
+2026/04/28-02:33:58.899 bea Compacting 1@1 + 11@2 files
+2026/04/28-02:33:58.955 bea Generated table #8364@1: 26266 keys, 2265931 bytes
+2026/04/28-02:33:58.998 bea Generated table #8365@1: 23480 keys, 2271883 bytes
+2026/04/28-02:33:59.053 bea Generated table #8366@1: 19487 keys, 2228119 bytes
+2026/04/28-02:33:59.109 bea Generated table #8367@1: 35645 keys, 2215302 bytes
+2026/04/28-02:33:59.124 bea Generated table #8368@1: 6896 keys, 2129481 bytes
+2026/04/28-02:33:59.138 bea Generated table #8369@1: 544 keys, 2118871 bytes
+2026/04/28-02:33:59.147 bea Generated table #8370@1: 442 keys, 2112809 bytes
+2026/04/28-02:33:59.153 bea Generated table #8371@1: 544 keys, 2111677 bytes
+2026/04/28-02:33:59.171 bea Generated table #8372@1: 15810 keys, 1442847 bytes
+2026/04/28-02:33:59.171 bea Compacted 1@1 + 11@2 files => 18896920 bytes
+2026/04/28-02:33:59.172 bea compacted to: files[ 0 2 45 22 0 0 0 ]
+2026/04/28-02:33:59.173 bea Delete type=2 #8304
+2026/04/28-02:33:59.173 bea Delete type=2 #8309
+2026/04/28-02:33:59.173 bea Delete type=2 #8357
+2026/04/28-02:33:59.173 bea Delete type=2 #8311
+2026/04/28-02:33:59.173 bea Delete type=2 #8305
+2026/04/28-02:33:59.173 bea Delete type=2 #8310
+2026/04/28-02:33:59.173 bea Delete type=2 #8303
+2026/04/28-02:33:59.173 bea Delete type=2 #8307
+2026/04/28-02:33:59.173 bea Delete type=2 #8322
+2026/04/28-02:33:59.173 bea Delete type=2 #8308
+2026/04/28-02:33:59.173 bea Delete type=2 #8306
+2026/04/28-02:33:59.173 bea Delete type=2 #8323
+2026/04/28-02:33:59.173 bea Delete type=2 #8312
+2026/04/28-02:33:59.177 bea Compacting 1@1 + 4@2 files
+2026/04/28-02:33:59.222 bea Generated table #8373@1: 56864 keys, 2219958 bytes
+2026/04/28-02:33:59.262 bea Generated table #8374@1: 47955 keys, 2214092 bytes
+2026/04/28-02:33:59.264 bea Generated table #8375@1: 58 keys, 155008 bytes
+2026/04/28-02:33:59.264 bea Compacted 1@1 + 4@2 files => 4589058 bytes
+2026/04/28-02:33:59.264 bea compacted to: files[ 0 1 44 22 0 0 0 ]
+2026/04/28-02:34:00.372 bea Compacting 1@1 + 12@2 files
+2026/04/28-02:34:00.383 bea Level-0 table #8378: started
+2026/04/28-02:34:00.407 bea Level-0 table #8378: 2367852 bytes OK
+2026/04/28-02:34:00.408 bea Delete type=0 #8356
+2026/04/28-02:34:00.446 bea Generated table #8376@1: 62930 keys, 722923 bytes
+2026/04/28-02:34:00.449 bea Generated table #8379@1: 2517 keys, 34272 bytes
+2026/04/28-02:34:00.515 bea Generated table #8380@1: 91874 keys, 2241392 bytes
+2026/04/28-02:34:00.587 bea Generated table #8381@1: 92800 keys, 2241796 bytes
+2026/04/28-02:34:00.657 bea Generated table #8382@1: 93364 keys, 2243653 bytes
+2026/04/28-02:34:00.730 bea Generated table #8383@1: 91828 keys, 2240002 bytes
+2026/04/28-02:34:00.794 bea Generated table #8384@1: 91135 keys, 2240261 bytes
+2026/04/28-02:34:00.856 bea Generated table #8385@1: 91021 keys, 2239903 bytes
+2026/04/28-02:34:00.923 bea Generated table #8386@1: 95354 keys, 2244845 bytes
+2026/04/28-02:34:00.983 bea Generated table #8387@1: 77658 keys, 2227680 bytes
+2026/04/28-02:34:01.049 bea Generated table #8388@1: 98128 keys, 2251019 bytes
+2026/04/28-02:34:01.096 bea Generated table #8389@1: 33123 keys, 2407861 bytes
+2026/04/28-02:34:01.098 bea Generated table #8390@1: 1023 keys, 132986 bytes
+2026/04/28-02:34:01.098 bea Compacted 1@1 + 12@2 files => 23468593 bytes
+2026/04/28-02:34:01.099 bea compacted to: files[ 1 0 45 22 0 0 0 ]
+2026/04/28-02:34:01.100 bea Delete type=2 #8334
+2026/04/28-02:34:01.100 bea Delete type=2 #8324
+2026/04/28-02:34:01.100 bea Delete type=2 #8327
+2026/04/28-02:34:01.100 bea Delete type=2 #8319
+2026/04/28-02:34:01.100 bea Delete type=2 #8332
+2026/04/28-02:34:01.100 bea Delete type=2 #8330
+2026/04/28-02:34:01.101 bea Delete type=2 #8335
+2026/04/28-02:34:01.101 bea Delete type=2 #8318
+2026/04/28-02:34:01.101 bea Delete type=2 #8314
+2026/04/28-02:34:01.101 bea Delete type=2 #8336
+2026/04/28-02:34:01.101 bea Delete type=2 #8313
+2026/04/28-02:34:01.101 bea Delete type=2 #8317
+2026/04/28-02:34:01.101 bea Delete type=2 #8279
+2026/04/28-02:34:01.101 bea Delete type=2 #8333
+2026/04/28-02:34:01.101 bea Delete type=2 #8337
+2026/04/28-02:34:01.101 bea Delete type=2 #8362
+2026/04/28-02:34:01.101 bea Delete type=2 #8165
+2026/04/28-02:34:01.101 bea Delete type=2 #8325
+2026/04/28-02:34:01.101 bea Delete type=2 #8299
+2026/04/28-02:34:01.101 bea Delete type=2 #8245
+2026/04/28-02:34:01.101 bea Delete type=2 #8328
+2026/04/28-02:34:01.101 bea Delete type=2 #8361
+2026/04/28-02:34:01.101 bea Delete type=2 #8363
+2026/04/28-02:34:01.101 bea Delete type=2 #8331
+2026/04/28-02:34:01.102 bea Delete type=2 #8329
+2026/04/28-02:34:01.102 bea Delete type=2 #8326
+2026/04/28-02:34:01.102 bea Delete type=2 #8167
+2026/04/28-02:34:01.102 bea Delete type=2 #8166
+2026/04/28-02:34:01.102 bea Delete type=2 #8338
+2026/04/28-02:34:01.102 bea Delete type=2 #8238
+2026/04/28-02:34:01.196 bea Compacting 1@0 + 0@1 files
+2026/04/28-02:34:01.207 bea Generated table #8391@0: 10692 keys, 121133 bytes
+2026/04/28-02:34:01.209 bea Generated table #8392@0: 867 keys, 35118 bytes
+2026/04/28-02:34:01.216 bea Generated table #8393@0: 807 keys, 862102 bytes
+2026/04/28-02:34:01.222 bea Generated table #8394@0: 1256 keys, 788030 bytes
+2026/04/28-02:34:01.222 bea Compacted 1@0 + 0@1 files => 1806383 bytes
+2026/04/28-02:34:01.222 bea compacted to: files[ 0 4 45 22 0 0 0 ]
+2026/04/28-02:34:01.243 bf0 Compacting 1@1 + 11@2 files
+2026/04/28-02:34:01.273 bf0 Generated table #8395@1: 2702 keys, 2149898 bytes
+2026/04/28-02:34:01.288 bf0 Generated table #8396@1: 895 keys, 2137358 bytes
+2026/04/28-02:34:01.296 bf0 Generated table #8397@1: 420 keys, 2125164 bytes
+2026/04/28-02:34:01.322 bf0 Generated table #8398@1: 1994 keys, 2144219 bytes
+2026/04/28-02:34:01.335 bf0 Generated table #8399@1: 1504 keys, 2135355 bytes
+2026/04/28-02:34:01.354 bf0 Generated table #8400@1: 2052 keys, 2145427 bytes
+2026/04/28-02:34:01.377 bf0 Generated table #8401@1: 2310 keys, 2144109 bytes
+2026/04/28-02:34:01.436 bf0 Generated table #8402@1: 33663 keys, 2239014 bytes
+2026/04/28-02:34:01.508 bf0 Generated table #8403@1: 25324 keys, 2271364 bytes
+2026/04/28-02:34:01.564 bf0 Generated table #8404@1: 24832 keys, 2270542 bytes
+2026/04/28-02:34:01.593 bf0 Generated table #8405@1: 13636 keys, 1187585 bytes
+2026/04/28-02:34:01.593 bf0 Compacted 1@1 + 11@2 files => 22950035 bytes
+2026/04/28-02:34:01.593 bf0 compacted to: files[ 0 3 45 22 0 0 0 ]
+2026/04/28-02:34:01.595 bf0 Delete type=2 #8359
+2026/04/28-02:34:01.595 bf0 Delete type=2 #8360
+2026/04/28-02:34:01.595 bf0 Delete type=2 #8352
+2026/04/28-02:34:01.595 bf0 Delete type=2 #8350
+2026/04/28-02:34:01.595 bf0 Delete type=2 #8353
+2026/04/28-02:34:01.595 bf0 Delete type=2 #8358
+2026/04/28-02:34:01.595 bf0 Delete type=2 #8393
+2026/04/28-02:34:01.595 bf0 Delete type=2 #8378
+2026/04/28-02:34:01.595 bf0 Delete type=2 #8349
+2026/04/28-02:34:01.595 bf0 Delete type=2 #8355
+2026/04/28-02:34:01.595 bf0 Delete type=2 #8364
+2026/04/28-02:34:01.595 bf0 Delete type=2 #8351
+2026/04/28-02:34:01.596 bf0 Delete type=2 #8354
+2026/04/28-02:34:01.955 bea Compacting 1@1 + 8@2 files
+2026/04/28-02:34:02.041 bea Generated table #8406@1: 23507 keys, 2271618 bytes
+2026/04/28-02:34:02.098 bea Generated table #8407@1: 19528 keys, 2228728 bytes
+2026/04/28-02:34:02.161 bea Generated table #8408@1: 35547 keys, 2214120 bytes
+2026/04/28-02:34:02.184 bea Generated table #8409@1: 7044 keys, 2123866 bytes
+2026/04/28-02:34:02.195 bea Generated table #8410@1: 541 keys, 2111534 bytes
+2026/04/28-02:34:02.206 bea Generated table #8411@1: 446 keys, 2115786 bytes
+2026/04/28-02:34:02.216 bea Generated table #8412@1: 542 keys, 2115953 bytes
+2026/04/28-02:34:02.243 bea Generated table #8413@1: 16280 keys, 2101305 bytes
+2026/04/28-02:34:02.243 bea Compacted 1@1 + 8@2 files => 17282910 bytes
+2026/04/28-02:34:02.244 bea compacted to: files[ 0 2 45 22 0 0 0 ]
+2026/04/28-02:34:02.245 bea Delete type=2 #8365
+2026/04/28-02:34:02.245 bea Delete type=2 #8370
+2026/04/28-02:34:02.245 bea Delete type=2 #8369
+2026/04/28-02:34:02.245 bea Delete type=2 #8368
+2026/04/28-02:34:02.245 bea Delete type=2 #8394
+2026/04/28-02:34:02.245 bea Delete type=2 #8367
+2026/04/28-02:34:02.245 bea Delete type=2 #8366
+2026/04/28-02:34:02.245 bea Delete type=2 #8372
+2026/04/28-02:34:02.245 bea Delete type=2 #8371
+2026/04/28-02:34:02.285 bea Compacting 1@1 + 12@2 files
+2026/04/28-02:34:02.321 bea Generated table #8414@1: 67244 keys, 603962 bytes
+2026/04/28-02:34:02.325 bea Generated table #8415@1: 2517 keys, 34272 bytes
+2026/04/28-02:34:02.388 bea Generated table #8416@1: 91874 keys, 2241392 bytes
+2026/04/28-02:34:02.454 bea Generated table #8417@1: 92800 keys, 2241796 bytes
+2026/04/28-02:34:02.523 bea Generated table #8418@1: 93364 keys, 2243653 bytes
+2026/04/28-02:34:02.582 bea Generated table #8419@1: 91828 keys, 2240002 bytes
+2026/04/28-02:34:02.647 bea Generated table #8420@1: 91135 keys, 2240261 bytes
+2026/04/28-02:34:02.716 bea Generated table #8421@1: 91021 keys, 2239903 bytes
+2026/04/28-02:34:02.786 bea Generated table #8422@1: 95354 keys, 2244845 bytes
+2026/04/28-02:34:02.856 bea Generated table #8423@1: 78066 keys, 2226894 bytes
+2026/04/28-02:34:02.999 bea Generated table #8424@1: 98148 keys, 2251043 bytes
+2026/04/28-02:34:03.063 bea Generated table #8425@1: 32851 keys, 2403797 bytes
+2026/04/28-02:34:03.063 bea Compacted 1@1 + 12@2 files => 23211820 bytes
+2026/04/28-02:34:03.064 bea compacted to: files[ 0 1 45 22 0 0 0 ]
+2026/04/28-02:34:03.111 bf0 Compacting 1@1 + 12@2 files
+2026/04/28-02:34:03.282 bf0 Generated table #8426@1: 54154 keys, 2216281 bytes
+2026/04/28-02:34:03.429 bf0 Generated table #8427@1: 48408 keys, 2214818 bytes
+2026/04/28-02:34:03.463 bf0 Generated table #8428@1: 4676 keys, 2145453 bytes
+2026/04/28-02:34:03.513 bf0 Generated table #8429@1: 1547 keys, 2149332 bytes
+2026/04/28-02:34:03.544 bf0 Generated table #8430@1: 1450 keys, 2146700 bytes
+2026/04/28-02:34:03.569 bf0 Generated table #8431@1: 1244 keys, 2138037 bytes
+2026/04/28-02:34:03.591 bf0 Generated table #8432@1: 1469 keys, 2145614 bytes
+2026/04/28-02:34:03.609 bf0 Generated table #8433@1: 1301 keys, 2150801 bytes
+2026/04/28-02:34:03.642 bf0 Generated table #8434@1: 1363 keys, 2151270 bytes
+2026/04/28-02:34:03.673 bf0 Generated table #8435@1: 1574 keys, 2145194 bytes
+2026/04/28-02:34:03.677 bf0 Generated table #8436@1: 186 keys, 306670 bytes
+2026/04/28-02:34:03.677 bf0 Compacted 1@1 + 12@2 files => 21910170 bytes
+2026/04/28-02:34:03.677 bf0 compacted to: files[ 0 0 44 22 0 0 0 ]
+2026/04/28-02:34:03.678 bf0 Delete type=2 #8379
+2026/04/28-02:34:03.678 bf0 Delete type=2 #8380
+2026/04/28-02:34:03.679 bf0 Delete type=2 #8391
+2026/04/28-02:34:03.679 bf0 Delete type=2 #8388
+2026/04/28-02:34:03.679 bf0 Delete type=2 #8386
+2026/04/28-02:34:03.679 bf0 Delete type=2 #8387
+2026/04/28-02:34:03.679 bf0 Delete type=2 #8381
+2026/04/28-02:34:03.679 bf0 Delete type=2 #8376
+2026/04/28-02:34:03.679 bf0 Delete type=2 #8384
+2026/04/28-02:34:03.679 bf0 Delete type=2 #8389
+2026/04/28-02:34:03.679 bf0 Delete type=2 #8382
+2026/04/28-02:34:03.679 bf0 Delete type=2 #8383
+2026/04/28-02:34:03.679 bf0 Delete type=2 #8385
+2026/04/28-02:34:04.382 bf0 Compacting 1@2 + 10@3 files
+2026/04/28-02:34:04.433 bf0 Generated table #8437@2: 1494 keys, 2117077 bytes
+2026/04/28-02:34:04.466 bf0 Generated table #8438@2: 6535 keys, 2128084 bytes
+2026/04/28-02:34:04.487 bf0 Generated table #8439@2: 2836 keys, 2118746 bytes
+2026/04/28-02:34:04.499 bf0 Generated table #8440@2: 302 keys, 2110360 bytes
+2026/04/28-02:34:04.515 bf0 Generated table #8441@2: 2559 keys, 2119419 bytes
+2026/04/28-02:34:04.534 bf0 Generated table #8442@2: 2096 keys, 2115971 bytes
+2026/04/28-02:34:04.553 bf0 Generated table #8443@2: 4259 keys, 2123727 bytes
+2026/04/28-02:34:04.611 bf0 Generated table #8444@2: 106882 keys, 2258979 bytes
+2026/04/28-02:34:04.669 bf0 Generated table #8445@2: 92232 keys, 2240824 bytes
+2026/04/28-02:34:04.731 bf0 Generated table #8446@2: 91977 keys, 2239498 bytes
+2026/04/28-02:34:04.733 bf0 Generated table #8447@2: 1098 keys, 28052 bytes
+2026/04/28-02:34:04.733 bf0 Compacted 1@2 + 10@3 files => 21600737 bytes
+2026/04/28-02:34:04.734 bf0 compacted to: files[ 0 0 43 23 0 0 0 ]
+2026/04/28-02:34:04.737 bf0 Delete type=2 #8392
+2026/04/28-02:34:04.737 bf0 Delete type=2 #8346
+2026/04/28-02:34:04.738 bf0 Delete type=2 #8345
+2026/04/28-02:34:04.738 bf0 Delete type=2 #8339
+2026/04/28-02:34:04.738 bf0 Delete type=2 #8343
+2026/04/28-02:34:04.738 bf0 Delete type=2 #8373
+2026/04/28-02:34:04.738 bf0 Delete type=2 #8390
+2026/04/28-02:34:04.738 bf0 Delete type=2 #8342
+2026/04/28-02:34:04.738 bf0 Delete type=2 #8341
+2026/04/28-02:34:04.738 bf0 Delete type=2 #8344
+2026/04/28-02:34:04.738 bf0 Delete type=2 #8375
+2026/04/28-02:34:04.738 bf0 Delete type=2 #8374
+2026/04/28-02:34:04.738 bf0 Delete type=2 #8340
+2026/04/28-02:34:05.476 bea Compacting 1@2 + 12@3 files
+2026/04/28-02:34:05.513 bea Level-0 table #8450: started
+2026/04/28-02:34:05.532 bea Level-0 table #8450: 2595788 bytes OK
+2026/04/28-02:34:05.533 bea Delete type=2 #8176
+2026/04/28-02:34:05.533 bea Delete type=2 #8169
+2026/04/28-02:34:05.533 bea Delete type=2 #8172
+2026/04/28-02:34:05.533 bea Delete type=2 #8414
+2026/04/28-02:34:05.533 bea Delete type=2 #8171
+2026/04/28-02:34:05.534 bea Delete type=2 #8177
+2026/04/28-02:34:05.534 bea Delete type=0 #8377
+2026/04/28-02:34:05.534 bea Delete type=2 #8170
+2026/04/28-02:34:05.534 bea Delete type=2 #8174
+2026/04/28-02:34:05.534 bea Delete type=2 #8173
+2026/04/28-02:34:05.534 bea Delete type=2 #8175
+2026/04/28-02:34:05.534 bea Delete type=2 #8178
+2026/04/28-02:34:05.586 bea Generated table #8448@2: 93015 keys, 2241668 bytes
+2026/04/28-02:34:05.652 bea Generated table #8451@2: 94066 keys, 2241769 bytes
+2026/04/28-02:34:05.705 bea Generated table #8452@2: 91940 keys, 2240295 bytes
+2026/04/28-02:34:05.753 bea Generated table #8453@2: 90427 keys, 2238548 bytes
+2026/04/28-02:34:05.807 bea Generated table #8454@2: 92390 keys, 2242149 bytes
+2026/04/28-02:34:05.863 bea Generated table #8455@2: 91652 keys, 2240972 bytes
+2026/04/28-02:34:05.930 bea Generated table #8456@2: 91929 keys, 2241810 bytes
+2026/04/28-02:34:05.986 bea Generated table #8457@2: 92672 keys, 2242497 bytes
+2026/04/28-02:34:06.050 bea Generated table #8458@2: 91308 keys, 2238645 bytes
+2026/04/28-02:34:06.086 bea Generated table #8459@2: 57582 keys, 1421559 bytes
+2026/04/28-02:34:06.087 bea Compacted 1@2 + 12@3 files => 21589912 bytes
+2026/04/28-02:34:06.087 bea compacted to: files[ 1 0 42 21 0 0 0 ]
+2026/04/28-02:34:06.101 bea Compacting 1@0 + 0@1 files
+2026/04/28-02:34:06.111 bea Generated table #8460@0: 9731 keys, 159429 bytes
+2026/04/28-02:34:06.114 bea Generated table #8461@0: 587 keys, 191873 bytes
+2026/04/28-02:34:06.119 bea Generated table #8462@0: 794 keys, 409225 bytes
+2026/04/28-02:34:06.121 bea Generated table #8463@0: 443 keys, 48356 bytes
+2026/04/28-02:34:06.121 bea Compacted 1@0 + 0@1 files => 808883 bytes
+2026/04/28-02:34:06.122 bea compacted to: files[ 0 4 42 21 0 0 0 ]
+2026/04/28-02:34:06.636 bf2 Compacting 1@1 + 11@2 files
+2026/04/28-02:34:06.649 bf2 Generated table #8464@1: 1835 keys, 2140579 bytes
+2026/04/28-02:34:06.668 bf2 Generated table #8465@1: 2837 keys, 2152181 bytes
+2026/04/28-02:34:06.682 bf2 Generated table #8466@1: 1004 keys, 2140086 bytes
+2026/04/28-02:34:06.695 bf2 Generated table #8467@1: 971 keys, 2132806 bytes
+2026/04/28-02:34:06.714 bf2 Generated table #8468@1: 2043 keys, 2145011 bytes
+2026/04/28-02:34:06.725 bf2 Generated table #8469@1: 1314 keys, 2135120 bytes
+2026/04/28-02:34:06.739 bf2 Generated table #8470@1: 2416 keys, 2148794 bytes
+2026/04/28-02:34:06.769 bf2 Generated table #8471@1: 14592 keys, 2172925 bytes
+2026/04/28-02:34:06.806 bf2 Generated table #8472@1: 29550 keys, 2259582 bytes
+2026/04/28-02:34:06.829 bf2 Generated table #8473@1: 16024 keys, 1425330 bytes
+2026/04/28-02:34:06.829 bf2 Compacted 1@1 + 11@2 files => 20852414 bytes
+2026/04/28-02:34:06.830 bf2 compacted to: files[ 0 3 41 21 0 0 0 ]
+2026/04/28-02:34:06.831 bf2 Delete type=2 #8462
+2026/04/28-02:34:06.831 bf2 Delete type=2 #8450
+2026/04/28-02:34:06.901 bea Compacting 1@1 + 10@2 files
+2026/04/28-02:34:06.905 bea Generated table #8474@1: 6884 keys, 84123 bytes
+2026/04/28-02:34:06.907 bea Generated table #8475@1: 671 keys, 10634 bytes
+2026/04/28-02:34:06.971 bea Generated table #8476@1: 91861 keys, 2240591 bytes
+2026/04/28-02:34:07.030 bea Generated table #8477@1: 92829 keys, 2241533 bytes
+2026/04/28-02:34:07.094 bea Generated table #8478@1: 93270 keys, 2241822 bytes
+2026/04/28-02:34:07.153 bea Generated table #8479@1: 91824 keys, 2240677 bytes
+2026/04/28-02:34:07.203 bea Generated table #8480@1: 91178 keys, 2241106 bytes
+2026/04/28-02:34:07.247 bea Generated table #8481@1: 91066 keys, 2239744 bytes
+2026/04/28-02:34:07.292 bea Generated table #8482@1: 95262 keys, 2244550 bytes
+2026/04/28-02:34:07.330 bea Generated table #8483@1: 78495 keys, 2228858 bytes
+2026/04/28-02:34:07.372 bea Generated table #8484@1: 98104 keys, 2251056 bytes
+2026/04/28-02:34:07.409 bea Generated table #8485@1: 33551 keys, 2407931 bytes
+2026/04/28-02:34:07.410 bea Generated table #8486@1: 121 keys, 15674 bytes
+2026/04/28-02:34:07.410 bea Compacted 1@1 + 10@2 files => 22688299 bytes
+2026/04/28-02:34:07.410 bea compacted to: files[ 0 2 44 21 0 0 0 ]
+2026/04/28-02:34:07.411 bea Delete type=2 #8401
+2026/04/28-02:34:07.411 bea Delete type=2 #8416
+2026/04/28-02:34:07.411 bea Delete type=2 #8157
+2026/04/28-02:34:07.411 bea Delete type=2 #8161
+2026/04/28-02:34:07.411 bea Delete type=2 #8422
+2026/04/28-02:34:07.412 bea Delete type=2 #8418
+2026/04/28-02:34:07.412 bea Delete type=2 #8460
+2026/04/28-02:34:07.412 bea Delete type=2 #8424
+2026/04/28-02:34:07.412 bea Delete type=2 #8159
+2026/04/28-02:34:07.412 bea Delete type=2 #8417
+2026/04/28-02:34:07.412 bea Delete type=2 #8423
+2026/04/28-02:34:07.412 bea Delete type=2 #8395
+2026/04/28-02:34:07.412 bea Delete type=2 #8415
+2026/04/28-02:34:07.412 bea Delete type=2 #8399
+2026/04/28-02:34:07.412 bea Delete type=2 #8156
+2026/04/28-02:34:07.412 bea Delete type=2 #8398
+2026/04/28-02:34:07.412 bea Delete type=2 #8347
+2026/04/28-02:34:07.412 bea Delete type=2 #8400
+2026/04/28-02:34:07.412 bea Delete type=2 #8160
+2026/04/28-02:34:07.412 bea Delete type=2 #8154
+2026/04/28-02:34:07.412 bea Delete type=2 #8397
+2026/04/28-02:34:07.412 bea Delete type=2 #8155
+2026/04/28-02:34:07.412 bea Delete type=2 #8125
+2026/04/28-02:34:07.412 bea Delete type=2 #8420
+2026/04/28-02:34:07.412 bea Delete type=2 #8421
+2026/04/28-02:34:07.412 bea Delete type=2 #8396
+2026/04/28-02:34:07.412 bea Delete type=2 #8419
+2026/04/28-02:34:07.412 bea Delete type=2 #8402
+2026/04/28-02:34:07.412 bea Delete type=2 #8403
+2026/04/28-02:34:07.412 bea Delete type=2 #8348
+2026/04/28-02:34:07.412 bea Delete type=2 #8425
+2026/04/28-02:34:07.412 bea Delete type=2 #8179
+2026/04/28-02:34:07.412 bea Delete type=2 #8152
+2026/04/28-02:34:07.413 bea Delete type=2 #8153
+2026/04/28-02:34:07.413 bea Delete type=2 #8158
+2026/04/28-02:34:07.423 bea Compacting 1@1 + 6@2 files
+2026/04/28-02:34:07.459 bea Generated table #8487@1: 24847 keys, 2271605 bytes
+2026/04/28-02:34:07.494 bea Generated table #8488@1: 25756 keys, 2264273 bytes
+2026/04/28-02:34:07.536 bea Generated table #8489@1: 23295 keys, 2265064 bytes
+2026/04/28-02:34:07.571 bea Generated table #8490@1: 23116 keys, 2199784 bytes
+2026/04/28-02:34:07.595 bea Generated table #8491@1: 26795 keys, 2188692 bytes
+2026/04/28-02:34:07.599 bea Generated table #8492@1: 321 keys, 1111624 bytes
+2026/04/28-02:34:07.599 bea Compacted 1@1 + 6@2 files => 12301042 bytes
+2026/04/28-02:34:07.600 bea compacted to: files[ 0 1 44 21 0 0 0 ]
+2026/04/28-02:34:07.601 bea Delete type=2 #8406
+2026/04/28-02:34:07.601 bea Delete type=2 #8404
+2026/04/28-02:34:07.601 bea Delete type=2 #8408
+2026/04/28-02:34:07.601 bea Delete type=2 #8409
+2026/04/28-02:34:07.601 bea Delete type=2 #8463
+2026/04/28-02:34:07.601 bea Delete type=2 #8405
+2026/04/28-02:34:07.601 bea Delete type=2 #8407
+2026/04/28-02:34:07.734 bea Compacting 1@2 + 10@3 files
+2026/04/28-02:34:07.801 bea Generated table #8493@2: 93046 keys, 2241994 bytes
+2026/04/28-02:34:07.870 bea Generated table #8494@2: 94087 keys, 2242395 bytes
+2026/04/28-02:34:07.912 bea Generated table #8495@2: 91968 keys, 2241795 bytes
+2026/04/28-02:34:07.958 bea Generated table #8496@2: 90418 keys, 2237632 bytes
+2026/04/28-02:34:08.000 bea Generated table #8497@2: 92399 keys, 2241918 bytes
+2026/04/28-02:34:08.042 bea Generated table #8498@2: 91608 keys, 2241250 bytes
+2026/04/28-02:34:08.085 bea Generated table #8499@2: 92055 keys, 2241726 bytes
+2026/04/28-02:34:08.130 bea Generated table #8500@2: 92689 keys, 2241939 bytes
+2026/04/28-02:34:08.179 bea Generated table #8501@2: 91316 keys, 2238932 bytes
+2026/04/28-02:34:08.206 bea Generated table #8502@2: 58065 keys, 1434468 bytes
+2026/04/28-02:34:08.206 bea Compacted 1@2 + 10@3 files => 21604049 bytes
+2026/04/28-02:34:08.206 bea compacted to: files[ 0 1 43 21 0 0 0 ]
+2026/04/28-02:34:08.207 bea Delete type=2 #8459
+2026/04/28-02:34:08.207 bea Delete type=2 #8456
+2026/04/28-02:34:08.207 bea Delete type=2 #8454
+2026/04/28-02:34:08.207 bea Delete type=2 #8455
+2026/04/28-02:34:08.207 bea Delete type=2 #8458
+2026/04/28-02:34:08.207 bea Delete type=2 #8457
+2026/04/28-02:34:08.207 bea Delete type=2 #8452
+2026/04/28-02:34:08.207 bea Delete type=2 #8475
+2026/04/28-02:34:08.207 bea Delete type=2 #8451
+2026/04/28-02:34:08.207 bea Delete type=2 #8453
+2026/04/28-02:34:08.207 bea Delete type=2 #8448
+2026/04/28-02:34:13.416 bf0 Compacting 1@2 + 10@3 files
+2026/04/28-02:34:13.432 bf0 Generated table #8503@2: 1486 keys, 2120253 bytes
+2026/04/28-02:34:13.448 bf0 Generated table #8504@2: 6551 keys, 2128240 bytes
+2026/04/28-02:34:13.462 bf0 Generated table #8505@2: 2801 keys, 2117470 bytes
+2026/04/28-02:34:13.473 bf0 Generated table #8506@2: 302 keys, 2110362 bytes
+2026/04/28-02:34:13.487 bf0 Generated table #8507@2: 2559 keys, 2119423 bytes
+2026/04/28-02:34:13.500 bf0 Generated table #8508@2: 2109 keys, 2114631 bytes
+2026/04/28-02:34:13.517 bf0 Generated table #8509@2: 4528 keys, 2123850 bytes
+2026/04/28-02:34:13.564 bf0 Generated table #8510@2: 106760 keys, 2259055 bytes
+2026/04/28-02:34:13.608 bf0 Generated table #8511@2: 92221 keys, 2240611 bytes
+2026/04/28-02:34:13.651 bf0 Generated table #8512@2: 92101 keys, 2240897 bytes
+2026/04/28-02:34:13.651 bf0 Compacted 1@2 + 10@3 files => 21574792 bytes
+2026/04/28-02:34:13.651 bf0 compacted to: files[ 0 1 42 21 0 0 0 ]
+2026/04/28-02:34:13.652 bf0 Delete type=2 #8439
+2026/04/28-02:34:13.652 bf0 Delete type=2 #8443
+2026/04/28-02:34:13.652 bf0 Delete type=2 #8440
+2026/04/28-02:34:13.652 bf0 Delete type=2 #8474
+2026/04/28-02:34:13.652 bf0 Delete type=2 #8441
+2026/04/28-02:34:13.652 bf0 Delete type=2 #8445
+2026/04/28-02:34:13.652 bf0 Delete type=2 #8442
+2026/04/28-02:34:13.652 bf0 Delete type=2 #8437
+2026/04/28-02:34:13.652 bf0 Delete type=2 #8444
+2026/04/28-02:34:13.652 bf0 Delete type=2 #8438
+2026/04/28-02:34:13.652 bf0 Delete type=2 #8446
+2026/04/28-02:34:21.153 bea Compacting 1@1 + 9@2 files
+2026/04/28-02:34:21.201 bea Generated table #8513@1: 54156 keys, 2216261 bytes
+2026/04/28-02:34:21.238 bea Generated table #8514@1: 48412 keys, 2214075 bytes
+2026/04/28-02:34:21.251 bea Generated table #8515@1: 4213 keys, 2144484 bytes
+2026/04/28-02:34:21.263 bea Generated table #8516@1: 1549 keys, 2152748 bytes
+2026/04/28-02:34:21.275 bea Generated table #8517@1: 1451 keys, 2147340 bytes
+2026/04/28-02:34:21.286 bea Generated table #8518@1: 1242 keys, 2139750 bytes
+2026/04/28-02:34:21.298 bea Generated table #8519@1: 1466 keys, 2144809 bytes
+2026/04/28-02:34:21.309 bea Generated table #8520@1: 1304 keys, 2150425 bytes
+2026/04/28-02:34:21.320 bea Generated table #8521@1: 1359 keys, 2145109 bytes
+2026/04/28-02:34:21.320 bea Compacted 1@1 + 9@2 files => 19455001 bytes
+2026/04/28-02:34:21.321 bea compacted to: files[ 0 0 42 21 0 0 0 ]
+2026/04/28-02:34:21.321 bea Delete type=2 #8427
+2026/04/28-02:34:21.321 bea Delete type=2 #8432
+2026/04/28-02:34:21.321 bea Delete type=2 #8430
+2026/04/28-02:34:21.322 bea Delete type=2 #8431
+2026/04/28-02:34:21.322 bea Delete type=2 #8428
+2026/04/28-02:34:21.322 bea Delete type=2 #8461
+2026/04/28-02:34:21.322 bea Delete type=2 #8426
+2026/04/28-02:34:21.322 bea Delete type=2 #8433
+2026/04/28-02:34:21.322 bea Delete type=2 #8434
+2026/04/28-02:34:21.322 bea Delete type=2 #8429
+2026/04/28-02:34:22.422 bf0 Level-0 table #8523: started
+2026/04/28-02:34:22.441 bf0 Level-0 table #8523: 1343999 bytes OK
+2026/04/28-02:34:22.442 bf0 Delete type=0 #8449
+2026/04/28-02:34:22.444 bea Compacting 1@0 + 0@1 files
+2026/04/28-02:34:22.459 bea Generated table #8524@0: 13791 keys, 387878 bytes
+2026/04/28-02:34:22.460 bea Generated table #8525@0: 176 keys, 2777 bytes
+2026/04/28-02:34:22.463 bea Generated table #8526@0: 817 keys, 67364 bytes
+2026/04/28-02:34:22.466 bea Generated table #8527@0: 603 keys, 144476 bytes
+2026/04/28-02:34:22.466 bea Compacted 1@0 + 0@1 files => 602495 bytes
+2026/04/28-02:34:22.467 bea compacted to: files[ 0 4 42 21 0 0 0 ]
+2026/04/28-02:34:22.502 bea Compacting 1@1 + 10@2 files
+2026/04/28-02:34:22.516 bea Generated table #8528@1: 2043 keys, 2145013 bytes
+2026/04/28-02:34:22.528 bea Generated table #8529@1: 1314 keys, 2135120 bytes
+2026/04/28-02:34:22.544 bea Generated table #8530@1: 2416 keys, 2149126 bytes
+2026/04/28-02:34:22.572 bea Generated table #8531@1: 14592 keys, 2172863 bytes
+2026/04/28-02:34:22.626 bea Generated table #8532@1: 29551 keys, 2259124 bytes
+2026/04/28-02:34:22.665 bea Level-0 table #8535: started
+2026/04/28-02:34:22.682 bea Level-0 table #8535: 1037818 bytes OK
+2026/04/28-02:34:22.684 bea Delete type=2 #8523
+2026/04/28-02:34:22.685 bea Delete type=0 #8522
+2026/04/28-02:34:22.696 bea Generated table #8533@1: 24483 keys, 2270993 bytes
+2026/04/28-02:34:22.745 bea Generated table #8536@1: 26013 keys, 2267201 bytes
+2026/04/28-02:34:22.790 bea Generated table #8537@1: 24448 keys, 2267712 bytes
+2026/04/28-02:34:22.837 bea Generated table #8538@1: 21091 keys, 2250621 bytes
+2026/04/28-02:34:22.864 bea Generated table #8539@1: 17047 keys, 1376728 bytes
+2026/04/28-02:34:22.864 bea Compacted 1@1 + 10@2 files => 21294501 bytes
+2026/04/28-02:34:22.864 bea compacted to: files[ 1 3 42 21 0 0 0 ]
+2026/04/28-02:34:22.876 be8 Compacting 1@0 + 2@1 files
+2026/04/28-02:34:22.936 be8 Generated table #8540@0: 21984 keys, 522941 bytes
+2026/04/28-02:34:22.940 be8 Generated table #8541@0: 592 keys, 28432 bytes
+2026/04/28-02:34:22.953 be8 Generated table #8542@0: 2083 keys, 141089 bytes
+2026/04/28-02:34:22.953 be8 Compacted 1@0 + 2@1 files => 692462 bytes
+2026/04/28-02:34:22.956 be8 compacted to: files[ 0 4 42 21 0 0 0 ]
+2026/04/28-02:34:23.223 bf0 Compacting 1@1 + 10@2 files
+2026/04/28-02:34:23.238 bf0 Generated table #8543@1: 18072 keys, 299175 bytes
+2026/04/28-02:34:23.240 bf0 Generated table #8544@1: 1911 keys, 34469 bytes
+2026/04/28-02:34:23.302 bf0 Generated table #8545@1: 91720 keys, 2239457 bytes
+2026/04/28-02:34:23.362 bf0 Generated table #8546@1: 92681 keys, 2240586 bytes
+2026/04/28-02:34:23.418 bf0 Generated table #8547@1: 93421 keys, 2242631 bytes
+2026/04/28-02:34:23.477 bf0 Generated table #8548@1: 91708 keys, 2239213 bytes
+2026/04/28-02:34:23.535 bf0 Generated table #8549@1: 91211 keys, 2241369 bytes
+2026/04/28-02:34:23.600 bf0 Generated table #8550@1: 90977 keys, 2238528 bytes
+2026/04/28-02:34:23.670 bf0 Generated table #8551@1: 95199 keys, 2245495 bytes
+2026/04/28-02:34:23.727 bf0 Generated table #8552@1: 78422 keys, 2228461 bytes
+2026/04/28-02:34:23.786 bf0 Generated table #8553@1: 97986 keys, 2250624 bytes
+2026/04/28-02:34:23.829 bf0 Generated table #8554@1: 34650 keys, 2486555 bytes
+2026/04/28-02:34:23.830 bf0 Generated table #8555@1: 615 keys, 80567 bytes
+2026/04/28-02:34:23.830 bf0 Compacted 1@1 + 10@2 files => 23067130 bytes
+2026/04/28-02:34:23.831 bf0 compacted to: files[ 0 3 45 21 0 0 0 ]
+2026/04/28-02:34:23.832 bf0 Delete type=2 #8469
+2026/04/28-02:34:23.832 bf0 Delete type=2 #8535
+2026/04/28-02:34:23.832 bf0 Delete type=2 #8524
+2026/04/28-02:34:23.832 bf0 Delete type=2 #8468
+2026/04/28-02:34:23.832 bf0 Delete type=2 #8470
+2026/04/28-02:34:23.832 bf0 Delete type=2 #8472
+2026/04/28-02:34:23.832 bf0 Delete type=2 #8490
+2026/04/28-02:34:23.832 bf0 Delete type=2 #8488
+2026/04/28-02:34:23.832 bf0 Delete type=2 #8489
+2026/04/28-02:34:23.832 bf0 Delete type=2 #8487
+2026/04/28-02:34:23.832 bf0 Delete type=2 #8471
+2026/04/28-02:34:23.832 bf0 Delete type=2 #8473
+2026/04/28-02:34:23.832 bf0 Delete type=2 #8526
+2026/04/28-02:34:23.832 bf0 Delete type=2 #8525
+2026/04/28-02:34:31.410 bf0 Compacting 1@1 + 6@2 files
+2026/04/28-02:34:31.445 bf0 Generated table #8556@1: 26795 keys, 2188692 bytes
+2026/04/28-02:34:31.454 bf0 Generated table #8557@1: 536 keys, 2117399 bytes
+2026/04/28-02:34:31.462 bf0 Generated table #8558@1: 524 keys, 2111267 bytes
+2026/04/28-02:34:31.471 bf0 Generated table #8559@1: 461 keys, 2114505 bytes
+2026/04/28-02:34:31.480 bf0 Generated table #8560@1: 6070 keys, 2121903 bytes
+2026/04/28-02:34:31.496 bf0 Generated table #8561@1: 10566 keys, 1098419 bytes
+2026/04/28-02:34:31.496 bf0 Compacted 1@1 + 6@2 files => 11752185 bytes
+2026/04/28-02:34:31.496 bf0 compacted to: files[ 0 2 45 21 0 0 0 ]
+2026/04/28-02:34:31.497 bf0 Delete type=2 #8478
+2026/04/28-02:34:31.498 bf0 Delete type=2 #8491
+2026/04/28-02:34:31.498 bf0 Delete type=2 #8476
+2026/04/28-02:34:31.498 bf0 Delete type=2 #8411
+2026/04/28-02:34:31.498 bf0 Delete type=2 #8481
+2026/04/28-02:34:31.498 bf0 Delete type=2 #8410
+2026/04/28-02:34:31.498 bf0 Delete type=2 #8413
+2026/04/28-02:34:31.498 bf0 Delete type=2 #8477
+2026/04/28-02:34:31.498 bf0 Delete type=2 #8527
+2026/04/28-02:34:31.498 bf0 Delete type=2 #8483
+2026/04/28-02:34:31.498 bf0 Delete type=2 #8484
+2026/04/28-02:34:31.498 bf0 Delete type=2 #8479
+2026/04/28-02:34:31.498 bf0 Delete type=2 #8480
+2026/04/28-02:34:31.498 bf0 Delete type=2 #8540
+2026/04/28-02:34:31.498 bf0 Delete type=2 #8482
+2026/04/28-02:34:31.498 bf0 Delete type=2 #8492
+2026/04/28-02:34:31.498 bf0 Delete type=2 #8412
+2026/04/28-02:34:31.498 bf0 Delete type=2 #8485
+2026/04/28-02:34:43.012 bea Compacting 1@1 + 3@2 files
+2026/04/28-02:34:43.050 bea Generated table #8562@1: 54156 keys, 2216329 bytes
+2026/04/28-02:34:43.087 bea Generated table #8563@1: 48428 keys, 2215102 bytes
+2026/04/28-02:34:43.099 bea Generated table #8564@1: 4085 keys, 2142800 bytes
+2026/04/28-02:34:43.099 bea Compacted 1@1 + 3@2 files => 6574231 bytes
+2026/04/28-02:34:43.100 bea compacted to: files[ 0 1 45 21 0 0 0 ]
+2026/04/28-02:34:43.100 bea Delete type=2 #8515
+2026/04/28-02:34:43.100 bea Delete type=2 #8513
+2026/04/28-02:34:43.100 bea Delete type=2 #8514
+2026/04/28-02:34:43.100 bea Delete type=2 #8541
+2026/04/28-02:35:25.503 bea Compacting 1@2 + 11@3 files
+2026/04/28-02:35:25.556 bea Generated table #8565@2: 92667 keys, 2242256 bytes
+2026/04/28-02:35:25.612 bea Generated table #8566@2: 94474 keys, 2242555 bytes
+2026/04/28-02:35:25.665 bea Generated table #8567@2: 91839 keys, 2240661 bytes
+2026/04/28-02:35:25.738 bea Generated table #8568@2: 90418 keys, 2238910 bytes
+2026/04/28-02:35:25.842 bea Generated table #8569@2: 92389 keys, 2241420 bytes
+2026/04/28-02:35:25.896 bea Generated table #8570@2: 91605 keys, 2241270 bytes
+2026/04/28-02:35:25.938 bea Generated table #8571@2: 92107 keys, 2242065 bytes
+2026/04/28-02:35:25.981 bea Generated table #8572@2: 92511 keys, 2240865 bytes
+2026/04/28-02:35:26.023 bea Generated table #8573@2: 91396 keys, 2239376 bytes
+2026/04/28-02:35:26.052 bea Generated table #8574@2: 61254 keys, 1513116 bytes
+2026/04/28-02:35:26.052 bea Compacted 1@2 + 11@3 files => 21682494 bytes
+2026/04/28-02:35:26.053 bea compacted to: files[ 0 1 44 20 0 0 0 ]
+2026/04/28-02:35:26.053 bea Delete type=2 #8544
+2026/04/28-02:35:26.053 bea Delete type=2 #8502
+2026/04/28-02:35:26.053 bea Delete type=2 #8498
+2026/04/28-02:35:26.054 bea Delete type=2 #8493
+2026/04/28-02:35:26.054 bea Delete type=2 #8495
+2026/04/28-02:35:26.054 bea Delete type=2 #8447
+2026/04/28-02:35:26.054 bea Delete type=2 #8500
+2026/04/28-02:35:26.054 bea Delete type=2 #8499
+2026/04/28-02:35:26.054 bea Delete type=2 #8494
+2026/04/28-02:35:26.054 bea Delete type=2 #8501
+2026/04/28-02:35:26.054 bea Delete type=2 #8496
+2026/04/28-02:35:26.054 bea Delete type=2 #8497
+2026/04/28-02:36:05.533 bea Compacting 1@2 + 10@3 files
+2026/04/28-02:36:05.556 bea Generated table #8575@2: 3178 keys, 2118736 bytes
+2026/04/28-02:36:05.575 bea Generated table #8576@2: 6352 keys, 2127514 bytes
+2026/04/28-02:36:05.591 bea Generated table #8577@2: 3170 keys, 2122346 bytes
+2026/04/28-02:36:05.602 bea Generated table #8578@2: 302 keys, 2109980 bytes
+2026/04/28-02:36:05.622 bea Generated table #8579@2: 2536 keys, 2120427 bytes
+2026/04/28-02:36:05.636 bea Generated table #8580@2: 1847 keys, 2113833 bytes
+2026/04/28-02:36:05.655 bea Generated table #8581@2: 3703 keys, 2123747 bytes
+2026/04/28-02:36:05.802 bea Generated table #8582@2: 101250 keys, 2251514 bytes
+2026/04/28-02:36:05.879 bea Generated table #8583@2: 92158 keys, 2241997 bytes
+2026/04/28-02:36:05.923 bea Generated table #8584@2: 92280 keys, 2240905 bytes
+2026/04/28-02:36:05.927 bea Generated table #8585@2: 7151 keys, 177306 bytes
+2026/04/28-02:36:05.927 bea Compacted 1@2 + 10@3 files => 21748305 bytes
+2026/04/28-02:36:05.928 bea compacted to: files[ 0 1 43 21 0 0 0 ]
+2026/04/28-02:36:05.928 bea Delete type=2 #8509
+2026/04/28-02:36:05.928 bea Delete type=2 #8508
+2026/04/28-02:36:05.928 bea Delete type=2 #8511
+2026/04/28-02:36:05.928 bea Delete type=2 #8543
+2026/04/28-02:36:05.928 bea Delete type=2 #8505
+2026/04/28-02:36:05.928 bea Delete type=2 #8506
+2026/04/28-02:36:05.929 bea Delete type=2 #8507
+2026/04/28-02:36:05.929 bea Delete type=2 #8503
+2026/04/28-02:36:05.929 bea Delete type=2 #8510
+2026/04/28-02:36:05.929 bea Delete type=2 #8512
+2026/04/28-02:36:05.929 bea Delete type=2 #8504
+2026/04/28-02:46:06.034 be8 Level-0 table #8587: started
+2026/04/28-02:46:06.054 be8 Level-0 table #8587: 1269529 bytes OK
+2026/04/28-02:46:06.056 be8 Delete type=0 #8534
+2026/04/28-02:46:46.052 bea Compacting 1@0 + 1@1 files
+2026/04/28-02:46:46.064 bea Generated table #8588@0: 15771 keys, 216647 bytes
+2026/04/28-02:46:46.065 bea Generated table #8589@0: 121 keys, 4587 bytes
+2026/04/28-02:46:46.067 bea Generated table #8590@0: 154 keys, 79946 bytes
+2026/04/28-02:46:46.072 bea Generated table #8591@0: 2852 keys, 269723 bytes
+2026/04/28-02:46:46.072 bea Compacted 1@0 + 1@1 files => 570903 bytes
+2026/04/28-02:46:46.072 bea compacted to: files[ 0 4 43 21 0 0 0 ]
+2026/04/28-02:47:26.086 bea Compacting 1@1 + 10@2 files
+2026/04/28-02:47:26.093 bea Generated table #8592@1: 12136 keys, 127241 bytes
+2026/04/28-02:47:26.095 bea Generated table #8593@1: 1351 keys, 18425 bytes
+2026/04/28-02:47:26.137 bea Generated table #8594@1: 91701 keys, 2240269 bytes
+2026/04/28-02:47:26.181 bea Generated table #8595@1: 92891 keys, 2242520 bytes
+2026/04/28-02:47:26.251 bea Generated table #8596@1: 93441 keys, 2242348 bytes
+2026/04/28-02:47:26.296 bea Generated table #8597@1: 91752 keys, 2240781 bytes
+2026/04/28-02:47:26.343 bea Generated table #8598@1: 91143 keys, 2239286 bytes
+2026/04/28-02:47:26.385 bea Generated table #8599@1: 91113 keys, 2240852 bytes
+2026/04/28-02:47:26.429 bea Generated table #8600@1: 95232 keys, 2245391 bytes
+2026/04/28-02:47:26.468 bea Generated table #8601@1: 78611 keys, 2227140 bytes
+2026/04/28-02:47:26.511 bea Generated table #8602@1: 97972 keys, 2250355 bytes
+2026/04/28-02:47:26.548 bea Generated table #8603@1: 34825 keys, 2488126 bytes
+2026/04/28-02:47:26.549 bea Generated table #8604@1: 199 keys, 25886 bytes
+2026/04/28-02:47:26.549 bea Compacted 1@1 + 10@2 files => 22828620 bytes
+2026/04/28-02:47:26.549 bea compacted to: files[ 0 3 46 21 0 0 0 ]
+2026/04/28-02:47:26.550 bea Delete type=2 #8551
+2026/04/28-02:47:26.550 bea Delete type=2 #8542
+2026/04/28-02:47:26.550 bea Delete type=2 #8553
+2026/04/28-02:47:26.550 bea Delete type=2 #8546
+2026/04/28-02:47:26.550 bea Delete type=2 #8550
+2026/04/28-02:47:26.550 bea Delete type=2 #8549
+2026/04/28-02:47:26.551 bea Delete type=2 #8552
+2026/04/28-02:47:26.551 bea Delete type=2 #8548
+2026/04/28-02:47:26.551 bea Delete type=2 #8547
+2026/04/28-02:47:26.551 bea Delete type=2 #8545
+2026/04/28-02:47:26.551 bea Delete type=2 #8554
+2026/04/28-02:47:26.551 bea Delete type=2 #8587
+2026/04/28-02:47:26.551 bea Delete type=2 #8588
+2026/04/28-02:48:46.144 bea Compacting 1@2 + 11@3 files
+2026/04/28-02:48:46.189 bea Generated table #8605@2: 92709 keys, 2240444 bytes
+2026/04/28-02:48:46.243 bea Generated table #8606@2: 94405 keys, 2244070 bytes
+2026/04/28-02:48:46.311 bea Generated table #8607@2: 92003 keys, 2241655 bytes
+2026/04/28-02:48:46.381 bea Generated table #8608@2: 90520 keys, 2238827 bytes
+2026/04/28-02:48:46.472 bea Generated table #8609@2: 92226 keys, 2239992 bytes
+2026/04/28-02:48:46.523 bea Generated table #8610@2: 91676 keys, 2240199 bytes
+2026/04/28-02:48:46.565 bea Generated table #8611@2: 92319 keys, 2240294 bytes
+2026/04/28-02:48:46.607 bea Generated table #8612@2: 92113 keys, 2240856 bytes
+2026/04/28-02:48:46.651 bea Generated table #8613@2: 91461 keys, 2240771 bytes
+2026/04/28-02:48:46.683 bea Generated table #8614@2: 69730 keys, 1719462 bytes
+2026/04/28-02:48:46.683 bea Compacted 1@2 + 11@3 files => 21886570 bytes
+2026/04/28-02:48:46.684 bea compacted to: files[ 0 3 45 20 0 0 0 ]
+2026/04/28-02:48:46.684 bea Delete type=2 #8573
+2026/04/28-02:48:46.684 bea Delete type=2 #8569
+2026/04/28-02:48:46.684 bea Delete type=2 #8574
+2026/04/28-02:48:46.684 bea Delete type=2 #8593
+2026/04/28-02:48:46.684 bea Delete type=2 #8585
+2026/04/28-02:48:46.685 bea Delete type=2 #8566
+2026/04/28-02:48:46.685 bea Delete type=2 #8567
+2026/04/28-02:48:46.685 bea Delete type=2 #8568
+2026/04/28-02:48:46.685 bea Delete type=2 #8571
+2026/04/28-02:48:46.685 bea Delete type=2 #8570
+2026/04/28-02:48:46.685 bea Delete type=2 #8572
+2026/04/28-02:48:46.685 bea Delete type=2 #8565
+2026/04/28-02:48:47.866 bea Compacting 1@1 + 10@2 files
+2026/04/28-02:48:47.879 bea Generated table #8615@1: 1004 keys, 2135136 bytes
+2026/04/28-02:48:47.888 bea Generated table #8616@1: 957 keys, 2132350 bytes
+2026/04/28-02:48:47.900 bea Generated table #8617@1: 2025 keys, 2143606 bytes
+2026/04/28-02:48:47.908 bea Generated table #8618@1: 1318 keys, 2134690 bytes
+2026/04/28-02:48:47.919 bea Generated table #8619@1: 2372 keys, 2148609 bytes
+2026/04/28-02:48:47.937 bea Generated table #8620@1: 12925 keys, 2168671 bytes
+2026/04/28-02:48:47.974 bea Generated table #8621@1: 30265 keys, 2257740 bytes
+2026/04/28-02:48:48.012 bea Generated table #8622@1: 24776 keys, 2270256 bytes
+2026/04/28-02:48:48.048 bea Generated table #8623@1: 25808 keys, 2267307 bytes
+2026/04/28-02:48:48.081 bea Generated table #8624@1: 24580 keys, 2266465 bytes
+2026/04/28-02:48:48.084 bea Generated table #8625@1: 948 keys, 91721 bytes
+2026/04/28-02:48:48.084 bea Compacted 1@1 + 10@2 files => 22016551 bytes
+2026/04/28-02:48:48.085 bea compacted to: files[ 0 2 46 20 0 0 0 ]
+2026/04/28-02:48:48.085 bea Delete type=2 #8530
+2026/04/28-02:48:48.085 bea Delete type=2 #8533
+2026/04/28-02:48:48.085 bea Delete type=2 #8532
+2026/04/28-02:48:48.085 bea Delete type=2 #8466
+2026/04/28-02:48:48.085 bea Delete type=2 #8590
+2026/04/28-02:48:48.085 bea Delete type=2 #8467
+2026/04/28-02:48:48.086 bea Delete type=2 #8536
+2026/04/28-02:48:48.086 bea Delete type=2 #8531
+2026/04/28-02:48:48.086 bea Delete type=2 #8537
+2026/04/28-02:48:48.086 bea Delete type=2 #8528
+2026/04/28-02:48:48.086 bea Delete type=2 #8529
+2026/04/28-02:49:26.176 bea Compacting 1@2 + 10@3 files
+2026/04/28-02:49:26.201 bea Generated table #8626@2: 1532 keys, 2121184 bytes
+2026/04/28-02:49:26.225 bea Generated table #8627@2: 6551 keys, 2128240 bytes
+2026/04/28-02:49:26.244 bea Generated table #8628@2: 2801 keys, 2117470 bytes
+2026/04/28-02:49:26.261 bea Generated table #8629@2: 302 keys, 2110362 bytes
+2026/04/28-02:49:26.281 bea Generated table #8630@2: 2559 keys, 2119423 bytes
+2026/04/28-02:49:26.297 bea Generated table #8631@2: 2109 keys, 2114631 bytes
+2026/04/28-02:49:26.317 bea Generated table #8632@2: 3489 keys, 2122686 bytes
+2026/04/28-02:49:26.385 bea Generated table #8633@2: 105609 keys, 2258300 bytes
+2026/04/28-02:49:26.429 bea Generated table #8634@2: 92143 keys, 2240521 bytes
+2026/04/28-02:49:26.470 bea Generated table #8635@2: 88389 keys, 2146655 bytes
+2026/04/28-02:49:26.470 bea Compacted 1@2 + 10@3 files => 21479472 bytes
+2026/04/28-02:49:26.471 bea compacted to: files[ 0 2 45 20 0 0 0 ]
+2026/04/28-02:49:26.472 bea Delete type=2 #8575
+2026/04/28-02:49:26.472 bea Delete type=2 #8579
+2026/04/28-02:49:26.472 bea Delete type=2 #8592
+2026/04/28-02:49:26.472 bea Delete type=2 #8582
+2026/04/28-02:49:26.472 bea Delete type=2 #8583
+2026/04/28-02:49:26.472 bea Delete type=2 #8577
+2026/04/28-02:49:26.472 bea Delete type=2 #8580
+2026/04/28-02:49:26.472 bea Delete type=2 #8581
+2026/04/28-02:49:26.472 bea Delete type=2 #8584
+2026/04/28-02:49:26.472 bea Delete type=2 #8576
+2026/04/28-02:49:26.472 bea Delete type=2 #8578
+2026/04/28-02:49:27.137 bea Compacting 1@1 + 8@2 files
+2026/04/28-02:49:27.172 bea Generated table #8636@1: 21188 keys, 2251116 bytes
+2026/04/28-02:49:27.200 bea Generated table #8637@1: 28826 keys, 2201149 bytes
+2026/04/28-02:49:27.216 bea Generated table #8638@1: 15284 keys, 2144602 bytes
+2026/04/28-02:49:27.223 bea Generated table #8639@1: 521 keys, 2113243 bytes
+2026/04/28-02:49:27.229 bea Generated table #8640@1: 452 keys, 2112429 bytes
+2026/04/28-02:49:27.235 bea Generated table #8641@1: 538 keys, 2112874 bytes
+2026/04/28-02:49:27.251 bea Generated table #8642@1: 14360 keys, 2149543 bytes
+2026/04/28-02:49:27.255 bea Generated table #8643@1: 2095 keys, 362522 bytes
+2026/04/28-02:49:27.255 bea Compacted 1@1 + 8@2 files => 15447478 bytes
+2026/04/28-02:49:27.255 bea compacted to: files[ 0 1 45 20 0 0 0 ]
+2026/04/28-02:49:27.256 bea Delete type=2 #8538
+2026/04/28-02:49:27.256 bea Delete type=2 #8560
+2026/04/28-02:49:27.256 bea Delete type=2 #8561
+2026/04/28-02:49:27.256 bea Delete type=2 #8539
+2026/04/28-02:49:27.256 bea Delete type=2 #8591
+2026/04/28-02:49:27.256 bea Delete type=2 #8558
+2026/04/28-02:49:27.256 bea Delete type=2 #8557
+2026/04/28-02:49:27.256 bea Delete type=2 #8559
+2026/04/28-02:49:27.256 bea Delete type=2 #8556
+2026/04/28-02:52:06.291 bea Compacting 1@1 + 9@2 files
+2026/04/28-02:52:06.350 bea Generated table #8644@1: 54156 keys, 2216356 bytes
+2026/04/28-02:52:06.391 bea Generated table #8645@1: 48428 keys, 2215254 bytes
+2026/04/28-02:52:06.404 bea Generated table #8646@1: 4089 keys, 2146279 bytes
+2026/04/28-02:52:06.416 bea Generated table #8647@1: 1547 keys, 2149201 bytes
+2026/04/28-02:52:06.433 bea Generated table #8648@1: 1451 keys, 2147340 bytes
+2026/04/28-02:52:06.446 bea Generated table #8649@1: 1242 keys, 2139750 bytes
+2026/04/28-02:52:06.463 bea Generated table #8650@1: 1466 keys, 2144809 bytes
+2026/04/28-02:52:06.479 bea Generated table #8651@1: 1304 keys, 2150425 bytes
+2026/04/28-02:52:06.495 bea Generated table #8652@1: 1360 keys, 2145322 bytes
+2026/04/28-02:52:06.495 bea Compacted 1@1 + 9@2 files => 19454736 bytes
+2026/04/28-02:52:06.496 bea compacted to: files[ 0 0 45 20 0 0 0 ]
+2026/04/28-02:52:06.497 bea Delete type=2 #8521
+2026/04/28-02:52:06.497 bea Delete type=2 #8563
+2026/04/28-02:52:06.497 bea Delete type=2 #8518
+2026/04/28-02:52:06.497 bea Delete type=2 #8519
+2026/04/28-02:52:06.497 bea Delete type=2 #8517
+2026/04/28-02:52:06.497 bea Delete type=2 #8564
+2026/04/28-02:52:06.498 bea Delete type=2 #8562
+2026/04/28-02:52:06.498 bea Delete type=2 #8520
+2026/04/28-02:52:06.498 bea Delete type=2 #8516
+2026/04/28-02:52:06.498 bea Delete type=2 #8589
+2026/04/28-03:08:07.315 bf2 Level-0 table #8654: started
+2026/04/28-03:08:07.339 bf2 Level-0 table #8654: 1357753 bytes OK
+2026/04/28-03:08:07.341 bf2 Delete type=0 #8586
+2026/04/28-03:08:28.594 bea Compacting 1@0 + 0@1 files
+2026/04/28-03:08:28.613 bea Generated table #8655@0: 18925 keys, 295914 bytes
+2026/04/28-03:08:28.613 bea Generated table #8656@0: 99 keys, 2269 bytes
+2026/04/28-03:08:28.615 bea Generated table #8657@0: 161 keys, 95734 bytes
+2026/04/28-03:08:28.617 bea Generated table #8658@0: 1159 keys, 129272 bytes
+2026/04/28-03:08:28.617 bea Compacted 1@0 + 0@1 files => 523189 bytes
+2026/04/28-03:08:28.618 bea compacted to: files[ 0 4 45 20 0 0 0 ]
+2026/04/28-03:08:28.619 bea Delete type=2 #8654
+2026/04/28-03:08:47.131 bea Compacting 1@1 + 10@2 files
+2026/04/28-03:08:47.141 bea Generated table #8659@1: 12794 keys, 166020 bytes
+2026/04/28-03:08:47.145 bea Generated table #8660@1: 3036 keys, 45891 bytes
+2026/04/28-03:08:47.190 bea Generated table #8661@1: 91649 keys, 2239844 bytes
+2026/04/28-03:08:47.236 bea Generated table #8662@1: 92937 keys, 2241105 bytes
+2026/04/28-03:08:47.301 bea Generated table #8663@1: 93340 keys, 2243582 bytes
+2026/04/28-03:08:47.399 bea Generated table #8664@1: 92000 keys, 2241756 bytes
+2026/04/28-03:08:47.486 bea Generated table #8665@1: 91151 keys, 2238995 bytes
+2026/04/28-03:08:47.528 bea Generated table #8666@1: 91117 keys, 2239390 bytes
+2026/04/28-03:08:47.571 bea Generated table #8667@1: 95192 keys, 2243661 bytes
+2026/04/28-03:08:47.609 bea Generated table #8668@1: 78476 keys, 2228069 bytes
+2026/04/28-03:08:47.649 bea Generated table #8669@1: 97787 keys, 2250039 bytes
+2026/04/28-03:08:47.686 bea Generated table #8670@1: 37197 keys, 2495843 bytes
+2026/04/28-03:08:47.687 bea Generated table #8671@1: 678 keys, 89158 bytes
+2026/04/28-03:08:47.687 bea Compacted 1@1 + 10@2 files => 22963353 bytes
+2026/04/28-03:08:47.688 bea compacted to: files[ 0 3 48 20 0 0 0 ]
+2026/04/28-03:08:47.688 bea Delete type=2 #8601
+2026/04/28-03:08:47.688 bea Delete type=2 #8655
+2026/04/28-03:08:47.689 bea Delete type=2 #8600
+2026/04/28-03:08:47.689 bea Delete type=2 #8603
+2026/04/28-03:08:47.689 bea Delete type=2 #8597
+2026/04/28-03:08:47.689 bea Delete type=2 #8596
+2026/04/28-03:08:47.689 bea Delete type=2 #8594
+2026/04/28-03:08:47.689 bea Delete type=2 #8595
+2026/04/28-03:08:47.689 bea Delete type=2 #8598
+2026/04/28-03:08:47.689 bea Delete type=2 #8599
+2026/04/28-03:08:47.689 bea Delete type=2 #8602
+2026/04/28-03:09:27.173 bea Compacting 1@2 + 10@3 files
+2026/04/28-03:09:27.236 bea Generated table #8672@2: 92718 keys, 2241115 bytes
+2026/04/28-03:09:27.283 bea Generated table #8673@2: 94161 keys, 2242371 bytes
+2026/04/28-03:09:27.329 bea Generated table #8674@2: 92232 keys, 2241507 bytes
+2026/04/28-03:09:27.382 bea Generated table #8675@2: 90581 keys, 2238710 bytes
+2026/04/28-03:09:27.450 bea Generated table #8676@2: 92127 keys, 2239803 bytes
+2026/04/28-03:09:27.519 bea Generated table #8677@2: 91565 keys, 2241358 bytes
+2026/04/28-03:09:27.595 bea Generated table #8678@2: 92697 keys, 2241957 bytes
+2026/04/28-03:09:27.638 bea Generated table #8679@2: 91895 keys, 2240246 bytes
+2026/04/28-03:09:27.680 bea Generated table #8680@2: 91409 keys, 2239079 bytes
+2026/04/28-03:09:27.714 bea Generated table #8681@2: 72813 keys, 1792328 bytes
+2026/04/28-03:09:27.714 bea Compacted 1@2 + 10@3 files => 21958474 bytes
+2026/04/28-03:09:27.714 bea compacted to: files[ 0 3 47 20 0 0 0 ]
+2026/04/28-03:09:27.715 bea Delete type=2 #8607
+2026/04/28-03:09:27.715 bea Delete type=2 #8605
+2026/04/28-03:09:27.715 bea Delete type=2 #8606
+2026/04/28-03:09:27.715 bea Delete type=2 #8608
+2026/04/28-03:09:27.715 bea Delete type=2 #8614
+2026/04/28-03:09:27.715 bea Delete type=2 #8609
+2026/04/28-03:09:27.715 bea Delete type=2 #8611
+2026/04/28-03:09:27.715 bea Delete type=2 #8660
+2026/04/28-03:09:27.715 bea Delete type=2 #8613
+2026/04/28-03:09:27.715 bea Delete type=2 #8610
+2026/04/28-03:09:27.715 bea Delete type=2 #8612
+2026/04/28-03:10:47.261 bea Compacting 1@2 + 10@3 files
+2026/04/28-03:10:47.284 bea Generated table #8682@2: 1348 keys, 2119350 bytes
+2026/04/28-03:10:47.304 bea Generated table #8683@2: 6551 keys, 2128240 bytes
+2026/04/28-03:10:47.317 bea Generated table #8684@2: 2801 keys, 2117470 bytes
+2026/04/28-03:10:47.329 bea Generated table #8685@2: 302 keys, 2110362 bytes
+2026/04/28-03:10:47.345 bea Generated table #8686@2: 2559 keys, 2119423 bytes
+2026/04/28-03:10:47.358 bea Generated table #8687@2: 2109 keys, 2114631 bytes
+2026/04/28-03:10:47.377 bea Generated table #8688@2: 3489 keys, 2122686 bytes
+2026/04/28-03:10:47.456 bea Generated table #8689@2: 103668 keys, 2256663 bytes
+2026/04/28-03:10:47.524 bea Generated table #8690@2: 92114 keys, 2240006 bytes
+2026/04/28-03:10:47.590 bea Generated table #8691@2: 91473 keys, 2221538 bytes
+2026/04/28-03:10:47.590 bea Compacted 1@2 + 10@3 files => 21550369 bytes
+2026/04/28-03:10:47.591 bea compacted to: files[ 0 3 46 20 0 0 0 ]
+2026/04/28-03:10:47.592 bea Delete type=2 #8633
+2026/04/28-03:10:47.592 bea Delete type=2 #8634
+2026/04/28-03:10:47.592 bea Delete type=2 #8631
+2026/04/28-03:10:47.592 bea Delete type=2 #8632
+2026/04/28-03:10:47.592 bea Delete type=2 #8630
+2026/04/28-03:10:47.592 bea Delete type=2 #8626
+2026/04/28-03:10:47.593 bea Delete type=2 #8635
+2026/04/28-03:10:47.593 bea Delete type=2 #8659
+2026/04/28-03:10:47.593 bea Delete type=2 #8629
+2026/04/28-03:10:47.593 bea Delete type=2 #8628
+2026/04/28-03:10:47.593 bea Delete type=2 #8627
+2026/04/28-03:10:50.495 bea Compacting 1@1 + 11@2 files
+2026/04/28-03:10:50.531 bea Generated table #8692@1: 25829 keys, 2268939 bytes
+2026/04/28-03:10:50.565 bea Generated table #8693@1: 24597 keys, 2266004 bytes
+2026/04/28-03:10:50.601 bea Generated table #8694@1: 21913 keys, 2257958 bytes
+2026/04/28-03:10:50.627 bea Generated table #8695@1: 26212 keys, 2195991 bytes
+2026/04/28-03:10:50.645 bea Generated table #8696@1: 18320 keys, 2149074 bytes
+2026/04/28-03:10:50.651 bea Generated table #8697@1: 544 keys, 2113544 bytes
+2026/04/28-03:10:50.657 bea Generated table #8698@1: 473 keys, 2114723 bytes
+2026/04/28-03:10:50.663 bea Generated table #8699@1: 529 keys, 2116221 bytes
+2026/04/28-03:10:50.678 bea Generated table #8700@1: 14051 keys, 2147060 bytes
+2026/04/28-03:10:50.683 bea Generated table #8701@1: 2512 keys, 503163 bytes
+2026/04/28-03:10:50.683 bea Compacted 1@1 + 11@2 files => 20132677 bytes
+2026/04/28-03:10:50.683 bea compacted to: files[ 0 2 45 20 0 0 0 ]
+2026/04/28-03:10:50.684 bea Delete type=2 #8639
+2026/04/28-03:10:50.684 bea Delete type=2 #8640
+2026/04/28-03:10:50.684 bea Delete type=2 #8637
+2026/04/28-03:10:50.684 bea Delete type=2 #8643
+2026/04/28-03:10:50.684 bea Delete type=2 #8624
+2026/04/28-03:10:50.684 bea Delete type=2 #8638
+2026/04/28-03:10:50.684 bea Delete type=2 #8642
+2026/04/28-03:10:50.684 bea Delete type=2 #8623
+2026/04/28-03:10:50.684 bea Delete type=2 #8641
+2026/04/28-03:10:50.684 bea Delete type=2 #8658
+2026/04/28-03:10:50.684 bea Delete type=2 #8625
+2026/04/28-03:10:50.684 bea Delete type=2 #8636
+2026/04/28-03:11:33.165 bea Compacting 1@1 + 10@2 files
+2026/04/28-03:11:33.177 bea Generated table #8702@1: 1833 keys, 2139494 bytes
+2026/04/28-03:11:33.191 bea Generated table #8703@1: 2831 keys, 2150461 bytes
+2026/04/28-03:11:33.201 bea Generated table #8704@1: 1016 keys, 2138256 bytes
+2026/04/28-03:11:33.210 bea Generated table #8705@1: 945 keys, 2131308 bytes
+2026/04/28-03:11:33.227 bea Generated table #8706@1: 2013 keys, 2142931 bytes
+2026/04/28-03:11:33.236 bea Generated table #8707@1: 1316 keys, 2133944 bytes
+2026/04/28-03:11:33.249 bea Generated table #8708@1: 2309 keys, 2149254 bytes
+2026/04/28-03:11:33.268 bea Generated table #8709@1: 11669 keys, 2166993 bytes
+2026/04/28-03:11:33.303 bea Generated table #8710@1: 30451 keys, 2255271 bytes
+2026/04/28-03:11:33.340 bea Generated table #8711@1: 25123 keys, 2270283 bytes
+2026/04/28-03:11:33.342 bea Generated table #8712@1: 955 keys, 101614 bytes
+2026/04/28-03:11:33.342 bea Compacted 1@1 + 10@2 files => 21779809 bytes
+2026/04/28-03:11:33.343 bea compacted to: files[ 0 1 46 20 0 0 0 ]
+2026/04/28-03:11:33.343 bea Delete type=2 #8465
+2026/04/28-03:11:33.343 bea Delete type=2 #8622
+2026/04/28-03:11:33.343 bea Delete type=2 #8657
+2026/04/28-03:11:33.343 bea Delete type=2 #8615
+2026/04/28-03:11:33.343 bea Delete type=2 #8464
+2026/04/28-03:11:33.343 bea Delete type=2 #8619
+2026/04/28-03:11:33.344 bea Delete type=2 #8621
+2026/04/28-03:11:33.344 bea Delete type=2 #8617
+2026/04/28-03:11:33.344 bea Delete type=2 #8620
+2026/04/28-03:11:33.344 bea Delete type=2 #8616
+2026/04/28-03:11:33.344 bea Delete type=2 #8618
+2026/04/28-03:11:42.595 bf0 Compacting 1@1 + 9@2 files
+2026/04/28-03:11:42.637 bf0 Generated table #8713@1: 54156 keys, 2216356 bytes
+2026/04/28-03:11:42.674 bf0 Generated table #8714@1: 48428 keys, 2215278 bytes
+2026/04/28-03:11:42.686 bf0 Generated table #8715@1: 4087 keys, 2146120 bytes
+2026/04/28-03:11:42.698 bf0 Generated table #8716@1: 1547 keys, 2149201 bytes
+2026/04/28-03:11:42.710 bf0 Generated table #8717@1: 1451 keys, 2147340 bytes
+2026/04/28-03:11:42.721 bf0 Generated table #8718@1: 1242 keys, 2139750 bytes
+2026/04/28-03:11:42.733 bf0 Generated table #8719@1: 1466 keys, 2144809 bytes
+2026/04/28-03:11:42.745 bf0 Generated table #8720@1: 1304 keys, 2150425 bytes
+2026/04/28-03:11:42.757 bf0 Generated table #8721@1: 1361 keys, 2145461 bytes
+2026/04/28-03:11:42.757 bf0 Compacted 1@1 + 9@2 files => 19454740 bytes
+2026/04/28-03:11:42.758 bf0 compacted to: files[ 0 0 46 20 0 0 0 ]
+2026/04/28-03:11:42.759 bf0 Delete type=2 #8652
+2026/04/28-03:11:42.759 bf0 Delete type=2 #8644
+2026/04/28-03:11:42.759 bf0 Delete type=2 #8650
+2026/04/28-03:11:42.759 bf0 Delete type=2 #8646
+2026/04/28-03:11:42.759 bf0 Delete type=2 #8645
+2026/04/28-03:11:42.759 bf0 Delete type=2 #8647
+2026/04/28-03:11:42.759 bf0 Delete type=2 #8651
+2026/04/28-03:11:42.759 bf0 Delete type=2 #8649
+2026/04/28-03:11:42.759 bf0 Delete type=2 #8656
+2026/04/28-03:11:42.759 bf0 Delete type=2 #8648
+2026/04/28-03:17:53.005 bf2 Level-0 table #8723: started
+2026/04/28-03:17:53.046 bf2 Level-0 table #8723: 1206530 bytes OK
+2026/04/28-03:17:53.047 bf2 Delete type=0 #8653
+2026/04/28-03:17:53.062 be8 Compacting 1@0 + 0@1 files
+2026/04/28-03:17:53.075 be8 Generated table #8724@0: 14246 keys, 332470 bytes
+2026/04/28-03:17:53.076 be8 Generated table #8725@0: 157 keys, 7808 bytes
+2026/04/28-03:17:53.077 be8 Generated table #8726@0: 73 keys, 49146 bytes
+2026/04/28-03:17:53.081 be8 Generated table #8727@0: 2658 keys, 206061 bytes
+2026/04/28-03:17:53.081 be8 Compacted 1@0 + 0@1 files => 595485 bytes
+2026/04/28-03:17:53.081 be8 compacted to: files[ 0 4 46 20 0 0 0 ]
+2026/04/28-03:17:53.084 be8 Delete type=2 #8723
+2026/04/28-03:17:53.098 be8 Compacting 1@1 + 10@2 files
+2026/04/28-03:17:53.157 be8 Generated table #8728@1: 25849 keys, 2268371 bytes
+2026/04/28-03:17:53.200 be8 Generated table #8729@1: 24600 keys, 2265754 bytes
+2026/04/28-03:17:53.249 be8 Generated table #8730@1: 21988 keys, 2257146 bytes
+2026/04/28-03:17:53.288 be8 Generated table #8731@1: 26150 keys, 2196454 bytes
+2026/04/28-03:17:53.312 be8 Generated table #8732@1: 18421 keys, 2150951 bytes
+2026/04/28-03:17:53.321 be8 Generated table #8733@1: 541 keys, 2111401 bytes
+2026/04/28-03:17:53.330 be8 Generated table #8734@1: 472 keys, 2113841 bytes
+2026/04/28-03:17:53.338 be8 Generated table #8735@1: 532 keys, 2113660 bytes
+2026/04/28-03:17:53.357 be8 Generated table #8736@1: 13560 keys, 2147061 bytes
+2026/04/28-03:17:53.363 be8 Generated table #8737@1: 3033 keys, 532085 bytes
+2026/04/28-03:17:53.363 be8 Compacted 1@1 + 10@2 files => 20156724 bytes
+2026/04/28-03:17:53.364 be8 compacted to: files[ 0 3 46 20 0 0 0 ]
+2026/04/28-03:18:07.735 bea Compacting 1@1 + 10@2 files
+2026/04/28-03:18:07.867 bea Generated table #8738@1: 10883 keys, 268249 bytes
+2026/04/28-03:18:07.869 bea Generated table #8739@1: 1643 keys, 19769 bytes
+2026/04/28-03:18:07.940 bea Generated table #8740@1: 91604 keys, 2240409 bytes
+2026/04/28-03:18:08.006 bea Generated table #8741@1: 93114 keys, 2242656 bytes
+2026/04/28-03:18:08.053 bea Generated table #8742@1: 93267 keys, 2243241 bytes
+2026/04/28-03:18:08.096 bea Generated table #8743@1: 92082 keys, 2242246 bytes
+2026/04/28-03:18:08.139 bea Generated table #8744@1: 91316 keys, 2241150 bytes
+2026/04/28-03:18:08.181 bea Generated table #8745@1: 91125 keys, 2239800 bytes
+2026/04/28-03:18:08.223 bea Generated table #8746@1: 95141 keys, 2243378 bytes
+2026/04/28-03:18:08.261 bea Generated table #8747@1: 78389 keys, 2228067 bytes
+2026/04/28-03:18:08.301 bea Generated table #8748@1: 97685 keys, 2249285 bytes
+2026/04/28-03:18:08.336 bea Generated table #8749@1: 38384 keys, 2497062 bytes
+2026/04/28-03:18:08.337 bea Generated table #8750@1: 338 keys, 44507 bytes
+2026/04/28-03:18:08.337 bea Compacted 1@1 + 10@2 files => 22999819 bytes
+2026/04/28-03:18:08.338 bea compacted to: files[ 0 2 49 20 0 0 0 ]
+2026/04/28-03:18:08.339 bea Delete type=2 #8669
+2026/04/28-03:18:08.339 bea Delete type=2 #8663
+2026/04/28-03:18:08.339 bea Delete type=2 #8693
+2026/04/28-03:18:08.339 bea Delete type=2 #8701
+2026/04/28-03:18:08.339 bea Delete type=2 #8700
+2026/04/28-03:18:08.339 bea Delete type=2 #8664
+2026/04/28-03:18:08.339 bea Delete type=2 #8727
+2026/04/28-03:18:08.339 bea Delete type=2 #8666
+2026/04/28-03:18:08.339 bea Delete type=2 #8696
+2026/04/28-03:18:08.339 bea Delete type=2 #8667
+2026/04/28-03:18:08.339 bea Delete type=2 #8668
+2026/04/28-03:18:08.339 bea Delete type=2 #8724
+2026/04/28-03:18:08.339 bea Delete type=2 #8699
+2026/04/28-03:18:08.339 bea Delete type=2 #8694
+2026/04/28-03:18:08.339 bea Delete type=2 #8665
+2026/04/28-03:18:08.339 bea Delete type=2 #8692
+2026/04/28-03:18:08.339 bea Delete type=2 #8695
+2026/04/28-03:18:08.339 bea Delete type=2 #8697
+2026/04/28-03:18:08.339 bea Delete type=2 #8662
+2026/04/28-03:18:08.340 bea Delete type=2 #8670
+2026/04/28-03:18:08.340 bea Delete type=2 #8661
+2026/04/28-03:18:08.340 bea Delete type=2 #8698
+2026/04/28-03:18:47.764 bea Compacting 1@2 + 10@3 files
+2026/04/28-03:18:47.810 bea Generated table #8751@2: 92717 keys, 2240602 bytes
+2026/04/28-03:18:47.860 bea Generated table #8752@2: 94109 keys, 2242438 bytes
+2026/04/28-03:18:47.912 bea Generated table #8753@2: 92122 keys, 2240342 bytes
+2026/04/28-03:18:47.965 bea Generated table #8754@2: 90700 keys, 2239326 bytes
+2026/04/28-03:18:48.008 bea Generated table #8755@2: 92014 keys, 2239639 bytes
+2026/04/28-03:18:48.050 bea Generated table #8756@2: 91666 keys, 2240360 bytes
+2026/04/28-03:18:48.096 bea Generated table #8757@2: 92736 keys, 2242014 bytes
+2026/04/28-03:18:48.137 bea Generated table #8758@2: 91757 keys, 2239608 bytes
+2026/04/28-03:18:48.181 bea Generated table #8759@2: 91539 keys, 2239718 bytes
+2026/04/28-03:18:48.215 bea Generated table #8760@2: 74481 keys, 1832542 bytes
+2026/04/28-03:18:48.215 bea Compacted 1@2 + 10@3 files => 21996589 bytes
+2026/04/28-03:18:48.216 bea compacted to: files[ 0 2 48 20 0 0 0 ]
+2026/04/28-03:18:48.217 bea Delete type=2 #8677
+2026/04/28-03:18:48.217 bea Delete type=2 #8672
+2026/04/28-03:18:48.217 bea Delete type=2 #8675
+2026/04/28-03:18:48.217 bea Delete type=2 #8678
+2026/04/28-03:18:48.217 bea Delete type=2 #8679
+2026/04/28-03:18:48.217 bea Delete type=2 #8680
+2026/04/28-03:18:48.217 bea Delete type=2 #8739
+2026/04/28-03:18:48.217 bea Delete type=2 #8674
+2026/04/28-03:18:48.217 bea Delete type=2 #8673
+2026/04/28-03:18:48.217 bea Delete type=2 #8681
+2026/04/28-03:18:48.217 bea Delete type=2 #8676
+2026/04/28-03:20:07.808 bea Compacting 1@2 + 10@3 files
+2026/04/28-03:20:07.827 bea Generated table #8761@2: 3600 keys, 2120477 bytes
+2026/04/28-03:20:07.844 bea Generated table #8762@2: 6113 keys, 2128172 bytes
+2026/04/28-03:20:07.858 bea Generated table #8763@2: 3425 keys, 2124204 bytes
+2026/04/28-03:20:07.869 bea Generated table #8764@2: 302 keys, 2109973 bytes
+2026/04/28-03:20:07.884 bea Generated table #8765@2: 2536 keys, 2120442 bytes
+2026/04/28-03:20:07.899 bea Generated table #8766@2: 1773 keys, 2114894 bytes
+2026/04/28-03:20:07.915 bea Generated table #8767@2: 3751 keys, 2123346 bytes
+2026/04/28-03:20:07.960 bea Generated table #8768@2: 95903 keys, 2246028 bytes
+2026/04/28-03:20:08.018 bea Generated table #8769@2: 92040 keys, 2240673 bytes
+2026/04/28-03:20:08.063 bea Generated table #8770@2: 92400 keys, 2241853 bytes
+2026/04/28-03:20:08.068 bea Generated table #8771@2: 7595 keys, 185730 bytes
+2026/04/28-03:20:08.068 bea Compacted 1@2 + 10@3 files => 21755792 bytes
+2026/04/28-03:20:08.068 bea compacted to: files[ 0 2 47 21 0 0 0 ]
+2026/04/28-03:20:08.069 bea Delete type=2 #8686
+2026/04/28-03:20:08.069 bea Delete type=2 #8685
+2026/04/28-03:20:08.069 bea Delete type=2 #8691
+2026/04/28-03:20:08.069 bea Delete type=2 #8690
+2026/04/28-03:20:08.069 bea Delete type=2 #8683
+2026/04/28-03:20:08.069 bea Delete type=2 #8687
+2026/04/28-03:20:08.069 bea Delete type=2 #8689
+2026/04/28-03:20:08.069 bea Delete type=2 #8738
+2026/04/28-03:20:08.069 bea Delete type=2 #8688
+2026/04/28-03:20:08.069 bea Delete type=2 #8684
+2026/04/28-03:20:08.069 bea Delete type=2 #8682
+2026/04/28-03:20:11.090 bea Compacting 1@1 + 10@2 files
+2026/04/28-03:20:11.102 bea Generated table #8772@1: 1834 keys, 2139845 bytes
+2026/04/28-03:20:11.117 bea Generated table #8773@1: 2835 keys, 2152430 bytes
+2026/04/28-03:20:11.127 bea Generated table #8774@1: 1016 keys, 2138256 bytes
+2026/04/28-03:20:11.137 bea Generated table #8775@1: 935 keys, 2130381 bytes
+2026/04/28-03:20:11.148 bea Generated table #8776@1: 1998 keys, 2142661 bytes
+2026/04/28-03:20:11.159 bea Generated table #8777@1: 1331 keys, 2132135 bytes
+2026/04/28-03:20:11.170 bea Generated table #8778@1: 2295 keys, 2152503 bytes
+2026/04/28-03:20:11.186 bea Generated table #8779@1: 11098 keys, 2164966 bytes
+2026/04/28-03:20:11.224 bea Generated table #8780@1: 30538 keys, 2254758 bytes
+2026/04/28-03:20:11.263 bea Generated table #8781@1: 25284 keys, 2270576 bytes
+2026/04/28-03:20:11.264 bea Generated table #8782@1: 409 keys, 43201 bytes
+2026/04/28-03:20:11.264 bea Compacted 1@1 + 10@2 files => 21721712 bytes
+2026/04/28-03:20:11.265 bea compacted to: files[ 0 1 48 21 0 0 0 ]
+2026/04/28-03:20:11.266 bea Delete type=2 #8703
+2026/04/28-03:20:11.266 bea Delete type=2 #8709
+2026/04/28-03:20:11.266 bea Delete type=2 #8708
+2026/04/28-03:20:11.266 bea Delete type=2 #8704
+2026/04/28-03:20:11.266 bea Delete type=2 #8711
+2026/04/28-03:20:11.266 bea Delete type=2 #8706
+2026/04/28-03:20:11.266 bea Delete type=2 #8707
+2026/04/28-03:20:11.266 bea Delete type=2 #8705
+2026/04/28-03:20:11.266 bea Delete type=2 #8710
+2026/04/28-03:20:11.266 bea Delete type=2 #8702
+2026/04/28-03:20:11.266 bea Delete type=2 #8726
+2026/04/28-03:22:47.982 bea Compacting 1@1 + 9@2 files
+2026/04/28-03:22:48.042 bea Generated table #8783@1: 51693 keys, 2212210 bytes
+2026/04/28-03:22:48.084 bea Generated table #8784@1: 50557 keys, 2218535 bytes
+2026/04/28-03:22:48.098 bea Generated table #8785@1: 5093 keys, 2145714 bytes
+2026/04/28-03:22:48.113 bea Generated table #8786@1: 1541 keys, 2151564 bytes
+2026/04/28-03:22:48.127 bea Generated table #8787@1: 1463 keys, 2147393 bytes
+2026/04/28-03:22:48.143 bea Generated table #8788@1: 1227 keys, 2137381 bytes
+2026/04/28-03:22:48.156 bea Generated table #8789@1: 1485 keys, 2145289 bytes
+2026/04/28-03:22:48.159 bea Generated table #8790@1: 55 keys, 95692 bytes
+2026/04/28-03:22:48.160 bea Compacted 1@1 + 9@2 files => 15253778 bytes
+2026/04/28-03:22:48.161 bea compacted to: files[ 0 0 47 21 0 0 0 ]
+2026/04/28-03:22:48.162 bea Delete type=2 #8714
+2026/04/28-03:22:48.162 bea Delete type=2 #8716
+2026/04/28-03:22:48.162 bea Delete type=2 #8725
+2026/04/28-03:22:48.162 bea Delete type=2 #8718
+2026/04/28-03:22:48.162 bea Delete type=2 #8713
+2026/04/28-03:22:48.162 bea Delete type=2 #8555
+2026/04/28-03:22:48.162 bea Delete type=2 #8717
+2026/04/28-03:22:48.162 bea Delete type=2 #8486
+2026/04/28-03:22:48.162 bea Delete type=2 #8719
+2026/04/28-03:22:48.162 bea Delete type=2 #8715
+2026/04/28-03:32:17.219 bf0 Level-0 table #8792: started
+2026/04/28-03:32:17.235 bf0 Level-0 table #8792: 1312903 bytes OK
+2026/04/28-03:32:17.237 bf0 Delete type=0 #8722
+2026/04/28-03:32:48.848 bea Compacting 1@0 + 0@1 files
+2026/04/28-03:32:48.863 bea Generated table #8793@0: 20105 keys, 321632 bytes
+2026/04/28-03:32:48.864 bea Generated table #8794@0: 123 keys, 4265 bytes
+2026/04/28-03:32:48.865 bea Generated table #8795@0: 108 keys, 77035 bytes
+2026/04/28-03:32:48.868 bea Generated table #8796@0: 1078 keys, 117880 bytes
+2026/04/28-03:32:48.868 bea Compacted 1@0 + 0@1 files => 520812 bytes
+2026/04/28-03:32:48.868 bea compacted to: files[ 0 4 47 21 0 0 0 ]
+2026/04/28-03:32:48.869 bea Delete type=2 #8792
+2026/04/28-03:33:28.849 bea Compacting 1@1 + 10@2 files
+2026/04/28-03:33:28.858 bea Generated table #8797@1: 14609 keys, 214005 bytes
+2026/04/28-03:33:28.860 bea Generated table #8798@1: 2662 keys, 35073 bytes
+2026/04/28-03:33:28.917 bea Generated table #8799@1: 91578 keys, 2240491 bytes
+2026/04/28-03:33:28.966 bea Generated table #8800@1: 93131 keys, 2242215 bytes
+2026/04/28-03:33:29.020 bea Generated table #8801@1: 93161 keys, 2240914 bytes
+2026/04/28-03:33:29.074 bea Generated table #8802@1: 92054 keys, 2241576 bytes
+2026/04/28-03:33:29.117 bea Generated table #8803@1: 91220 keys, 2240324 bytes
+2026/04/28-03:33:29.158 bea Generated table #8804@1: 91162 keys, 2240314 bytes
+2026/04/28-03:33:29.204 bea Generated table #8805@1: 95232 keys, 2245594 bytes
+2026/04/28-03:33:29.242 bea Generated table #8806@1: 78302 keys, 2227437 bytes
+2026/04/28-03:33:29.283 bea Generated table #8807@1: 97618 keys, 2250680 bytes
+2026/04/28-03:33:29.320 bea Generated table #8808@1: 40545 keys, 2501713 bytes
+2026/04/28-03:33:29.321 bea Generated table #8809@1: 563 keys, 74051 bytes
+2026/04/28-03:33:29.321 bea Compacted 1@1 + 10@2 files => 22994387 bytes
+2026/04/28-03:33:29.322 bea compacted to: files[ 0 3 50 21 0 0 0 ]
+2026/04/28-03:33:29.323 bea Delete type=2 #8749
+2026/04/28-03:33:29.323 bea Delete type=2 #8743
+2026/04/28-03:33:29.323 bea Delete type=2 #8740
+2026/04/28-03:33:29.323 bea Delete type=2 #8747
+2026/04/28-03:33:29.323 bea Delete type=2 #8793
+2026/04/28-03:33:29.323 bea Delete type=2 #8745
+2026/04/28-03:33:29.323 bea Delete type=2 #8744
+2026/04/28-03:33:29.323 bea Delete type=2 #8742
+2026/04/28-03:33:29.323 bea Delete type=2 #8741
+2026/04/28-03:33:29.323 bea Delete type=2 #8746
+2026/04/28-03:33:29.323 bea Delete type=2 #8748
+2026/04/28-03:34:08.909 bea Compacting 1@2 + 11@3 files
+2026/04/28-03:34:08.968 bea Generated table #8810@2: 92895 keys, 2242376 bytes
+2026/04/28-03:34:09.016 bea Generated table #8811@2: 94054 keys, 2244242 bytes
+2026/04/28-03:34:09.077 bea Generated table #8812@2: 92167 keys, 2241829 bytes
+2026/04/28-03:34:09.205 bea Generated table #8813@2: 91039 keys, 2239903 bytes
+2026/04/28-03:34:09.267 bea Generated table #8814@2: 91995 keys, 2241238 bytes
+2026/04/28-03:34:09.309 bea Generated table #8815@2: 91592 keys, 2241112 bytes
+2026/04/28-03:34:09.351 bea Generated table #8816@2: 92784 keys, 2242703 bytes
+2026/04/28-03:34:09.393 bea Generated table #8817@2: 91013 keys, 2239711 bytes
+2026/04/28-03:34:09.435 bea Generated table #8818@2: 92379 keys, 2240141 bytes
+2026/04/28-03:34:09.473 bea Generated table #8819@2: 84180 keys, 2070973 bytes
+2026/04/28-03:34:09.473 bea Compacted 1@2 + 11@3 files => 22244228 bytes
+2026/04/28-03:34:09.474 bea compacted to: files[ 0 3 49 20 0 0 0 ]
+2026/04/28-03:34:09.475 bea Delete type=2 #8759
+2026/04/28-03:34:09.475 bea Delete type=2 #8753
+2026/04/28-03:34:09.475 bea Delete type=2 #8798
+2026/04/28-03:34:09.475 bea Delete type=2 #8756
+2026/04/28-03:34:09.475 bea Delete type=2 #8757
+2026/04/28-03:34:09.475 bea Delete type=2 #8751
+2026/04/28-03:34:09.475 bea Delete type=2 #8752
+2026/04/28-03:34:09.475 bea Delete type=2 #8755
+2026/04/28-03:34:09.475 bea Delete type=2 #8754
+2026/04/28-03:34:09.475 bea Delete type=2 #8758
+2026/04/28-03:34:09.475 bea Delete type=2 #8771
+2026/04/28-03:34:09.475 bea Delete type=2 #8760
+2026/04/28-03:34:48.938 bea Compacting 1@1 + 10@2 files
+2026/04/28-03:34:48.978 bea Generated table #8820@1: 25842 keys, 2268281 bytes
+2026/04/28-03:34:49.021 bea Generated table #8821@1: 24612 keys, 2266506 bytes
+2026/04/28-03:34:49.060 bea Generated table #8822@1: 22122 keys, 2258417 bytes
+2026/04/28-03:34:49.086 bea Generated table #8823@1: 26022 keys, 2195748 bytes
+2026/04/28-03:34:49.104 bea Generated table #8824@1: 18618 keys, 2151753 bytes
+2026/04/28-03:34:49.111 bea Generated table #8825@1: 537 keys, 2113568 bytes
+2026/04/28-03:34:49.117 bea Generated table #8826@1: 476 keys, 2112487 bytes
+2026/04/28-03:34:49.123 bea Generated table #8827@1: 532 keys, 2116371 bytes
+2026/04/28-03:34:49.138 bea Generated table #8828@1: 12884 keys, 2145531 bytes
+2026/04/28-03:34:49.146 bea Generated table #8829@1: 3758 keys, 574686 bytes
+2026/04/28-03:34:49.146 bea Compacted 1@1 + 10@2 files => 20203348 bytes
+2026/04/28-03:34:49.146 bea compacted to: files[ 0 2 49 20 0 0 0 ]
+2026/04/28-03:34:49.147 bea Delete type=2 #8731
+2026/04/28-03:34:49.147 bea Delete type=2 #8734
+2026/04/28-03:34:49.147 bea Delete type=2 #8732
+2026/04/28-03:34:49.147 bea Delete type=2 #8796
+2026/04/28-03:34:49.147 bea Delete type=2 #8736
+2026/04/28-03:34:49.147 bea Delete type=2 #8735
+2026/04/28-03:34:49.147 bea Delete type=2 #8729
+2026/04/28-03:34:49.147 bea Delete type=2 #8730
+2026/04/28-03:34:49.147 bea Delete type=2 #8733
+2026/04/28-03:34:49.147 bea Delete type=2 #8728
+2026/04/28-03:34:49.147 bea Delete type=2 #8737
+2026/04/28-03:34:51.598 bea Compacting 1@2 + 10@3 files
+2026/04/28-03:34:51.646 bea Generated table #8830@2: 1872 keys, 2119380 bytes
+2026/04/28-03:34:51.690 bea Generated table #8831@2: 6537 keys, 2127901 bytes
+2026/04/28-03:34:51.715 bea Generated table #8832@2: 2952 keys, 2120419 bytes
+2026/04/28-03:34:51.734 bea Generated table #8833@2: 302 keys, 2110261 bytes
+2026/04/28-03:34:51.751 bea Generated table #8834@2: 2545 keys, 2118014 bytes
+2026/04/28-03:34:51.764 bea Generated table #8835@2: 2037 keys, 2116548 bytes
+2026/04/28-03:34:51.779 bea Generated table #8836@2: 3536 keys, 2124577 bytes
+2026/04/28-03:34:51.824 bea Generated table #8837@2: 98820 keys, 2250329 bytes
+2026/04/28-03:34:51.866 bea Generated table #8838@2: 92250 keys, 2241605 bytes
+2026/04/28-03:34:51.906 bea Generated table #8839@2: 90046 keys, 2186203 bytes
+2026/04/28-03:34:51.907 bea Compacted 1@2 + 10@3 files => 21515237 bytes
+2026/04/28-03:34:51.907 bea compacted to: files[ 0 2 48 20 0 0 0 ]
+2026/04/28-03:34:51.908 bea Delete type=2 #8770
+2026/04/28-03:34:51.908 bea Delete type=2 #8765
+2026/04/28-03:34:51.908 bea Delete type=2 #8763
+2026/04/28-03:34:51.908 bea Delete type=2 #8762
+2026/04/28-03:34:51.908 bea Delete type=2 #8764
+2026/04/28-03:34:51.908 bea Delete type=2 #8797
+2026/04/28-03:34:51.908 bea Delete type=2 #8769
+2026/04/28-03:34:51.908 bea Delete type=2 #8761
+2026/04/28-03:34:51.908 bea Delete type=2 #8766
+2026/04/28-03:34:51.908 bea Delete type=2 #8768
+2026/04/28-03:34:51.908 bea Delete type=2 #8767
+2026/04/28-03:35:28.964 bea Compacting 1@1 + 10@2 files
+2026/04/28-03:35:28.984 bea Generated table #8840@1: 1829 keys, 2139303 bytes
+2026/04/28-03:35:29.006 bea Generated table #8841@1: 2836 keys, 2151488 bytes
+2026/04/28-03:35:29.017 bea Generated table #8842@1: 1022 keys, 2137516 bytes
+2026/04/28-03:35:29.026 bea Generated table #8843@1: 898 keys, 2129788 bytes
+2026/04/28-03:35:29.038 bea Generated table #8844@1: 2015 keys, 2145107 bytes
+2026/04/28-03:35:29.049 bea Generated table #8845@1: 1302 keys, 2133899 bytes
+2026/04/28-03:35:29.059 bea Generated table #8846@1: 2279 keys, 2151591 bytes
+2026/04/28-03:35:29.075 bea Generated table #8847@1: 10118 keys, 2162155 bytes
+2026/04/28-03:35:29.120 bea Generated table #8848@1: 30565 keys, 2252921 bytes
+2026/04/28-03:35:29.175 bea Generated table #8849@1: 25594 keys, 2271819 bytes
+2026/04/28-03:35:29.180 bea Generated table #8850@1: 807 keys, 86501 bytes
+2026/04/28-03:35:29.180 bea Compacted 1@1 + 10@2 files => 21762088 bytes
+2026/04/28-03:35:29.183 bea compacted to: files[ 0 1 49 20 0 0 0 ]
+2026/04/28-03:35:29.184 bea Delete type=2 #8772
+2026/04/28-03:35:29.185 bea Delete type=2 #8775
+2026/04/28-03:35:29.185 bea Delete type=2 #8777
+2026/04/28-03:35:29.185 bea Delete type=2 #8778
+2026/04/28-03:35:29.185 bea Delete type=2 #8776
+2026/04/28-03:35:29.185 bea Delete type=2 #8774
+2026/04/28-03:35:29.185 bea Delete type=2 #8779
+2026/04/28-03:35:29.185 bea Delete type=2 #8781
+2026/04/28-03:35:29.185 bea Delete type=2 #8780
+2026/04/28-03:35:29.185 bea Delete type=2 #8773
+2026/04/28-03:35:29.185 bea Delete type=2 #8795
+2026/04/28-03:39:01.008 bf0 Level-0 table #8852: started
+2026/04/28-03:39:01.021 bf0 Level-0 table #8852: 1095817 bytes OK
+2026/04/28-03:39:01.022 bf0 Delete type=0 #8791
+2026/04/28-03:39:29.144 bea Compacting 1@0 + 1@1 files
+2026/04/28-03:39:29.159 bea Generated table #8853@0: 12881 keys, 199539 bytes
+2026/04/28-03:39:29.160 bea Generated table #8854@0: 159 keys, 5599 bytes
+2026/04/28-03:39:29.164 bea Generated table #8855@0: 794 keys, 75445 bytes
+2026/04/28-03:39:29.165 bea Generated table #8856@0: 42 keys, 10166 bytes
+2026/04/28-03:39:29.166 bea Compacted 1@0 + 1@1 files => 290749 bytes
+2026/04/28-03:39:29.166 bea compacted to: files[ 0 4 49 20 0 0 0 ]
+2026/04/28-03:39:29.167 bea Delete type=2 #8794
+2026/04/28-03:39:29.167 bea Delete type=2 #8852
+2026/04/28-03:39:29.168 bea Compacting 1@1 + 10@2 files
+2026/04/28-03:39:29.177 bea Generated table #8857@1: 10391 keys, 153254 bytes
+2026/04/28-03:39:29.178 bea Generated table #8858@1: 1316 keys, 16848 bytes
+2026/04/28-03:39:29.220 bea Generated table #8859@1: 91587 keys, 2239803 bytes
+2026/04/28-03:39:29.266 bea Generated table #8860@1: 93181 keys, 2241601 bytes
+2026/04/28-03:39:29.328 bea Generated table #8861@1: 93169 keys, 2240904 bytes
+2026/04/28-03:39:29.369 bea Generated table #8862@1: 92072 keys, 2241503 bytes
+2026/04/28-03:39:29.411 bea Generated table #8863@1: 91202 keys, 2239906 bytes
+2026/04/28-03:39:29.455 bea Generated table #8864@1: 91052 keys, 2239963 bytes
+2026/04/28-03:39:29.498 bea Generated table #8865@1: 95021 keys, 2243381 bytes
+2026/04/28-03:39:29.536 bea Generated table #8866@1: 78443 keys, 2226631 bytes
+2026/04/28-03:39:29.576 bea Generated table #8867@1: 97536 keys, 2250546 bytes
+2026/04/28-03:39:29.613 bea Generated table #8868@1: 41563 keys, 2503211 bytes
+2026/04/28-03:39:29.614 bea Generated table #8869@1: 247 keys, 32813 bytes
+2026/04/28-03:39:29.614 bea Compacted 1@1 + 10@2 files => 22870364 bytes
+2026/04/28-03:39:29.614 bea compacted to: files[ 0 3 52 20 0 0 0 ]
+2026/04/28-03:39:29.615 bea Delete type=2 #8808
+2026/04/28-03:39:29.615 bea Delete type=2 #8804
+2026/04/28-03:39:29.615 bea Delete type=2 #8802
+2026/04/28-03:39:29.615 bea Delete type=2 #8806
+2026/04/28-03:39:29.615 bea Delete type=2 #8805
+2026/04/28-03:39:29.615 bea Delete type=2 #8799
+2026/04/28-03:39:29.615 bea Delete type=2 #8853
+2026/04/28-03:39:29.615 bea Delete type=2 #8807
+2026/04/28-03:39:29.615 bea Delete type=2 #8800
+2026/04/28-03:39:29.616 bea Delete type=2 #8801
+2026/04/28-03:39:29.616 bea Delete type=2 #8803
+2026/04/28-03:40:09.204 bea Compacting 1@2 + 10@3 files
+2026/04/28-03:40:09.257 bea Generated table #8870@2: 93007 keys, 2242824 bytes
+2026/04/28-03:40:09.344 bea Generated table #8871@2: 93945 keys, 2241830 bytes
+2026/04/28-03:40:09.422 bea Generated table #8872@2: 92235 keys, 2241317 bytes
+2026/04/28-03:40:09.501 bea Generated table #8873@2: 91027 keys, 2240321 bytes
+2026/04/28-03:40:09.546 bea Generated table #8874@2: 91848 keys, 2239726 bytes
+2026/04/28-03:40:09.589 bea Generated table #8875@2: 91527 keys, 2239063 bytes
+2026/04/28-03:40:09.633 bea Generated table #8876@2: 92720 keys, 2240835 bytes
+2026/04/28-03:40:09.675 bea Generated table #8877@2: 90930 keys, 2239660 bytes
+2026/04/28-03:40:09.717 bea Generated table #8878@2: 92197 keys, 2241224 bytes
+2026/04/28-03:40:09.757 bea Generated table #8879@2: 85978 keys, 2108435 bytes
+2026/04/28-03:40:09.757 bea Compacted 1@2 + 10@3 files => 22275235 bytes
+2026/04/28-03:40:09.758 bea compacted to: files[ 0 3 51 20 0 0 0 ]
+2026/04/28-03:40:09.759 bea Delete type=2 #8819
+2026/04/28-03:40:09.759 bea Delete type=2 #8813
+2026/04/28-03:40:09.759 bea Delete type=2 #8815
+2026/04/28-03:40:09.759 bea Delete type=2 #8811
+2026/04/28-03:40:09.759 bea Delete type=2 #8818
+2026/04/28-03:40:09.759 bea Delete type=2 #8817
+2026/04/28-03:40:09.759 bea Delete type=2 #8814
+2026/04/28-03:40:09.759 bea Delete type=2 #8812
+2026/04/28-03:40:09.759 bea Delete type=2 #8810
+2026/04/28-03:40:09.759 bea Delete type=2 #8858
+2026/04/28-03:40:09.759 bea Delete type=2 #8816
+2026/04/28-03:40:49.221 bea Compacting 1@2 + 10@3 files
+2026/04/28-03:40:49.239 bea Generated table #8880@2: 1872 keys, 2119345 bytes
+2026/04/28-03:40:49.255 bea Generated table #8881@2: 6537 keys, 2127901 bytes
+2026/04/28-03:40:49.269 bea Generated table #8882@2: 2952 keys, 2120419 bytes
+2026/04/28-03:40:49.282 bea Generated table #8883@2: 302 keys, 2110261 bytes
+2026/04/28-03:40:49.296 bea Generated table #8884@2: 2545 keys, 2118014 bytes
+2026/04/28-03:40:49.311 bea Generated table #8885@2: 2037 keys, 2116548 bytes
+2026/04/28-03:40:49.330 bea Generated table #8886@2: 3536 keys, 2124577 bytes
+2026/04/28-03:40:49.398 bea Generated table #8887@2: 97886 keys, 2248749 bytes
+2026/04/28-03:40:49.521 bea Generated table #8888@2: 92119 keys, 2242229 bytes
+2026/04/28-03:40:49.584 bea Generated table #8889@2: 91561 keys, 2219647 bytes
+2026/04/28-03:40:49.584 bea Compacted 1@2 + 10@3 files => 21547690 bytes
+2026/04/28-03:40:49.585 bea compacted to: files[ 0 3 50 20 0 0 0 ]
+2026/04/28-03:40:49.586 bea Delete type=2 #8832
+2026/04/28-03:40:49.586 bea Delete type=2 #8831
+2026/04/28-03:40:49.586 bea Delete type=2 #8833
+2026/04/28-03:40:49.586 bea Delete type=2 #8836
+2026/04/28-03:40:49.586 bea Delete type=2 #8835
+2026/04/28-03:40:49.586 bea Delete type=2 #8830
+2026/04/28-03:40:49.586 bea Delete type=2 #8857
+2026/04/28-03:40:49.586 bea Delete type=2 #8837
+2026/04/28-03:40:49.586 bea Delete type=2 #8834
+2026/04/28-03:40:49.586 bea Delete type=2 #8839
+2026/04/28-03:40:49.586 bea Delete type=2 #8838
+2026/04/28-03:40:50.799 bea Compacting 1@1 + 12@2 files
+2026/04/28-03:40:50.811 bea Generated table #8890@1: 2015 keys, 2145985 bytes
+2026/04/28-03:40:50.820 bea Generated table #8891@1: 1299 keys, 2132047 bytes
+2026/04/28-03:40:50.832 bea Generated table #8892@1: 2270 keys, 2148256 bytes
+2026/04/28-03:40:50.848 bea Generated table #8893@1: 9808 keys, 2161262 bytes
+2026/04/28-03:40:50.884 bea Generated table #8894@1: 30559 keys, 2251171 bytes
+2026/04/28-03:40:50.919 bea Generated table #8895@1: 25695 keys, 2271559 bytes
+2026/04/28-03:40:50.955 bea Generated table #8896@1: 25574 keys, 2268672 bytes
+2026/04/28-03:40:50.988 bea Generated table #8897@1: 25140 keys, 2264073 bytes
+2026/04/28-03:40:51.023 bea Generated table #8898@1: 23190 keys, 2269522 bytes
+2026/04/28-03:40:51.026 bea Generated table #8899@1: 1191 keys, 254108 bytes
+2026/04/28-03:40:51.026 bea Compacted 1@1 + 12@2 files => 20166655 bytes
+2026/04/28-03:40:51.027 bea compacted to: files[ 0 2 48 20 0 0 0 ]
+2026/04/28-03:40:51.028 bea Delete type=2 #8848
+2026/04/28-03:40:51.028 bea Delete type=2 #8844
+2026/04/28-03:40:51.028 bea Delete type=2 #8845
+2026/04/28-03:40:51.028 bea Delete type=2 #8782
+2026/04/28-03:40:51.028 bea Delete type=2 #8822
+2026/04/28-03:40:51.028 bea Delete type=2 #8847
+2026/04/28-03:40:51.028 bea Delete type=2 #8820
+2026/04/28-03:40:51.028 bea Delete type=2 #8846
+2026/04/28-03:40:51.028 bea Delete type=2 #8855
+2026/04/28-03:40:51.028 bea Delete type=2 #8850
+2026/04/28-03:40:51.028 bea Delete type=2 #8849
+2026/04/28-03:40:51.028 bea Delete type=2 #8821
+2026/04/28-03:40:51.028 bea Delete type=2 #8712
