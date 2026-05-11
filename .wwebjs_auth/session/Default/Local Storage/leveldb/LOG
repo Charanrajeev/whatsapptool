@@ -1,3 +1,6 @@
-2026/05/11-02:34:15.488 c20 Reusing MANIFEST /home/runner/work/whatsapptool/whatsapptool/.wwebjs_auth/session/Default/Local Storage/leveldb/MANIFEST-000001
-2026/05/11-02:34:15.493 c20 Recovering log #104
-2026/05/11-02:34:15.493 c20 Reusing old log /home/runner/work/whatsapptool/whatsapptool/.wwebjs_auth/session/Default/Local Storage/leveldb/000104.log 
+2026/05/11-04:37:39.220 bf7 Reusing MANIFEST /home/runner/work/whatsapptool/whatsapptool/.wwebjs_auth/session/Default/Local Storage/leveldb/MANIFEST-000001
+2026/05/11-04:37:39.225 bf7 Recovering log #104
+2026/05/11-04:37:39.226 bf7 Reusing old log /home/runner/work/whatsapptool/whatsapptool/.wwebjs_auth/session/Default/Local Storage/leveldb/000104.log 
+2026/05/11-04:57:47.697 c01 Level-0 table #108: started
+2026/05/11-04:57:47.699 c01 Level-0 table #108: 16159 bytes OK
+2026/05/11-04:57:47.700 c01 Delete type=0 #104
